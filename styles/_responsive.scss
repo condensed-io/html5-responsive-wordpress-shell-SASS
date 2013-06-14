@@ -1,0 +1,69 @@
+/*
+RESPONSIVE STYLES
+*/
+
+
+/*--------------------------------------------------------------------------------------------------*/
+/* BEGIN: up to tablet */ @media screen and (max-width: 40em) {
+
+
+	// body:before { @include alert("up to tablet"); } // uncomment this line to get an alert showing this meda query
+
+
+} /* END: up to tablet */
+/*--------------------------------------------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------------------------------------------*/
+/* BEGIN: tablet and smaller */ @media screen and (min-width: 40em) {
+
+
+	// add your rules here, for instance mobile nav styles that get applied to phones and tablets could go here
+
+
+} /* END: tablet and smaller */
+/*--------------------------------------------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------------------------------------------*/
+/* BEGIN: larger than mobile but smaller than desktop */ @media screen and (min-width: 40em) and (max-width: 980px){
+
+
+	// body:before { @include alert("larger than mobile but smaller than desktop"); } // uncomment this line to get an alert showing this meda query
+
+
+} /* END: larger than mobile but smaller than desktop
+/*--------------------------------------------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------------------------------------------*/
+/* BEGIN: Smaller than desktop */ @media screen and (max-width: 980px) {
+
+
+	// body:before { @include alert("smaller than desktop"); } // uncomment this line to get an alert showing this meda query
+
+
+} /* END: Smaller than desktop */
+/*--------------------------------------------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------------------------------------------*/
+/* BEGIN: desktop and above */ @media screen and (min-width: 980px) {
+	
+
+	// body:before { @include alert("desktop and above"); } // uncomment this line to get an alert showing this meda query
+
+
+} /* END: desktop and above */ 
+/*--------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+

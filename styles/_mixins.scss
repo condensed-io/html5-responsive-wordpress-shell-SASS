@@ -1,0 +1,44 @@
+// rounded corners
+@mixin rounded($radius: 0.5em) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-khtml-border-radius: $radius;
+	border-radius: $radius;
+}
+
+// alert shows in upper right, used for showing the media query sizes
+@mixin alert($statement) {
+	content: $statement;
+	right: .3em;
+	position: fixed;
+	top: .3em;
+	z-index: 999;
+	background: lighten($header-bkg, 20%);
+	padding: .2em 1.5em;
+	@include rounded(2em);
+	font-family: helvetica, sans-serif;
+	font-size: 12px;
+}
+
+// accessible hidden content -- http://shoptalkshow.com/episodes/058-with-derek-featherstone/  (skip to 32 minutes)
+@mixin hide() {
+	display: none;
+}
+
+// unhide accessible content
+@mixin unhide() {
+	position: static;
+}
+
+// Shorthand mixin. Supports multiple parentheses-deliminated values for each variable.
+// Example: @include transition (all, 2.0s, ease-in-out);
+//          @include transition ((opacity, width), (1.0s, 2.0s), ease-in, (0, 2s));
+//          @include transition ($property:(opacity, width), $delay: (1.5s, 2.5s));
+
+@mixin transition($transition-property, $transition-time, $method) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	-ms-transition: $transition-property $transition-time $method;
+	-o-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+}

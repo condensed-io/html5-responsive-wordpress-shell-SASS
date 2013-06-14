@@ -1,0 +1,86 @@
+/*
+These are the base styles that get applied before responsive CSS is added
+It should be a basic stacked layout which could work as a fallback for old IE and crap phones
+Add on top of that in responsive.scss
+*/
+
+
+/* ::: BASICS ::::::::::::::::::::::::::::::::::::::::: */
+
+	/*--- Set the background and font color for the html and body, if you don't have a different bkg for the body set both to be the same ---*/
+		html { background: $page-bkg; color: $page-txt; }
+		body { background: $page-bkg; color: $page-txt; }	
+
+		/* Tags */
+		pre { background-color: $code-bkg; margin: 2em; }
+
+		/* Lists */
+		ol {}
+		ol ol { list-style-type: lower-alpha; margin: .2em 2em .8em 2em; }
+		ul ul { margin: .2em 2em .8em 2em; }
+
+	
+	/*--- PAGE WRAPPER ---*/
+		.page-wrapper { padding: 0 5%; }
+
+
+/* ::: PAGE DIVISIONS ::::::::::::::::::::::::::::::::: */
+
+	/*--- SITE HEADER ---*/
+	
+		.site-header { background-color: $header-bkg; }
+		.site-header .site-title { }
+		.site-header .site-description { }	
+
+		/* Nav */
+		.nav-menu a { font-size: 1.2em; text-decoration: none; display: inline-block; line-height: 1.8em; margin: 0 3px 3px 0; padding: 1em 2em; -moz-border-radius: 10px; -khtml-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; }
+	
+		/* Nav Links */
+		.nav-menu a:link, .nav-menu a:visited  { color: darken($nav-up, 40%); background: $nav-up; }
+		.nav-menu a:hover, .nav-menu a:active, .nav-menu a:focus { color: darken($nav-dn, 20%); background: $nav-dn; text-decoration: underline; }
+
+		/* Down States */
+		.nav-menu .current_page_item a { color: lighten($nav-current, 40%) !important; background: $nav-current; cursor: default; }
+	
+		
+	/*--- CONTENT AREA ---*/
+	
+		.content-main { }
+		.content-main em { font-style: italic; }
+		
+		/* Page Nav */
+		.page-nav a { float: right; padding: .5em 2em; margin: 1em; }
+
+		/* Page */
+		.page {}
+
+		/* Posts */
+		.post {}
+
+		/* Single */
+		.single-template {}
+
+
+	/*--- NO SOMMENT STYLES: We always use a plugin for comments; either disqus, livefyre, or intense debate ---*/
+	
+	
+	/*--- SIDEBAR - MAIN ---*/
+
+		.sidebar-main { padding-bottom: 3em; }
+		.sidebar-main ul { list-style-position: inside; }
+	
+	
+	/*--- SIDEBAR - FOOTER ---*/
+
+		.sidebar-footer ul { list-style-position: inside; }
+
+
+	/*--- FOOTER ---*/
+
+		.footer { clear: both; padding-bottom: 20px; text-align: right; }
+			
+		/* Credit */
+		.footer .site-credits a { letter-spacing: 1px; }
+
+
+
