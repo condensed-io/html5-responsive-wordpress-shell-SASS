@@ -39,8 +39,8 @@ You probably don't need to make many changes to this file
 		ul.hide { margin: 0 0 0 1em !important; padding: 0 !important; }
 
 			// Adds 'Plus-Minus' sign to header -- change these for icon font soon
-			.header-shown:before { content: "-" }
-			.header-hidden:before { content: "+"}
+			.header-shown:before { content: "-"; margin-right: .5em; }
+			.header-hidden:before { content: "+"; margin-right: .5em;}
 
 		/* Indicators */
 		.indicator { position: absolute; z-index: 100; text-align: center; left: 0; top: 0; }

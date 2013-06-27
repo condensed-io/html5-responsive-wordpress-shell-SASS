@@ -97,10 +97,12 @@ ul.hide {
   padding: 0 !important; }
 
 .header-shown:before {
-  content: "-"; }
+  content: "-";
+  margin-right: .5em; }
 
 .header-hidden:before {
-  content: "+"; }
+  content: "+";
+  margin-right: .5em; }
 
 /* Indicators */
 .indicator {
