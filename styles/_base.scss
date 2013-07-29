@@ -12,6 +12,15 @@ You probably don't need to make many changes to this file
 		html { -webkit-font-smoothing: antialiased; }
 
 
+	/*--- Fixes issue where browser appears to scroll horizontally. This causes problems on responsive pages that are supposed to take up the entire width of the screen http://stackoverflow.com/questions/17005500/bootstrap-css-responsive-left-with-a-white-space-on-the-right ---*/
+		html {
+		  width: auto !important;
+		  overflow-x: hidden !important;
+		}
+		body {
+		  width: auto !important;
+		  overflow-x: hidden !important;
+		}
 	/*--- NATURAL BOX LAYOUT MODEL for all elements - http://paulirish.com/2012/box-sizing-border-box-ftw/ ---*/
 		* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
