@@ -30,15 +30,47 @@
 	position: static;
 }
 
-// Shorthand mixin. Supports multiple parentheses-deliminated values for each variable.
-// Example: @include transition (all, 2.0s, ease-in-out);
-//          @include transition ((opacity, width), (1.0s, 2.0s), ease-in, (0, 2s));
-//          @include transition ($property:(opacity, width), $delay: (1.5s, 2.5s));
+// SASS breakpoint mixin. Read: http://web-design-weekly.com/2013/05/12/handy-sass-mixins/
 
-@mixin transition($transition-property, $transition-time, $method) {
-	-webkit-transition: $transition-property $transition-time $method;
-	-moz-transition: $transition-property $transition-time $method;
-	-ms-transition: $transition-property $transition-time $method;
-	-o-transition: $transition-property $transition-time $method;
-	transition: $transition-property $transition-time $method;
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (min-width: em(980)) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: em(650)) { @content; }
+  }
 }
+
+// Enables using of CSS3 value `rem`
+// http://drublic.de/blog/rem-fallback-sass-less/
+
+@mixin x-rem($property, $values, $main-font-size: 16px) {
+
+	// Empty list for all values in px
+	$px-values: ();
+	$rem-values: ();
+
+	// Iterate over entries
+	@each $value in $values {
+
+		// If the value is zero, return 0
+		@if $value == 0 or type_of($value) != number {
+			$px-values: append($px-values, $value);
+			$rem-values: append($rem-values, $value);
+
+		// If the value is not zero, convert it from px to rem
+		} @else {
+			$px-values: append($px-values, ($value * $main-font-size) );
+			$rem-values: append($rem-values, #{$value}rem);
+		}
+	}
+
+	// Return the property and its list of converted values
+	#{$property}: #{$px-values};
+	#{$property}: #{$rem-values};
+}
+
+// @include x-rem(font-size, 1.3);
+
+
+

@@ -1,0 +1,43 @@
+// 768 - (45*2) = 678px
+
+// Grid width
+$gw-column: 250px;      // Column Width
+$gw-gutter: 30px;       // Gutter Width
+
+// Columns
+$fg-column: 250px;      // Column Width
+$fg-gutter: 30px;       // Gutter Width
+$fg-max-columns: 3;     // Total Columns For Main Container
+
+.grid-container {
+  max-width: grid-width(3);
+  margin: 0 auto;
+  background-color: #eee;
+  @include clearfix;
+  
+  .span1 {
+    float: left;
+    width: flex-grid( 1 );
+    margin-right: flex-gutter();
+    background-color: #999;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  .span2 {
+    float: left;
+    width: flex-grid( 2 );
+    margin-right: flex-gutter();
+    background-color: #999;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  .span3 {
+    width: flex-grid( 3 );
+    margin-right: flex-gutter();
+    background-color: #999;
+  }
+}

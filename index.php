@@ -14,9 +14,7 @@ if ($disableSidebar !== 'true'): ?>
 <!--END: Sidebar Main-->
 
 <!--BEGIN: Content div-->
-<section class="content-main clear-fix row-site" role="main">
-
-	<h1 class="access-hide">Latest Posts</h1>
+<div class="content-main clear-fix row-site" role="main">
 	
 	<?php if (have_posts()) : // BEGIN THE LOOP ?>
 
@@ -49,7 +47,7 @@ if ($disableSidebar !== 'true'): ?>
 				
 		<?php endwhile; //END: looping through all the posts ?>
 
-			<!--BEGIN: Page Nav-->
+			<!--BEGIN: Page Nav  ~  if there's a prob with this try moving it out fo the loop -->
 			<?php if ( $wp_query->max_num_pages > 1 ) : // if there's more than one page turn on pagination ?>
 				<nav class="page-nav">
 		        	<h1 class="hide">Page Navigation</h1>
@@ -67,7 +65,7 @@ if ($disableSidebar !== 'true'): ?>
 
 	<?php endif; //END: The Loop ?>
 	
-</section>
+</div>
 <!--END: content div-->
 
 <?php get_footer(); ?>

@@ -2,11 +2,14 @@
 Theme Name: html5 shell by mimoYmima.com
 Theme URI: http://html5.mimoymima.com/
 Description: a Framework for rapidly developing HTML5 based WordPress Themes
-Version: 2.5
+Version: 2.51
 Author: Brent Lagerman
 Author URI: http://html5.mimoymima.com/
 */
 
+
+// bourbon.io mixin library
+@import "./styles/bourbon/bourbon";
 
 // mixins
 @import "./styles/_mixins.scss";
@@ -16,9 +19,6 @@ Author URI: http://html5.mimoymima.com/
 
 // reset + general styles
 @import "./styles/_base.scss";
-
-// general re-usable classes
-@import "./styles/_classes.scss";
 
 // typography
 @import "./styles/_type.scss";
@@ -31,6 +31,3 @@ Author URI: http://html5.mimoymima.com/
 
 // page specific styles
 @import "./styles/_pages.scss";
-
-// responsive layouts
-@import "./styles/_responsive.scss";
