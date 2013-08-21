@@ -1,11 +1,9 @@
-//::: DEFINE FONT STYLES ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//::: LOAD FONTS ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-/*--- Load Font Face Fonts ---*/
+	@include font-face(StMarieThin, './fonts/StMarie-Thin-webfont', normal);
 
-	@font-face {font-family: 'StMarieThin'; src: url('./fonts/StMarie-Thin-webfont.eot'); src: url('./fonts/StMarie-Thin-webfont.eot?#iefix') format('embedded-opentype'), url('./fonts/StMarie-Thin-webfont.woff') format('woff'), url('./fonts/StMarie-Thin-webfont.ttf') format('truetype'), url('./fonts/StMarie-Thin-webfont.svg#StMarieThin') format('svg'); font-weight: normal; font-style: normal; }
-	
 
-/*--- Default font stacks for this site ---*/
+//::: DEFINE FONT FAMILIES ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 	@mixin monospace() {
 		font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
@@ -21,7 +19,7 @@
 	}
 
 
-/*--- Display Fonts ~ try to use one or two at max in your design. ---*/
+/*--- Display Fonts ~ try to use one or two at max in your design. this one is here for reference---*/
 
 	@mixin stmarie() {
 		font-family: 'StMarieThin', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', helvetica, sans-serif;
@@ -48,9 +46,8 @@
 /*--- Headings ---*/
 
 	h1, h2, h3, h4, h5, h6 {
-		color: $h1-h6;
+		@include stmarie(); // you'll want to replace this with your own font
 		font-weight: 500;
-		@include stmarie();
 	}
 
 	h1 { font-size: 2.5em; }
