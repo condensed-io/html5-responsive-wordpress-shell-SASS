@@ -25,24 +25,30 @@ Add on top of that in responsive.scss
 
 	/*--- SITE HEADER ---*/
 	
-		.site-header { background-color: $header-bkg; }
+		.site-header { }
 		.site-header .site-title { }
 		.site-header .site-description { }	
 
-		/* Nav */
-		.nav-menu a { font-size: 1.2em; text-decoration: none; display: inline-block; line-height: 1.8em; margin: 0 3px 3px 0; padding: 1em 2em; -moz-border-radius: 10px; -khtml-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; }
+	/*--- MAIN NAV ---*/
+
+		.nav-menu a {
+			text-decoration: none;
+			display: inline-block;
+			line-height: 1.8em;
+			margin: 0 3px 3px 0;
+			padding: 1em 2em;
+		}
 	
-		/* Nav Links */
-		.nav-menu a:link, .nav-menu a:visited  { color: darken($nav-up, 40%); background: $nav-up; }
-		.nav-menu a:hover, .nav-menu a:active, .nav-menu a:focus { color: darken($nav-dn, 20%); background: $nav-dn; text-decoration: underline; }
+		.nav-menu a:link, .nav-menu a:visited { }
+		.nav-menu a:hover, .nav-menu a:active, .nav-menu a:focus { }
 
 		/* Down States */
-		.nav-menu .current_page_item a { color: lighten($nav-current, 40%) !important; background: $nav-current; cursor: default; }
+		.nav-menu .current_page_item a { }
 	
 		
 	/*--- CONTENT AREA ---*/
 	
-		.content-main { }
+		.content-main {}
 		.content-main em { font-style: italic; }
 		
 		/* Page Nav */
@@ -78,6 +84,5 @@ Add on top of that in responsive.scss
 			
 		/* Credit */
 		.site-credits a { letter-spacing: 1px; }
-
 
 
