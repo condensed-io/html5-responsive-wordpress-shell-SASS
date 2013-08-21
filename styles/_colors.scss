@@ -6,6 +6,7 @@ $tan: #EBDBBD;
 $orange: #FC0;
 $cream: #F9F4EB;
 $dark-grey: #333;
+$black: #000;
 
 
 //::: COLOR ASSIGNMENT :::::::::::::::::::::::::::::
@@ -16,18 +17,7 @@ $dark-grey: #333;
 
 	// Links
 	$link-default-off: $blue;
-	$link-default-on: $orange;
-
-	// Nav
-	$nav-up: $tan;
-	$nav-dn: $orange;
-	$nav-current: $dark-grey;
-
-	// Code
-	$code-bkg: $light-blue;
-
-	// Headings
-	$h1-h6: $blue;
+	$link-default-on: $black;
 
 	// Borders
 	$borders: $dark-grey;
