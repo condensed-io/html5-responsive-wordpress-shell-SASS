@@ -1,9 +1,3 @@
-// rounded corners
-@mixin rounded($radius: 0.5em) {
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	-khtml-border-radius: $radius;
-	border-radius: $radius;
 }
 
 // alert shows in upper right, used for showing the media query sizes
