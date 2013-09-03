@@ -84,6 +84,7 @@ function body_classes() {
     elseif (is_tag()) { echo "page_tag"." "; }
     elseif (is_home()) { echo "page_home"." "; }
     elseif (is_404()) { echo "page_404"." "; }
+    elseif ('post' == get_post_type() && is_single()) { echo "template_single"." "; }
 
     // echo page_(page name)
     if( is_page()) {
