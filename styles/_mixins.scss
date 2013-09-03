@@ -1,6 +1,20 @@
+// NOTE: this project uses Bourbon so you can use any of the Bourbon mixins
+// http://bourbon.io/
+
+
+// accessible hidden content -- http://shoptalkshow.com/episodes/058-with-derek-featherstone/  (skip to 32 minutes)
+@mixin hide() {
+	display: none;
 }
 
-// alert shows in upper right, used for showing the media query sizes
+
+// unhide accessible content
+@mixin unhide() {
+	position: static;
+}
+
+
+// alerts: Shows in upper right
 @mixin alert($statement) {
 	content: $statement;
 	right: .3em;
@@ -14,17 +28,9 @@
 	font-size: 12px;
 }
 
-// accessible hidden content -- http://shoptalkshow.com/episodes/058-with-derek-featherstone/  (skip to 32 minutes)
-@mixin hide() {
-	display: none;
-}
 
-// unhide accessible content
-@mixin unhide() {
-	position: static;
-}
-
-// SASS breakpoint mixin. Read: http://web-design-weekly.com/2013/05/12/handy-sass-mixins/
+// SASS breakpoint mixin
+// http://web-design-weekly.com/2013/05/12/handy-sass-mixins/
 
 @mixin breakpoint($point) {
   @if $point == large {
