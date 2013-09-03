@@ -3,6 +3,6 @@
 		
 		// Text Inputs
 		input[type='text'] {
-			@include rounded(.5em);
+			border-radius: .5em;
 			border: 1px solid $borders;
 		}
