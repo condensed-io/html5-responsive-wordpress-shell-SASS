@@ -11,6 +11,13 @@ You probably don't need to make many changes to this file
 	html { -webkit-font-smoothing: antialiased; }
 
 
+/*--- Prevent font scaling in landscape mode on phones ---*/
+	@media all and (orientation:landscape) {
+		html {
+	    	-webkit-text-size-adjust: none;
+	    }
+	}
+
 /*--- NATURAL BOX LAYOUT MODEL for all elements - http://paulirish.com/2012/box-sizing-border-box-ftw/ ---*/
 	* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
