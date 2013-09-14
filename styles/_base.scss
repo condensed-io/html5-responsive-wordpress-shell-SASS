@@ -76,6 +76,23 @@ You probably don't need to make many changes to this file
 	/* Hide these elements but keep them accessible */
 	.access-hide { @include hide(); }
 
+	/*--- fitvid CSS ---*/
+	.fitvid {
+	    position: relative;
+	    padding-bottom: 56.25%;
+	    height: 0;
+	    overflow: hidden;
+	}
+	.fitvid iframe,
+	.fitvid object,
+	.fitvid embed {
+
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	}
 
 /*--- LISTS ---*/
 
