@@ -42,7 +42,7 @@ You probably don't need to make many changes to this file
 	/* .js div.preloader { position: fixed; left: 0; top: 0; z-index: 999; width: 100%; height: 100%; overflow: visible; background: #c0c0c0 url(./images/loading.gif) no-repeat center center; } */
 
 	/* Show-Hide Content */
-	.make-link { color: #06F !important; text-decoration: none; margin-bottom: .5em; } 
+	.make-link { color: $link-default-off !important; text-decoration: none; margin-bottom: .5em; } 
 	.make-link:hover, .make-link:focus, .make-link:active { cursor: pointer; color: #C60; text-decoration: underline; }
 	ul.hide { margin: 0 0 0 1em !important; padding: 0 !important; }
 
