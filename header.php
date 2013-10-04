@@ -58,19 +58,10 @@ $android = strpos($_SERVER['HTTP_USER_AGENT'],"Android");
 
 	<!--BEGIN: PAGE WRAPPER-->
 	<div class="page-wrapper">
-
-		<!--TOP BAR-->
-		<aside class="top-bar">
-			<a class="site-home-link" href="/">HOME</a>
-			<h1><a href="/">Site Name</a></h1>
-		</aside>
 			
 		<!--SITE HEADER-->
 		<header class="site-header row-site" role="banner">
-			<hgroup>
-				<h1 class="site-title"><?php if(!is_home()) { wp_title(''); echo " :: "; } ?><a href="/"><?php bloginfo('name'); ?></a></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			</hgroup>
+			<h1 class="site-title"><?php if(!is_home()) { wp_title(''); echo " :: "; } ?><a href="/"><?php bloginfo('name'); ?></a></h1>
 		</header>
 
 		<!--MAIN NAV: To make the menu vertical instead of horizontal remove the menu_class of horiz-list-->
