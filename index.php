@@ -66,6 +66,6 @@ if ($disableSidebar !== 'true'): ?>
 	<?php endif; //END: The Loop ?>
 	
 </div>
-<!--END: content div-->
+<!--END: Content Div-->
 
 <?php get_footer(); ?>
