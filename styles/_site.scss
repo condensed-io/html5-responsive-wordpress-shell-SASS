@@ -18,7 +18,12 @@ Add on top of that in responsive.scss
 
 	
 	/*--- PAGE WRAPPER ---*/
-		.page-wrapper { padding: 0 5%; }
+		.page-wrapper {
+			padding: 0;
+			@include breakpoint(medium) {
+				padding: 0 5%;
+			}
+		}
 
 
 /* ::: PAGE DIVISIONS ::::::::::::::::::::::::::::::::: */
