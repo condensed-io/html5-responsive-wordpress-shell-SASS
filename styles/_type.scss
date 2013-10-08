@@ -37,6 +37,8 @@
 		line-height: 1.5;
 	}
 
+	.content-main em { font-style: italic; }
+
 /*--- Links ---*/
 
 	a:link, a:visited { color: $link-default-off; text-decoration: underline; }
