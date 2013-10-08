@@ -26,13 +26,10 @@
 	</dl-->
 	<!--END: Contact Info-->
 	
-	<!--BEGIN: Credit. If you use this theme please consider keeping our credit in the footer.  You may delete it though if needed. -->
-	<article class="site-credits">
-		<h1>Credits</h1>
-		<h2><a class="cred-yours" href="http://html5.mimoymima.com" title="keyword rich title">Your Credit Here</a></h2>
-		<h2><a class="cred-mine" href="http://html5.mimoymima.com" title="Build your Wordpress themes faster - HTML5 WordPress Shell">built using the HTML5 Wordpress shell :: html5.mimoymima.com</a></h2>
-	</article>
-	<!--END: Credit-->
+	<!--BEGIN: Credits :: If you use this theme please consider keeping our credit in the footer.  You can delete it if you need to. -->
+	<small><a class="cred-yours" href="http://html5.mimoymima.com" title="keyword rich title">Your Credit Here</a></small>
+	<small><a class="cred-mine" href="http://html5.mimoymima.com" title="Build your Wordpress themes faster - HTML5 WordPress Shell">built using the HTML5 Wordpress shell :: html5.mimoymima.com</a></small>
+	<!--END: Credits-->
 	
 	<p class="copyright"><small>&copy; <?php echo date('Y'); ?> <?php bloginfo('name')?></small></p>
 	
