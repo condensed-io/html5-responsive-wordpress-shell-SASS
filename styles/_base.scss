@@ -4,7 +4,7 @@ BASE - HOW LOW CAN YOU GO?
 
 Base is for standard things that don't change from project to project
 
-You probably dont' ever need to edit this sheet unless you find a but
+You probably don't ever need to edit this sheet unless you find a but
 
 If you have anything to add please give a pull request
 
@@ -123,6 +123,8 @@ If you have anything to add please give a pull request
 	.sys { text-align: left }
 	.warn { }
 
+	/* a class you can add when doing production to hide elements and keep them accessible */
+	.access-hide { @include hide(); }
 
 	// Show-Hide
 	.make-link { color: $link-default-off !important; text-decoration: none; margin-bottom: .5em; } 
