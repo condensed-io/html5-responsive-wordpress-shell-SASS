@@ -1,14 +1,14 @@
 <?php
 
-//  // If you are logged into the admin area, show what template someone is using on the top of all pages
-//	if (is_user_logged_in()) { add_action('wp_footer', 'show_template'); }
+// BEGIN: if you are logged into the admin area, show what template someone is using on the top of all pages
+//  if (is_user_logged_in()) { add_action('wp_footer', 'show_template'); }
 //
-//	function show_template() {
-//		global $template;
-//		print_r($template);
-//		//global $wp_taxonomies;
-//		//print_r($wp_taxonomies['sections']);
-//	}
+//  function show_template() {
+//      global $template;
+//      print_r($template);
+//      //global $wp_taxonomies;
+//      //print_r($wp_taxonomies['sections']);
+//  }
 
 // // create a new taxonomy called 'Countries'
 // function countries_init() {
@@ -26,6 +26,15 @@
 // add_action( 'init', 'countries_init' );
 
 
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+
+function remove_width_attribute( $html ) {
+   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+   return $html;
+}
+
+
 // Add a 'first' and 'last' class to the first and last menu item pulled from custom menus
 function add_first_and_last($output) {
     $output = preg_replace('/class="menu-item/', 'class="first-menu-item menu-item', $output, 1);
@@ -41,24 +50,25 @@ remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wp_generator');
 
 
-// Loads jQuery from the Google CDN, loading jquery this way ensures it won't be included twice with plugins that include it
-/*
-if you are developing this site locally you can use wordpress' local copy of jquery by commenting out the deregister line and the line with google's version of jquery below and registering the local copy
-like this:
-           // wp_deregister_script( 'jquery' );
-           // wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js');
-           wp_register_script ( 'jquery' );
-           wp_enqueue_script( 'jquery' );
-*/
+// Load jquery
+// you can either load the local or google CDN version below by commenting out one or another wp_register_script line function
 
-	function my_init_method() {
-	    if (!is_admin()) {
-	        wp_deregister_script( 'jquery' );
-	        wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js');
-	        wp_enqueue_script( 'jquery' );
-	    }
-	} 
-	add_action('init', 'my_init_method');
+
+    function my_init_method() {
+        if (!is_admin()) {
+
+            wp_deregister_script( 'jquery' );
+
+            // local copy of jquery
+            wp_register_script( 'jquery', '/wp-includes/js/jquery/jquery.js"');
+
+            // google CDN copy of jquery
+            //wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js');
+            
+            wp_enqueue_script( 'jquery' );
+        }
+    } 
+    add_action('init', 'my_init_method');
 
 
 // Add theme support
@@ -112,11 +122,11 @@ function body_classes() {
 
 
 // Removes the automatic paragraph tags from the excerpt, we leave it on for the content and have a custom field you can use to turn it off on a page by page basis --> wpautop = false
-	remove_filter('the_excerpt', 'wpautop');
+    remove_filter('the_excerpt', 'wpautop');
 
 // Used to create custom length excerpts
 function get_the_custom_excerpt($length){
-	return substr( get_the_excerpt(), 0, strrpos( substr( get_the_excerpt(), 0, $length), ' ' ) ).'...';
+    return substr( get_the_excerpt(), 0, strrpos( substr( get_the_excerpt(), 0, $length), ' ' ) ).'...';
 }
 
 // Register wigetized sidebars, changing the default output from lists to divs
@@ -145,16 +155,16 @@ function get_the_custom_excerpt($length){
     // ));
 
 // This function is used to get the slug of the page
-	function get_the_slug() {
-		global $post;
-		if ( is_single() || is_page() ) {
-			return $post->post_name;
-		} else {
-			return "";
-		}
-	}
+    function get_the_slug() {
+        global $post;
+        if ( is_single() || is_page() ) {
+            return $post->post_name;
+        } else {
+            return "";
+        }
+    }
 
-	
+    
 // To REMOVE unused dashboard widgets you can uncomment the next line and customize /includes/remove.php
 // require_once('includes/remove.php');
 

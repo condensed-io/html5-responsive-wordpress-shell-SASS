@@ -1,92 +1,149 @@
 /*
-These are the base styles that get applied before responsive CSS is added
-It should be a basic stacked layout which could work as a fallback for old IE and crap phones
-Add on top of that in responsive.scss
+
+THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
+
+- Layout
+- Applying your color definitions from colors.scss
+- Applying your typography definitions from type.scss
+
 */
 
 
-/* ::: BASICS ::::::::::::::::::::::::::::::::::::::::: */
+/* ::: HTML ELEMENTS ::::::::::::::::::::::::::::::::::::::::: */
 
 	/*--- Set the background and font color for the html and body, if you don't have a different bkg for the body set both to be the same ---*/
-		html { background: $page-bkg; color: $page-txt; }
-		body { background: $page-bkg; color: $page-txt; }
+	html {
+		background: $page-bkg;
+		color: $page-txt;
+	}
+	body {
+		background: $page-bkg;
+		color: $page-txt;
+	}
 
-		/* Lists */
-		ol {}
-		ol ol { list-style-type: lower-alpha; margin: .2em 2em .8em 2em; }
-		ul ul { margin: .2em 2em .8em 2em; }
+	/*--- Lists ---*/
+	ol {
+		
+	}
+	ol ol {
+		list-style-type: lower-alpha;
+		margin: .2em 2em .8em 2em;
+	}
+	ul ul {
+		margin: .2em 2em .8em 2em;
+	}
 
+
+
+/* ::: PAGE WRAPPER ::::::::::::::::::::::::::::::::::::::::: */
 	
-	/*--- PAGE WRAPPER ---*/
-		.page-wrapper {
-			padding: 0;
-			@include breakpoint(medium) {
-				padding: 0 5%;
-			}
+	.page-wrapper {
+		padding: 0;
+		@include breakpoint(medium) {
+			padding: 0 5%;
 		}
+	}
 
 
-/* ::: PAGE DIVISIONS ::::::::::::::::::::::::::::::::: */
 
-	/*--- SITE HEADER ---*/
-	
-		.site-header { }
-		.site-header .site-title { }
+/* ::: SITE HEADER ::::::::::::::::::::::::::::::::: */
+
+	.site-header {
+
+	}
+	.site-header .site-title {
+
+	}
 
 
-	/*--- MAIN NAV ---*/
 
-		.nav-menu a {
-			text-decoration: none;
-			display: inline-block;
-			line-height: 1.8em;
-			margin: 0 3px 3px 0;
-			padding: 1em 2em;
-		}
-	
-		.nav-menu a:link, .nav-menu a:visited { }
-		.nav-menu a:hover, .nav-menu a:active, .nav-menu a:focus { }
+/* ::: MAIN NAV ::::::::::::::::::::::::::::::::: */
 
-		/* Down States */
-		.nav-menu .current_page_item a { }
+	.nav-menu a {
+		text-decoration: none;
+		display: inline-block;
+		line-height: 1.8em;
+		margin: 0 3px 3px 0;
+		padding: 1em 2em;
+	}
+
+	.nav-menu a:link, .nav-menu a:visited {
+
+	}
+	.nav-menu a:hover, .nav-menu a:active, .nav-menu a:focus {
+
+	}
+
+	/* Down States */
+	.nav-menu .current_page_item a {
+
+	}
 	
 		
-	/*--- CONTENT AREA ---*/
+
+/* ::: CONTENT AREA ::::::::::::::::::::::::::::::::: */
 	
-		.content-main {}
+	.content-main {}
+	
+	/* Page Nav */
+	.page-nav a {
+		float: right;
+		padding: .5em 2em;
+		margin: 1em;
+	}
+
+	/* Page */
+	.page {
+
+	}
+
+	/* Posts */
+	.post {
+
+	}
+
+	/* Single */
+	.single-template {
+
+	}
+
+
+
+/* ::: COMMENTS ::::::::::::::::::::::::::::::::: */
+	
+	/*--- If you use the Facebook comments plugin this makes it responsive ---*/
+	/*--- http://wordpress.org/plugins/facebook-comments-plugin/ ---*/
+	.fb-comments, .fb-comments span, .fb-comments iframe {
+		width: 100% !important;
+	}
+	.fb-comments { margin-top: 2em; }
+
+	
+	
+/* ::: SIDEBAR: MAIN (NOTE: make it pop below the content on mobile) ::::::::::::::::::::::::::::::::: */
+
+	.sidebar-main {
+		padding-bottom: 3em;
+	}
+
+	.sidebar-main ul {
+		list-style-position: inside;
+	}
+	
+	
+
+/* ::: FOOTER ::::::::::::::::::::::::::::::::: */
+
+	.footer {
+		clear: both;
+		padding-bottom: 20px;
+		text-align: right;
+	}
 		
-		/* Page Nav */
-		.page-nav a { float: right; padding: .5em 2em; margin: 1em; }
+	/* Credit */
+	.site-credits a {
+		letter-spacing: 1px;
+	}
 
-		/* Page */
-		.page {}
-
-		/* Posts */
-		.post {}
-
-		/* Single */
-		.single-template {}
-
-
-	/*--- NO COMMENT STYLES: We always use a plugin for comments; either disqus, livefyre, or intense debate ---*/
-	
-	
-	/*--- SIDEBAR - MAIN ---*/
-
-		.sidebar-main { padding-bottom: 3em; }
-		.sidebar-main ul { list-style-position: inside; }
-	
-	
-	/*--- SIDEBAR - FOOTER ---*/
-
-		.sidebar-footer ul { list-style-position: inside; }
-
-
-	/*--- FOOTER ---*/
-
-		.footer { clear: both; padding-bottom: 20px; text-align: right; }
-			
-		/* Credit */
-		.site-credits a { letter-spacing: 1px; }
 
 

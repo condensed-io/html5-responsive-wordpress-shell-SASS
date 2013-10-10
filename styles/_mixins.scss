@@ -1,92 +1,94 @@
-// NOTE: this project uses Bourbon so you can use any of the Bourbon mixins
-// http://bourbon.io/
+/*
+
+GENERAL MIXINS: This project uses Bourbon so you can use any of the Bourbon mixins
+http://bourbon.io/
+
+- utility
+- setting breakpoints
+
+*/
 
 
-// accessible hidden content -- http://shoptalkshow.com/episodes/058-with-derek-featherstone/  (skip to 32 minutes)
-@mixin hide() {
-	display: none;
-}
 
+/* ::: HIDING CONTENT ::::::::::::::::::::::::::::::::::::::::: */
 
-// unhide accessible content
-@mixin unhide() {
-	position: static;
-}
-
-
-// alerts: Shows in upper right
-@mixin alert($statement) {
-	content: $statement;
-	right: .3em;
-	position: fixed;
-	top: .3em;
-	z-index: 999;
-	background: lighten($header-bkg, 20%);
-	padding: .2em 1.5em;
-	@include rounded(2em);
-	font-family: helvetica, sans-serif;
-	font-size: 12px;
-}
-
-
-// SASS breakpoint mixin
-// http://web-design-weekly.com/2013/05/12/handy-sass-mixins/
-
-@mixin breakpoint($point) {
-  @if $point == large {
-    @media (min-width: em(980)) { @content; }
-  }
-  @else if $point == medium {
-    @media (min-width: em(650)) { @content; }
-  }
-}
-
-
-// retina background images
-// http://37signals.com/svn/posts/3271-easy-retina-ready-images-using-scss
-@mixin image-2x($image, $width, $height) {
-  @media (min--moz-device-pixel-ratio: 1.3),
-         (-o-min-device-pixel-ratio: 2.6/2),
-         (-webkit-min-device-pixel-ratio: 1.3),
-         (min-device-pixel-ratio: 1.3),
-         (min-resolution: 1.3dppx) {
-    /* on retina, use image that's scaled by 2 */
-    background-image: url($image);
-    background-size: $width $height;
-  }
-}
-
-
-// Enables using of CSS3 value `rem`
-// http://drublic.de/blog/rem-fallback-sass-less/
-
-@mixin x-rem($property, $values, $main-font-size: 16px) {
-
-	// Empty list for all values in px
-	$px-values: ();
-	$rem-values: ();
-
-	// Iterate over entries
-	@each $value in $values {
-
-		// If the value is zero, return 0
-		@if $value == 0 or type_of($value) != number {
-			$px-values: append($px-values, $value);
-			$rem-values: append($rem-values, $value);
-
-		// If the value is not zero, convert it from px to rem
-		} @else {
-			$px-values: append($px-values, ($value * $main-font-size) );
-			$rem-values: append($rem-values, #{$value}rem);
-		}
+	// http://shoptalkshow.com/episodes/058-with-derek-featherstone/  (skip to 32 minutes)
+	@mixin hide() {
+		display: none;
 	}
 
-	// Return the property and its list of converted values
-	#{$property}: #{$px-values};
-	#{$property}: #{$rem-values};
-}
+	// unhide accessible content
+	@mixin unhide() {
+		position: static;
+	}
 
-// @include x-rem(font-size, 1.3);
+
+
+/* ::: BREAKPOINTS ::::::::::::::::::::::::::::::::::::::::: */
+
+	// http://web-design-weekly.com/2013/05/12/handy-sass-mixins/
+
+	@mixin breakpoint($point) {
+	  @if $point == large {
+	    @media (min-width: em(980)) { @content; }
+	  }
+	  @else if $point == medium {
+	    @media (min-width: em(650)) { @content; }
+	  }
+	}
+
+
+
+/* ::: BREAKPOINTS ::::::::::::::::::::::::::::::::::::::::: */
+
+	// retina background images
+	// http://37signals.com/svn/posts/3271-easy-retina-ready-images-using-scss
+	@mixin image-2x($image, $width, $height) {
+	  @media (min--moz-device-pixel-ratio: 1.3),
+	         (-o-min-device-pixel-ratio: 2.6/2),
+	         (-webkit-min-device-pixel-ratio: 1.3),
+	         (min-device-pixel-ratio: 1.3),
+	         (min-resolution: 1.3dppx) {
+	    /* on retina, use image that's scaled by 2 */
+	    background-image: url($image);
+	    background-size: $width $height;
+	  }
+	}
+
+
+
+/* ::: ENABLES REM ::::::::::::::::::::::::::::::::::::::::: */
+
+	// http://drublic.de/blog/rem-fallback-sass-less/
+
+	@mixin x-rem($property, $values, $main-font-size: 16px) {
+
+		// Empty list for all values in px
+		$px-values: ();
+		$rem-values: ();
+
+		// Iterate over entries
+		@each $value in $values {
+
+			// If the value is zero, return 0
+			@if $value == 0 or type_of($value) != number {
+				$px-values: append($px-values, $value);
+				$rem-values: append($rem-values, $value);
+
+			// If the value is not zero, convert it from px to rem
+			} @else {
+				$px-values: append($px-values, ($value * $main-font-size) );
+				$rem-values: append($rem-values, #{$value}rem);
+			}
+		}
+
+		// Return the property and its list of converted values
+		#{$property}: #{$px-values};
+		#{$property}: #{$rem-values};
+	}
+
+	// EXAMPLE: @include x-rem(font-size, 1.3);
+	// Cand be used with any value, not just font size
 
 
 

@@ -1,8 +1,19 @@
-	/*-- FORMS --*/
-		.search-form input[type='text'] { width: 10em; }
+/*
+
+FORMS
+
+*/
+
+
+/* ::: TEXT INPUTS ::::::::::::::::::::::::::::::::::::::::: */
 		
-		// Text Inputs
-		input[type='text'] {
-			border-radius: .5em;
-			border: 1px solid $borders;
-		}
+	input[type='text'] {
+		border-radius: .5em;
+		border: 1px solid $borders;
+	}
+
+/* ::: SEARCH ::::::::::::::::::::::::::::::::::::::::: */
+
+	.search-form input[type='text'] {
+
+	}

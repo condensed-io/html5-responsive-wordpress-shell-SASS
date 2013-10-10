@@ -1,34 +1,94 @@
 /*
-base.scss is for standard things that don't change from project to project
-You probably don't need to make many changes to this file
+
+BASE - HOW LOW CAN YOU GO?
+
+Base is for standard things that don't change from project to project
+
+You probably dont' ever need to edit this sheet unless you find a but
+
+If you have anything to add please give a pull request
+
 */
 
-/*--- Slightly modified version of RESET CSS v2.0 by Eric Meyer - http://meyerweb.com/eric/tools/css/reset/ - http://cssreset.com ---*/
-	html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {	margin: 0;	padding: 0;	border: 0;	font-size: 100%; font: inherit;	vertical-align: baseline; } /* HTML5 display-role reset for older browsers */ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	display: block; } body { line-height: 1; } ul { list-style: none; } blockquote, q { quotes: none;}blockquote:before, blockquote:after,q:before, q:after { content: ''; content: none;} table { border-collapse: collapse; border-spacing: 0; }
 
 
-/*--- Fixes a bug in webkit with fonts being animated - http://stackoverflow.com/questions/9733011/safari-changing-font-weights-when-unrelated-animations-are-running ---*/
-	html { -webkit-font-smoothing: antialiased; }
+/* ::: modified version of RESET CSS 2.0 by Eric Meyer ::::::::::::::::::::::::::::::::::::::::: */
+	
+	// http://meyerweb.com/eric/tools/css/reset/ - http://cssreset.com
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+
+	// HTML5 display-role reset for older browsers
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	
+	body {
+		line-height: 1;
+	}
+	ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,q:before, q:after
+	{
+		content: '';
+		content: none;
+	}
+	table {
+		border-collapse: collapse; border-spacing: 0;
+	}
 
 
-/*--- Prevent font scaling in landscape mode on phones ---*/
+
+/* ::: OTHER BROWSER FIXES ::::::::::::::::::::::::::::::::::::::::: */
+
+	// Fixes a bug in webkit with fonts being animated 
+	// http://stackoverflow.com/questions/9733011/safari-changing-font-weights-when-unrelated-animations-are-running
+	html {
+		-webkit-font-smoothing: antialiased;
+	}
+
+	// Prevent font scaling in landscape mode on phones
 	@media all and (orientation:landscape) {
 		html {
 	    	-webkit-text-size-adjust: none;
 	    }
 	}
 
-/*--- NATURAL BOX LAYOUT MODEL for all elements - http://paulirish.com/2012/box-sizing-border-box-ftw/ ---*/
-	* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+	// Natural Box Layout Model for all elements ::::::::::::::::::::::::::::::::::::::::: */
+	// http://paulirish.com/2012/box-sizing-border-box-ftw/
+	* {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
 
 
-/*--- Removes inner padding and border in Firefox 4+ to make heights consistant across webkit and FF -- thanks Adrian! */
-	button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/* ::: NATURAL BOX LAYOUT MODEL for all elements ::::::::::::::::::::::::::::::::::::::::: */
 
 
-/*--- WordPress ---*/
+	// Removes inner padding and border in Firefox 4+ to make heights consistant across webkit and FF -- thanks Adrian! */
+	button::-moz-focus-inner,
+	input::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+
+
+
+/* ::: WordPress ::::::::::::::::::::::::::::::::::::::::: */
 	
-	/* WordPress WYSIWYG alignment -- when you put in images that span the entire width of the content area remove the width and height */
+	// WordPress WYSIWYG alignment -- when you put in images that span the entire width of the content area remove the width and height
 	img.aligncenter { max-width: 100%; display: block; margin: 5px auto; }
     img.alignright { padding: 4px; margin: 0 0 2px 7px; display: inline; }
     img.alignleft { padding: 4px; margin: 0 7px 2px 0; display: inline; }
@@ -36,12 +96,35 @@ You probably don't need to make many changes to this file
 	.alignleft { float: left; }
 
 
-/*--- JQUERY RELATED --- */
 
-	/* PRELOADER: Relies on some js in the functions file and a div in the header (both commented out by default) */
-	/* .js div.preloader { position: fixed; left: 0; top: 0; z-index: 999; width: 100%; height: 100%; overflow: visible; background: #c0c0c0 url(./images/loading.gif) no-repeat center center; } */
+/* ::: PRELOADER ::::::::::::::::::::::::::::::::::::::::: */
 
-	/* Show-Hide Content */
+	// PRELOADER: Relies on some js in the functions file and a div in the header (both commented out by default)
+	// .js div.preloader { position: fixed; left: 0; top: 0; z-index: 999; width: 100%; height: 100%; overflow: visible; background: #c0c0c0 url(./images/loading.gif) no-repeat center center; }
+
+
+
+/* ::: CLEAR FIXES ::::::::::::::::::::::::::::::::::::::::: */
+
+	// Two methods
+
+	// .clear-fix is attached to the element you want to clear
+	.clear-fix:before,
+	.clear-fix:after { content: ""; display: table; } 
+	.clear-fix:after { clear: both; }
+
+	// You can also add an <hr class=".clear-all" /> wherever you are when doing production work and it will force a clear
+	.clear-all { visibility: hidden; clear: both; margin: 0 !important; padding: 0 !important; font-size: 0; height: 1px; }
+	
+
+
+/* ::: WARNINGS ::::::::::::::::::::::::::::::::::::::::: */
+
+	.sys { text-align: left }
+	.warn { }
+
+
+	// Show-Hide
 	.make-link { color: $link-default-off !important; text-decoration: none; margin-bottom: .5em; } 
 	.make-link:hover, .make-link:focus, .make-link:active { cursor: pointer; color: #C60; text-decoration: underline; }
 	ul.hide { margin: 0 0 0 1em !important; padding: 0 !important; }
@@ -50,105 +133,91 @@ You probably don't need to make many changes to this file
 	.header-shown:before { content: "-"; margin-right: .5em; }
 	.header-hidden:before { content: "+"; margin-right: .5em; }
 	
-	/* Indicators */
+	// Indicators
 	.indicator { position: absolute; z-index: 100; text-align: center; left: 0; top: 0; }
 	.indicator a { width: 20em; background-color: #FF0; display: block; text-transform: uppercase; text-decoration: none; padding: 1em; }
 	.indicator a:link, .indicator a:visited { color: black; }
 	.indicator a:hover, .indicator a:focus, .indicator a:active { color: black; background-color: #FFF; text-decoration: none; cursor: pointer; }
 
-	/* Hide these items when Javascript is active */
+	// Hide these items when Javascript is active
 	.js .js-ind, .js .hide { display: none; }
 
 
-/*--- UTILITY ---*/
 
-	/* Clear Fixes - two methods, clear-fix is attached to the element you want to clear, .clear-all you can attach to a hr or br tag to clear the item before it as a last resort when you're in a hurry */
-	.clear-fix:before,
-	.clear-fix:after { content: ""; display: table; } 
-	.clear-fix:after { clear: both; }
+/* ::: LISTS ::::::::::::::::::::::::::::::::::::::::: */
 
-	.clear-all { visibility: hidden; clear: both; margin: 0 !important; padding: 0 !important; font-size: 0; height: 1px; }
-	
-	/* Warnings */
-	.sys { text-align: left }
-	.warn { }
+	// Horiz List
+	.horiz-list { display: inline-block; }
+	.horiz-list ul { display: inline-block; }
+	.horiz-list ul ul { display: none; }
+	.horiz-list li { display: inline-block; }
 
-	/* Hide these elements but keep them accessible */
-	.access-hide { @include hide(); }
+	// Lists Without Bullets
+	.no-bullet {
+		list-style-type: none;
+		margin-bottom: 2em;
+	}
+	.no-bullet li {
+		margin-bottom: .5em;
+	}
 
-	/*--- fitvid CSS ---*/
+	// Bullet Lists: Nicer formatting for bulleted lists
+	.bullet-list {
+		margin: 1em 0 2em 0;
+		line-height: 150%;
+	}
+	.bullet-list li {
+		margin: 0 2em 1em 2em;
+		list-style-type: square;
+	}
+	.bullet-list li ul {
+		margin: .5em 0 1.5em 0;
+	}
+	.bullet-list li ul li {
+		list-style-type: circle;
+		margin: 0 2em .5em 2em;
+	}
+
+	// Link Lists
+	.link-list li {
+		list-style-type: none;
+	}
+	li.link-list a, ul.link-list li a {
+		display: block;
+		padding-left: 20px;
+		margin-left: 20px;
+	}
+
+	// PDF Lists
+	.pdf-link {
+		padding-left: 20px;
+		margin-left: 5px;
+	}
+	.pdf-list li {
+		list-style-type: none;
+	}
+	li.pdf-list a, ul.pdf-list li a {
+		display: block;
+		padding-left: 20px;
+		margin-left: 20px;
+	}
+
+ 
+
+ /* ::: FitVids ::::::::::::::::::::::::::::::::::::::::: */
+
+
+	// FitVid CSS
 	.fitvid {
 	    position: relative;
 	    padding-bottom: 56.25%;
 	    height: 0;
 	    overflow: hidden;
 	}
-	.fitvid iframe,
-	.fitvid object,
-	.fitvid embed {
-
+	.fitvid iframe, .fitvid object, .fitvid embed {
 	    position: absolute;
 	    top: 0;
 	    left: 0;
 	    width: 100%;
 	    height: 100%;
 	}
-
-/*--- LISTS ---*/
-
-	/* Horiz List */
-		.horiz-list { display: inline-block; }
-		.horiz-list ul { display: inline-block; }
-		.horiz-list ul ul { display: none; }
-		.horiz-list li { display: inline-block; }
-
-	/* Lists without bullets */
-		.no-bullet {
-			list-style-type: none;
-			margin-bottom: 2em;
-		}
-		.no-bullet li {
-			margin-bottom: .5em;
-		}
-
-	/* Bullet Lists: Nicer formatting for a bulleted list */
-		.bullet-list {
-			margin: 1em 0 2em 0;
-			line-height: 150%;
-		}
-		.bullet-list li {
-			margin: 0 2em 1em 2em;
-			list-style-type: square;
-		}
-		.bullet-list li ul {
-			margin: .5em 0 1.5em 0;
-		}
-		.bullet-list li ul li {
-			list-style-type: circle;
-			margin: 0 2em .5em 2em;
-		}
-
-	/* Link Lists */
-		.link-list li {
-			list-style-type: none;
-		}
-		li.link-list a, ul.link-list li a {
-			display: block;
-			padding-left: 20px;
-			margin-left: 20px;
-		}
-
-	/* PDF Lists */
-		.pdf-link {
-			padding-left: 20px;
-			margin-left: 5px;
-		}
-		.pdf-list li {
-			list-style-type: none;
-		}
-		li.pdf-list a, ul.pdf-list li a {
-			display: block;
-			padding-left: 20px;
-			margin-left: 20px;
-		}
-
