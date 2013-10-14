@@ -26,6 +26,7 @@
 // add_action( 'init', 'countries_init' );
 
 
+// For Responsive images and thumbnails, removes the width and height from the markup
 add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
 add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
 
