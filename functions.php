@@ -84,42 +84,38 @@ if (function_exists('add_theme_support')) {
 
 }
 
-// Body Class Function
-function body_classes() {
-
+// Add to the body_class function
+function condensed_body_class($classes) {
     global $post;
 
- // echo some of these things
-    if (is_category()) { echo "page_category"." "; }
-    elseif (is_search()) { echo "page_search"." "; }
-    elseif (is_tag()) { echo "page_tag"." "; }
-    elseif (is_home()) { echo "page_home"." "; }
-    elseif (is_404()) { echo "page_404"." "; }
-    elseif ('post' == get_post_type() && is_single()) { echo "template_single"." "; }
-
-    // echo page_(page name)
+    // add a class for the name of the page - later might want to remove the auto generated pageid class which isn't very useful
     if( is_page()) {
         $pn = $post->post_name;
-        echo "page_".$pn." ";
+        $classes[] = "page_".$pn;
     }
 
-    // echo parent_(parent name)
+    // add a class for the parent page name
     $post_parent = get_post($post->post_parent);
     $parentSlug = $post_parent->post_name;
     
     if ( is_page() && $post->post_parent ) {
-            echo "parent_".$parentSlug." ";
+            $classes[] = "parent_".$parentSlug;
     }
 
-    // echo template_(template name)
+    // add class for the name of the custom template used (if any)
     $temp = get_page_template();
     if ( $temp != null ) {
         $path = pathinfo($temp);
         $tmp = $path['filename'] . "." . $path['extension'];
         $tn= str_replace(".php", "", $tmp);
-        echo "template_".$tn;
+        $classes[] = "template_".$tn;
     }
+
+    return $classes;
+
 }
+
+add_filter('body_class', 'condensed_body_class');
 
 
 // Removes the automatic paragraph tags from the excerpt, we leave it on for the content and have a custom field you can use to turn it off on a page by page basis --> wpautop = false
