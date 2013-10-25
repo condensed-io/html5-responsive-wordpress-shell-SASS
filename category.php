@@ -25,26 +25,12 @@ if ($disableSidebar !== 'true'): ?>
 			<!--BEGIN: Post-->
 			<article <?php post_class() ?> class="post-<?php the_ID(); ?>">
 				
-				<header>
-					<h1><a href="<?php the_permalink(); ?>" rel="bookmark" title='Click to read: "<?php strip_tags(the_title()); ?>"'><?php the_title(); ?></a></h1>
-					<p class="post-date"><?php the_time('F jS, Y') ?> &#8212; <?php the_category(', ') ?></p>
-				</header>
-				
-				<div class="entry">
-					<?php the_excerpt("Continue reading &rarr;"); ?>
-				</div>
-								
-				<!--BEGIN: Post Meta Data-->
-				<footer class="post-meta-data">
-					<ul class="horiz-list">
-						<li><?php the_time('F jS, Y') ?> by <?php the_author(); ?></li>
-						<li class="add-comment"><?php comments_popup_link('Share Your Comments', '1 Comment', '% Comments'); ?></li>
-						<li><?php edit_post_link('[Edit]', '<small>', '</small>'); ?></li>
-						<li><?php the_tags('Tags: ', ', ', '<br />'); ?></li>
-					</ul>
-				</footer>
-				<!--END: Post Meta Data-->
-			
+				<h1 class="alt"><a href="<?php the_permalink(); ?>" rel="bookmark" title='Click to read: "<?php strip_tags(the_title()); ?>"'><?php the_title(); ?></a></h2>
+				<p>by <?php the_author(); ?></p>
+				<p class="post-date"><?php the_time('F jS, Y') ?> &#8212; <?php the_category(', ') ?></p>
+				<p><?php the_tags('Topics Covered: ', ', ', '<br />'); ?></p>
+				<p><?php the_excerpt("Continue reading &rarr;"); ?></p>
+
 			</article>
 			<!--END: Post-->
 				
