@@ -1,6 +1,6 @@
 //::: LOAD FONTS ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-	@include font-face(StMarieThin, './fonts/StMarie-Thin-webfont', normal);
+	@import "../fonts/condensed.scss";
 
 
 //::: DEFINE FONT FAMILIES ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -21,8 +21,8 @@
 
 /*--- Display Fonts ~ try to use one or two at max in your design. this one is here for reference---*/
 
-	@mixin stmarie() {
-		font-family: 'StMarieThin', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', helvetica, sans-serif;
+	@mixin condensed() {
+		font-family: 'condensed';
 		font-weight: normal;
 	}
 
@@ -48,7 +48,6 @@
 /*--- Headings ---*/
 
 	h1, h2, h3, h4, h5, h6 {
-		@include stmarie(); // you'll want to replace this with your own font
 		font-weight: 500;
 	}
 
