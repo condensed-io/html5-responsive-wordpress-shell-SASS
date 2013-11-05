@@ -35,6 +35,9 @@ If you have anything to add please give a pull request
 	ul {
 		list-style: none;
 	}
+	ol ol {
+		list-style-type: lower-alpha;
+	}
 	blockquote, q {
 		quotes: none;
 	}
