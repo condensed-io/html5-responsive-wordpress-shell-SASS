@@ -36,15 +36,6 @@ function remove_width_attribute( $html ) {
 }
 
 
-// Add a 'first' and 'last' class to the first and last menu item pulled from custom menus
-function add_first_and_last($output) {
-    $output = preg_replace('/class="menu-item/', 'class="first-menu-item menu-item', $output, 1);
-    $output = substr_replace($output, 'class="last-menu-item menu-item', strripos($output, 'class="menu-item'), strlen('class="menu-item'));
-    return $output;
-}
-add_filter('wp_nav_menu', 'add_first_and_last');
-
-
 // Removes tags generated in the WordPress Head that we don't use, you could read up and re-enable them if you think they're needed
 remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'rsd_link');
