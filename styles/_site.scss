@@ -22,13 +22,16 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 	}
 
 	/*--- Lists ---*/
+
 	ol {
 		
 	}
+
 	ol ol {
 		list-style-type: lower-alpha;
 		margin: .2em 2em .8em 2em;
 	}
+
 	ul ul {
 		margin: .2em 2em .8em 2em;
 	}
@@ -37,10 +40,11 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 
 /* ::: PAGE WRAPPER ::::::::::::::::::::::::::::::::::::::::: */
 	
-	.page-wrapper {
+	.row {
 		padding: 0;
 		@include breakpoint(medium) {
 			padding: 0 5%;
+			max-width: 1400px;
 		}
 	}
 
