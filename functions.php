@@ -42,7 +42,7 @@ remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wp_generator');
 
 
-// Load jquery
+// Load jQuery
 // you can either load the local or google CDN version below by commenting out one or another wp_register_script line function
 
 
