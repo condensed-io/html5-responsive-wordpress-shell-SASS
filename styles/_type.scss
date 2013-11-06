@@ -33,6 +33,9 @@
 	body {
 		@include sans();
 		font-size: 14px; // base font size
+		@include breakpoint(medium) {
+			font-size: 16px;
+		}
 		font-weight: 300;
 		line-height: 1.5;
 	}
