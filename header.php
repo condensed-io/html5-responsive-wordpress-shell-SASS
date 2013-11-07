@@ -48,7 +48,7 @@
 	<!--div class="preloader"></div-->
 		
 	<!--SITE HEADER-->
-	<header class="site-header row-site" role="banner">
+	<header class="site-header" role="banner">
 		<h1 class="site-title"><?php if(!is_home()) { wp_title(''); echo " :: "; } ?><a href="/"><?php bloginfo('name'); ?></a></h1>
 	</header>
 

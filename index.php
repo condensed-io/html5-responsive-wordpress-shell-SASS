@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 
 <!--BEGIN: Content div-->
-<div class="content-main clear-fix row-site" role="main">
+<div class="content-main clear-fix" role="main">
 	
 	<?php if (have_posts()) : // BEGIN THE LOOP ?>
 
 		<?php while (have_posts()) : the_post(); //LOOPING through all the posts, we split onto two lines for clean indentation ?>
 
-			<article <?php post_class('clear-fix'); ?>>
+			<article class="row" <?php post_class('clear-fix'); ?>> <!--the row class adds the gutter for the content, you can add it to other containers that you want to pad consistantly -->
 
 				<header>
 					<h1><?php the_title(); ?></h1>
