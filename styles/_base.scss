@@ -144,6 +144,23 @@ If you have anything to add please give a pull request
 
 /* ::: LISTS ::::::::::::::::::::::::::::::::::::::::: */
 
+	ul {
+		list-style-type: disc;
+		margin-left: 2em;
+	}
+
+	ol {
+		
+	}
+	
+	ol ol {
+		margin: .2em 2em .8em 2em;
+	}
+	
+	ul ul {
+		margin: .2em 2em .8em 2em;
+	}
+
 	// Horiz List
 	.horiz-list { display: inline-block; }
 	.horiz-list ul { display: inline-block; }
