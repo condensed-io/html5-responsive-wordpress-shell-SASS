@@ -7,13 +7,12 @@ FORMS
 
 /* ::: TEXT INPUTS ::::::::::::::::::::::::::::::::::::::::: */
 		
-	input[type='text'] {
-		border-radius: .5em;
-		border: 1px solid $borders;
+	input[type='text'], input[type='email'] {
+		// styles
 	}
 
 /* ::: SEARCH ::::::::::::::::::::::::::::::::::::::::: */
 
 	.search-form input[type='text'] {
-
+		// styles
 	}
