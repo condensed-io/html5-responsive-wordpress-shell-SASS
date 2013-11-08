@@ -21,6 +21,9 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 		color: $page-txt;
 	}
 
+	// transition all links by default
+	a:hover, a:active, a:focus {
+		@include transition (all .3s ease-in-out);
 	}
 
 
