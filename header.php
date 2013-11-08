@@ -44,8 +44,6 @@
 
 <!--see http://www.mimoymima.com/2010/03/lab/wordpress-body-tag/-->
 <body <?php body_class(); ?>>
-
-	<!--div class="preloader"></div-->
 		
 	<!--SITE HEADER-->
 	<header class="site-header" role="banner">

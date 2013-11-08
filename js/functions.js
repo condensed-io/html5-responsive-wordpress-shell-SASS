@@ -29,16 +29,6 @@
 // DOCUMENT READY FUNCTION: uses noConflict to work with other libraries
 jQuery(document).ready(function($) {
 
-//  // site preloader -- also uncomment the div in the header and the css style for #preloader
-//  $(window).load(function(){
-//  	$('#preloader').fadeOut('slow',function(){$(this).remove();});
-//  });
-	
-// //-----Select Linker -- To use, add the class LinkSelect to your form -- by mimoYmima.com
-// 	$('.link-select select').change(function(){ 
-// 		var LinkTo = $('.link-select select').val();
-// 		top.location.href = LinkTo;
-// 	});
 
 //-----Show and Hide Stuff
 	$(".toggle")
