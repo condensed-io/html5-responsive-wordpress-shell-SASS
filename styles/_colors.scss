@@ -1,30 +1,80 @@
 //::: COLOR REFERENCE :::::::::::::::::::::::::::::
 
-$light-blue: #CAF3FF;
-$blue: #39C;
-$tan: #EBDBBD;
-$orange: #FC0;
-$cream: #F9F4EB;
-$dark-grey: #333;
-
+// A few default color values that all sites should have
 $white: #FFF;
 $black: #000;
 $black-50: rgba(0,0,0,.50);
+$dark-grey: #333;
+
+// Define your color values here, these are placeholders
+
+$orange: #F60;
+$cream: #F9F4EB;
+
+
 
 
 
 //::: COLOR ASSIGNMENT :::::::::::::::::::::::::::::
+
+// Assign these based on the colors defined above
 
 	// Page
 	$page-bkg: $cream;
 	$page-txt: $dark-grey;
 
 	// Links
-	$link-default-off: $blue;
+	$link-default-off: $orange;
 	$link-default-on: $black;
+
+	// Buttons
+	$button-bkg-off: $orange;
+	$button-bkg-on: $black;
+	$button-txt-off: $white;
+	$button-txt-on: $white;
 
 	// Borders
 	$borders: $dark-grey;
 
 	// Header
 	$header-bkg: $cream;
+
+	// Forms
+	$form-bkg: $black;
+	$form-txt: $white;
+	$btn-bkg-on: $orange;
+	$btn-txt-on: $black;
+	$btn-bkg-off: $black;
+	$btn-txt-off: $orange;
+
+
+
+/* ::: COLORED SECTIONS ::::::::::::::::::::::::::::::::: */
+
+// add this class to a section of the page that you want to change the color of
+
+	.orange-section {
+		background: $orange;
+		color: $black;
+		a {
+			&:link, &:visited {
+				color: $black;
+			}
+			&:hover, &:focus, &:active {
+				color: $black-50;
+			}
+		}
+		.button {
+			&:hover, &:focus, &:active {
+				background: $black-50;
+				color: $orange;
+			}
+		}
+	}
+
+
+
+/* ::: CLASSES ::::::::::::::::::::::::::::::::: */
+
+// you can use these inline in your html
+	.yellow { color: $orange;}
