@@ -32,12 +32,6 @@ If you have anything to add please give a pull request
 	body {
 		line-height: 1;
 	}
-	ul {
-		list-style: none;
-	}
-	ol ol {
-		list-style-type: lower-alpha;
-	}
 	blockquote, q {
 		quotes: none;
 	}
@@ -149,15 +143,16 @@ If you have anything to add please give a pull request
 		margin-left: 2em;
 	}
 
-	ol {
-		
-	}
-	
-	ol ol {
-		margin: .2em 2em .8em 2em;
+	.content-main ul li {
+		margin-bottom: 1em;
 	}
 	
 	ul ul {
+		margin: .2em 2em .8em 2em;
+	}
+
+	ol ol {
+		list-style-type: lower-alpha;
 		margin: .2em 2em .8em 2em;
 	}
 
