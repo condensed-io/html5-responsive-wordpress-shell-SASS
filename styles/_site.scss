@@ -51,6 +51,11 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 
 
 /* ::: MAIN NAV ::::::::::::::::::::::::::::::::: */
+	
+	.fixed { // this is used for the sticky header
+	    position: fixed;
+	    top: 0;
+	}
 
 	.nav-menu a {
 		text-decoration: none;
