@@ -5,14 +5,54 @@ FORMS
 */
 
 
-/* ::: TEXT INPUTS ::::::::::::::::::::::::::::::::::::::::: */
+/* ::: ELEMENTS ::::::::::::::::::::::::::::::::::::::::: */
 		
-	input[type='text'], input[type='email'] {
-		// styles
+	input, textarea, select {
+		background: $form-bkg;
+		color: $form-txt;
+		border: 0;
+		outline: none;
+		font-size: 1em;
+		font-weight: 100;
+		vertical-align: middle;
+		padding: .7em 1em;
 	}
 
-/* ::: SEARCH ::::::::::::::::::::::::::::::::::::::::: */
+	input[type='text'], input[type='email']  {
+		width: 100%;
+		// //bourbon mixin that allows you to style placeholders - it adds all the vendor prefixes
+		// @include placeholder {
+		// 
+		// }
+	}
+	select {
+		height: 2.7em;
+		width: 100%;
+	}
+	textarea {
+		width: 100%;
+	}
 
-	.search-form input[type='text'] {
-		// styles
+	input[type='submit'], .button {
+		border-radius: .5em;
+		background: $btn-bkg-off;
+		color: $btn-txt-off;
+		padding: .5em 1em;
+		&:link, &:visited {
+			color: $btn-txt-off;
+			text-decoration: none;
+		}
+		&:hover, &:focus, &:active {
+			text-decoration: none;
+			background: $btn-bkg-on;
+			color: $btn-txt-on;
+			@include transition (all .3s ease-in-out);
+		}
+	}
+	.button.toggle {
+		display: inline-block;
+		border-bottom: 0;
+		&:before { // remove the +- from toggle if it's a button
+			display: none;
+		}
 	}
