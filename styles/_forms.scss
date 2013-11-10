@@ -46,6 +46,7 @@ FORMS
 			text-decoration: none;
 			background: $btn-bkg-on;
 			color: $btn-txt-on;
+			cursor: pointer;
 			@include transition (all .3s ease-in-out);
 		}
 	}
