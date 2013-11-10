@@ -138,7 +138,7 @@ If you have anything to add please give a pull request
 
 /* ::: LISTS ::::::::::::::::::::::::::::::::::::::::: */
 
-	ul {
+	.content-main ul {
 		list-style-type: disc;
 		margin-left: 2em;
 	}
@@ -147,7 +147,7 @@ If you have anything to add please give a pull request
 		margin-bottom: 1em;
 	}
 	
-	ul ul {
+	.content-main ul ul {
 		margin: .2em 2em .8em 2em;
 	}
 
