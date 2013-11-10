@@ -30,6 +30,7 @@
 jQuery(document).ready(function($) {
 
 
+
 /* ::: SHOW AND HIDE ::::::::::::::::::::::::::::::::: */
 
 	$(".toggle")
@@ -50,6 +51,30 @@ jQuery(document).ready(function($) {
 	});
 
 
+
+/* ::: MOBILE NAV ::::::::::::::::::::::::::::::::: */
+
+	$(function() {
+		var mobileBtn = $('.icon-list');
+		var menu = $('.topnav-links');
+		var menuHeight  = menu.height();
+		$(mobileBtn).on('click', function(e) {
+			e.preventDefault();
+			menu.slideToggle();
+		});
+	});
+
+	// If the browser size gets bigger than 500px make the nav visible again
+	$(window).resize(function(){
+		var w = $(window).width();
+		var menu = $('.topnav-links');
+		if(w > 900 && menu.is(':hidden')) {
+			menu.css( "display", "block" );
+		}
+	});
+
+
+
 /* ::: STICKY NAV ::::::::::::::::::::::::::::::::: */
 	
 	// Check the initial Position of the Sticky Header
@@ -65,9 +90,11 @@ jQuery(document).ready(function($) {
     });
 
 
+
 /* ::: MOVE LABELS INTO INPUTS IN FORMS ::::::::::::::::::::::::::::::::: */
 
 	// target gform fields and mailchimp fields (you can add more)
+	// there's probably a better way to do this, try rewriting this script one day
 	
 	$('ul[id*=gform_fields] li, .mc-field-group').each(function(){
 
@@ -82,8 +109,10 @@ jQuery(document).ready(function($) {
 	});
 
 
+
 /* ::: POPUP LINKS ::::::::::::::::::::::::::::::::: */
 	$('.popup').attr('target', '_blank');
+
 
 
 /* ::: SCROLL INTO VIEW ::::::::::::::::::::::::::::::::: */
