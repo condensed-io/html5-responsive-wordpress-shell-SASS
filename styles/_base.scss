@@ -214,9 +214,14 @@ If you have anything to add please give a pull request
 	}
 
  
+ 
+ /* ::: Misc ::::::::::::::::::::::::::::::::::::::::: */
 
- /* ::: FitVids ::::::::::::::::::::::::::::::::::::::::: */
-
+ 	// This is used for the sticky header
+	.fixed {
+	    position: fixed !important;
+	    top: 0;
+	}
 
 	// FitVid CSS
 	.fitvid {
