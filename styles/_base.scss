@@ -4,10 +4,6 @@ BASE - HOW LOW CAN YOU GO?
 
 Base is for standard things that don't change from project to project
 
-You probably don't ever need to edit this sheet unless you find a but
-
-If you have anything to add please give a pull request
-
 */
 
 
@@ -118,7 +114,7 @@ If you have anything to add please give a pull request
 
 	// Show-Hide
 	.make-link { color: $link-default-off !important; text-decoration: none; margin-bottom: .5em; } 
-	.make-link:hover, .make-link:focus, .make-link:active { cursor: pointer; color: #C60; text-decoration: underline; }
+	.make-link:hover, .make-link:focus, .make-link:active { cursor: pointer; color: $link-default-on; text-decoration: underline; }
 	ul.hide { margin: 0 0 0 1em !important; padding: 0 !important; }
 
 	// Adds plus and minus signs to header -- could be changed for other icons using an icon font - overwrite in the site.scss file
@@ -150,10 +146,16 @@ If you have anything to add please give a pull request
 	.content-main ul ul {
 		margin: .2em 2em .8em 2em;
 	}
-
-	ol ol {
-		list-style-type: lower-alpha;
-		margin: .2em 2em .8em 2em;
+	
+	.content-main ol {
+		margin-left: 2em;
+		li {
+			margin-bottom: 1em;
+		}
+		ol {
+			list-style-type: lower-alpha;
+			margin: .2em 2em .8em 2em;
+		}
 	}
 
 	// Horiz List
@@ -214,6 +216,27 @@ If you have anything to add please give a pull request
 	}
 
  
+
+ /* ::: Tables ::::::::::::::::::::::::::::::::::::::::: */
+
+	table {
+		width: 100%;
+		font-size: 80%;
+		@include breakpoint(medium) {
+			font-size: 90%;
+		}
+	}
+	th {
+		font-weight: 600;
+		white-space: nowrap;
+		padding: .5em;
+	}
+	td {
+		padding: .5em;
+		border-bottom: 1px dotted $borders;
+	}
+
+
  
  /* ::: Misc ::::::::::::::::::::::::::::::::::::::::: */
 
