@@ -1,5 +1,5 @@
-// mYm Functions v 1.5 - brent@mimoymima.com
-// last edited: Nov 27, 2011
+// mYm Functions v 2 - brent@mimoymima.com
+// last edited: Nov 10, 2013
 
 
 // fix for ipad resizing content on orientation change -- updated version of jeremy keith's fix
