@@ -27,6 +27,11 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 		@include transition (all .3s ease-in-out);
 	}
 
+	th {
+		background-color: $black;
+		color: $white;
+	}
+
 
 /* ::: PAGE WRAPPER ::::::::::::::::::::::::::::::::::::::::: */
 	
