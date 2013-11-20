@@ -112,10 +112,24 @@ Base is for standard things that don't change from project to project
 	/* a class you can add when doing production to hide elements and keep them accessible */
 	.access-hide { @include hide(); }
 
+
 	// Show-Hide
-	.make-link { color: $link-default-off !important; text-decoration: none; margin-bottom: .5em; } 
-	.make-link:hover, .make-link:focus, .make-link:active { cursor: pointer; color: $link-default-on; text-decoration: underline; }
-	ul.hide { margin: 0 0 0 1em !important; padding: 0 !important; }
+	.make-link {
+		color: $link-default-off;
+		text-decoration: none;
+		margin-bottom: .5em;
+	}
+	.make-link:hover,
+	.make-link:focus,
+	.make-link:active {
+		@include transition (all .4s ease-in-out);
+		cursor: pointer;
+		color: $link-default-on;
+ 	}
+ 	ul.hide {
+ 		margin: 0 0 0 1em !important;
+ 		padding: 0 !important;
+ 	}
 
 	// Adds plus and minus signs to header -- could be changed for other icons using an icon font - overwrite in the site.scss file
 	.header-shown:before { content: "-"; margin-right: .5em; }
