@@ -57,3 +57,35 @@ FORMS
 			display: none;
 		}
 	}
+
+
+// the styles below are only relevant if you use gravity forms or a mailchimp email signup, so feel free to remove them
+
+
+/* ::: GRAVITY FORMS ::::::::::::::::::::::::::::::::::::::::: */
+
+
+	.gform_body {
+		ul {
+			list-style-type: none;
+			margin: 0;
+			margin-top: 1em;
+			li {
+				margin-bottom: .5em;
+			}
+		}	
+	}
+
+	li.gfield {
+		list-style-type: none !important;
+	}
+
+
+
+/* ::: MAILCHIMP EMAIL SIGNUP ::::::::::::::::::::::::::::::::::::::::: */
+
+	#mc-embedded-subscribe-form {
+		.mc-field-group { margin-bottom: .5em; }
+	}
+
+	
