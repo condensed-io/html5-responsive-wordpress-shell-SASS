@@ -4,6 +4,8 @@
 $white: #FFF;
 $black: #000;
 $black-50: rgba(0,0,0,.50);
+$light-grey: #CCC;
+$grey: #666;
 $dark-grey: #333;
 
 // Define your color values here, these are placeholders
@@ -40,12 +42,20 @@ $cream: #F9F4EB;
 	$header-bkg: $cream;
 
 	// Forms
-	$form-bkg: $black;
-	$form-txt: $white;
-	$btn-bkg-on: $orange;
-	$btn-txt-on: $black;
+
+	$form-bkg-off: $black;
+	$form-bkg-on: $orange;
+	$form-txt-off: $white;
+	$form-txt-on: $black;
+
+	$form-placeholder-off: $grey;
+	$form-placeholder-on: $light-grey;
+
 	$btn-bkg-off: $black;
+	$btn-bkg-on: $orange;
+	
 	$btn-txt-off: $orange;
+	$btn-txt-on: $black;
 
 
 

@@ -118,11 +118,11 @@ Base is for standard things that don't change from project to project
 		color: $link-default-off;
 		text-decoration: none;
 		margin-bottom: .5em;
+		@include transition (all .4s ease-in-out);
 	}
 	.make-link:hover,
 	.make-link:focus,
 	.make-link:active {
-		@include transition (all .4s ease-in-out);
 		cursor: pointer;
 		color: $link-default-on;
  	}
