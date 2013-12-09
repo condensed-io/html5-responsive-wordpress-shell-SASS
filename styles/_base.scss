@@ -42,6 +42,30 @@ Base is for standard things that don't change from project to project
 
 
 
+/* ::: Tables ::::::::::::::::::::::::::::::::::::::::: */
+
+	table {
+	    display: block;
+	    overflow-x: auto;
+	    width: 100%;
+	    -webkit-overflow-scrolling: touch;
+		font-size: 80%;
+		@include breakpoint(medium) {
+			font-size: 90%;
+		}
+	}
+	th {
+		font-weight: 600;
+		white-space: nowrap;
+		padding: .5em;
+	}
+	td {
+		padding: .5em;
+		border-bottom: 1px dotted $borders;
+	}
+
+
+
 /* ::: OTHER BROWSER FIXES ::::::::::::::::::::::::::::::::::::::::: */
 
 	// Fixes a bug in webkit with fonts being animated 
@@ -234,29 +258,14 @@ Base is for standard things that don't change from project to project
 	}
 
  
-
- /* ::: Tables ::::::::::::::::::::::::::::::::::::::::: */
-
-	table {
-		width: 100%;
-		font-size: 80%;
-		@include breakpoint(medium) {
-			font-size: 90%;
-		}
-	}
-	th {
-		font-weight: 600;
-		white-space: nowrap;
-		padding: .5em;
-	}
-	td {
-		padding: .5em;
-		border-bottom: 1px dotted $borders;
-	}
-
-
- 
  /* ::: Misc ::::::::::::::::::::::::::::::::::::::::: */
+
+	// Code
+ 	pre {
+ 		overflow: scroll;
+ 		padding: 1em 2em;
+ 		border-radius: .5em;
+ 	}
 
  	// This is used for the sticky header
 	.fixed {
