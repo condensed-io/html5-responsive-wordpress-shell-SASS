@@ -44,6 +44,7 @@ Base is for standard things that don't change from project to project
 
 /* ::: Tables ::::::::::::::::::::::::::::::::::::::::: */
 
+	// mobile scroll fix
 	table {
 	    display: block;
 	    overflow-x: auto;
@@ -52,6 +53,7 @@ Base is for standard things that don't change from project to project
 		font-size: 80%;
 		@include breakpoint(medium) {
 			font-size: 90%;
+			display: table;
 		}
 	}
 	th {
