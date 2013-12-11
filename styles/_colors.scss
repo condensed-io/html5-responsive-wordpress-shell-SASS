@@ -43,25 +43,28 @@ $cream: #F9F4EB;
 
 	// Forms
 
-	$form-bkg-off: $black;
-	$form-bkg-on: $orange;
-	$form-txt-off: $white;
-	$form-txt-on: $black;
+		//general
+		$form-bkg-off: $black;
+		$form-bkg-on: $orange;
+		$form-txt-off: $white;
+		$form-txt-on: $black;
 
-	$form-placeholder-off: $grey;
-	$form-placeholder-on: $light-grey;
+		//placeholders
+		$form-placeholder-off: $grey;
+		$form-placeholder-on: $light-grey;
 
-	$btn-bkg-off: $black;
-	$btn-bkg-on: $orange;
-	
-	$btn-txt-off: $orange;
-	$btn-txt-on: $black;
+		//buttons
+		$btn-bkg-off: $black;
+		$btn-bkg-on: $orange;
+		$btn-txt-off: $orange;
+		$btn-txt-on: $black;
 
 
 
 /* ::: COLORED SECTIONS ::::::::::::::::::::::::::::::::: */
 
-// add this class to a section of the page that you want to change the color of
+// add this class to a section of the page that you want to change to have a certain background color
+// this is just here to show you how to make a re-usable class for big sections of the site that change colors
 
 	.orange-section {
 		background: $orange;
