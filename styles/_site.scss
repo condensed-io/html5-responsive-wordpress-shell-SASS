@@ -40,6 +40,7 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 		@include breakpoint(medium) {
 			padding: 0 5%;
 			max-width: 1400px;
+			margin: 0 auto // center the content
 		}
 	}
 
