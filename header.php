@@ -45,7 +45,7 @@
 <!--see http://www.mimoymima.com/2010/03/lab/wordpress-body-tag/-->
 <body <?php body_class(); ?>>
 		
-	<!--SITE HEADER-->
+	<!--SITE HEADER ~ for SEO ~ hidden with CSS-->
 	<header class="site-header" role="banner">
 		<h1 class="site-title"><?php if(!is_home()) { wp_title(''); echo " :: "; } ?><a href="/"><?php bloginfo('name'); ?></a></h1>
 	</header>
