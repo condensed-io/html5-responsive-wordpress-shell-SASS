@@ -69,8 +69,13 @@
 		clear: both; // this is needed for headings between floated content areas
 	}
 
-	h1 { font-size: 2.5em; }
-	h2 { font-size: 1.7em; }
+	// add default sizes
+	h1 {
+		font-size: 2.5em;
+	}
+	h2 {
+		font-size: 1.7em;
+	}
 
 
 
