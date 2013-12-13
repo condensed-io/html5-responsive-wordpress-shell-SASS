@@ -5,7 +5,7 @@ ie7 hacks
 /* Self Clearing Floats */
 .clear-fix { min-height: 1%; }
 
-img { -ms-interpolation-mode: bicubic; } /* fixes image resizing for ie7 */
+img { -ms-interpolation-mode: bicubic; } /* fixes image resizing */
 
 /* if bullet images are dissapearing for li's, uncomment this stuff below
 
