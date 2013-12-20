@@ -22,9 +22,14 @@
 
 /*--- Display Fonts ~ try to use one or two at max in your design. this one is here for reference---*/
 
+	// The mixin makes it easy to add the font to elements in the stylesheet
 	@mixin condensed() {
 		font-family: 'condensed';
 		font-weight: normal;
+	}
+	// The class makes it easy to add the font to elements in the HTML
+	.icon-font {
+		@include condensed();
 	}
 
 
