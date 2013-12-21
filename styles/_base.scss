@@ -174,13 +174,14 @@ Base is for standard things that don't change from project to project
 
 /* ::: LISTS ::::::::::::::::::::::::::::::::::::::::: */
 
+	// bulleted lists in the content area
 	.content-main ul {
 		margin-left: 2em;
 		margin-top: 1em;
 		margin-bottom: 1.5em;
+		list-style-type: square;
 		li {
 			margin: 0 2em .2em 1em;
-			list-style-type: square;
 		}
 		ul {
 			margin: .5em 2em .8em 1em;
@@ -210,29 +211,12 @@ Base is for standard things that don't change from project to project
 
 	// Lists Without Bullets
 	.no-bullet {
-		list-style-type: none;
+		list-style-type: none !important; // important needed to overwrite the default styling
 		margin-bottom: 2em;
 		margin-left: 0;
 	}
 	.no-bullet li {
 		margin-bottom: .5em;
-	}
-
-	// Bullet Lists: Nicer formatting for bulleted lists
-	.bullet-list {
-		margin: 1em 0 2em 0;
-		line-height: 150%;
-	}
-	.bullet-list li {
-		margin: 0 2em 1em 2em;
-		list-style-type: square;
-	}
-	.bullet-list li ul {
-		margin: .5em 0 1.5em 0;
-	}
-	.bullet-list li ul li {
-		list-style-type: circle;
-		margin: 0 2em .5em 2em;
 	}
 
 	// Link Lists
