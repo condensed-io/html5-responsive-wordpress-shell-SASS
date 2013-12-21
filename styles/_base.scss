@@ -207,24 +207,23 @@ Base is for standard things that don't change from project to project
 		}
 	}
 
-	// Horiz List
+	// Horizontal List
 	.horiz-list { display: inline-block; }
 	.horiz-list ul { display: inline-block; }
 	.horiz-list ul ul { display: none; }
 	.horiz-list li { display: inline-block; }
 
 	// Lists Without Bullets
-	.no-bullet {
-		list-style-type: none !important; // important needed to overwrite the default styling
-		margin-bottom: 2em;
+	ul.no-bullet {
 		margin-left: 0;
+		list-style-type: none;
 	}
-	.no-bullet li {
+	ul.no-bullet li {
 		margin-bottom: .5em;
 	}
 
 	// Link Lists
-	.link-list li {
+	ul.link-list li {
 		list-style-type: none;
 	}
 	li.link-list a, ul.link-list li a {
@@ -234,11 +233,11 @@ Base is for standard things that don't change from project to project
 	}
 
 	// PDF Lists
-	.pdf-link {
+	ul.pdf-link {
 		padding-left: 20px;
 		margin-left: 5px;
 	}
-	.pdf-list li {
+	ul.pdf-list li {
 		list-style-type: none;
 	}
 	li.pdf-list a, ul.pdf-list li a {
