@@ -95,29 +95,29 @@ jQuery(document).ready(function($) {
 
 // L I N K //  http://andrewhenderson.me/tutorial/jquery-sticky-sidebar/
 	
-//uncomment these lines to use//////////	// selector for the links you want to activate
-//uncomment these lines to use//////////	// the links need to have a hash that leads to an element on the page with the same ID (which is how you probably makred it up right)
-//uncomment these lines to use//////////	$('.topnav-links a').click(function(){
-//uncomment these lines to use//////////	
-//uncomment these lines to use//////////		var el = $(this).attr('href');
-//uncomment these lines to use//////////		var elWrapped = $(el);
-//uncomment these lines to use//////////		
-//uncomment these lines to use//////////		scrollToDiv(elWrapped,40);
-//uncomment these lines to use//////////		return false;
-//uncomment these lines to use//////////		
-//uncomment these lines to use//////////	});
-//uncomment these lines to use//////////		
-//uncomment these lines to use//////////	function scrollToDiv(element,navheight){
-//uncomment these lines to use//////////		
-//uncomment these lines to use//////////		var offset = element.offset();
-//uncomment these lines to use//////////		var offsetTop = offset.top;
-//uncomment these lines to use//////////		var totalScroll = offsetTop-navheight;
-//uncomment these lines to use//////////		
-//uncomment these lines to use//////////		$('body,html').animate({
-//uncomment these lines to use//////////		scrollTop: totalScroll
-//uncomment these lines to use//////////		}, 500);
-//uncomment these lines to use//////////	
-//uncomment these lines to use//////////	}
+	// selector for the links you want to activate, adding class of jumplink but you can add more by comma separating them
+	// the links need to have a hash that leads to an element on the page with the same ID (which is how you probably makred it up right)
+	$('.jumplink').click(function(){
+	
+		var el = $(this).attr('href');
+		var elWrapped = $(el);
+		
+		scrollToDiv(elWrapped,40);
+		return false;
+		
+	});
+		
+	function scrollToDiv(element,navheight){
+		
+		var offset = element.offset();
+		var offsetTop = offset.top;
+		var totalScroll = offsetTop-navheight;
+		
+		$('body,html').animate({
+		scrollTop: totalScroll
+		}, 500);
+	
+	}
 
 
 
