@@ -8,8 +8,6 @@ FORMS
 /* ::: ELEMENTS ::::::::::::::::::::::::::::::::::::::::: */
 		
 	input, textarea, select {
-		background: $form-bkg-off;
-		color: $form-txt-off;
 		border: 0;
 		outline: none;
 		font-size: 1em;
@@ -22,20 +20,7 @@ FORMS
 		width: 100%;
 		@include transition (all .3s ease-in-out);
 		@include placeholder {
-			color: $form-placeholder-off;
 			@include transition (all .3s ease-in-out);
-		}
-		&:hover, &:active {
-			@include placeholder {
-				color: $form-placeholder-on;
-			}
-		}
-		&:focus {
-			color: $form-txt-on;
-			background-color: $form-bkg-on;
-			@include placeholder {
-				color: $black-50;
-			}	
 		}
 	}
 	select {
@@ -48,18 +33,13 @@ FORMS
 
 	input[type='submit'], .button {
 		border-radius: .5em;
-		background: $btn-bkg-off;
-		color: $btn-txt-off;
 		padding: .5em 1em;
 		&:link, &:visited {
-			color: $btn-txt-off;
 			text-decoration: none;
 			@include transition (all .3s ease-in-out);
 		}
 		&:hover, &:focus, &:active {
 			text-decoration: none;
-			background: $btn-bkg-on;
-			color: $btn-txt-on;
 			cursor: pointer;
 		}
 	}

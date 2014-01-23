@@ -63,8 +63,8 @@
 
 /*--- Links ---*/
 
-	a:link, a:visited { color: $link-default-off; text-decoration: underline; }
-	a:hover, a:active, a:focus { color: $link-default-on; text-decoration: none; }
+	a:link, a:visited { text-decoration: underline; }
+	a:hover, a:active, a:focus { text-decoration: none; }
 
 
 /*--- Headings ---*/

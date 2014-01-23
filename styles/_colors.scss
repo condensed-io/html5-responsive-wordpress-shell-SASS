@@ -4,6 +4,7 @@
 $white: #FFF;
 $black: #000;
 $black-50: rgba(0,0,0,.50);
+$lighter-grey: #EEE;
 $light-grey: #CCC;
 $grey: #666;
 $dark-grey: #333;
@@ -11,67 +12,105 @@ $dark-grey: #333;
 // Define your color values here, these are placeholders
 
 $orange: #F60;
-$cream: #F9F4EB;
+$orange-50: rgba(255,102,0,.50);
+$orange-70: rgba(255,102,0,.70);
 
 
+//::: ELEMENTS :::::::::::::::::::::::::::::
 
+	// set the colors on the page
+	html {
+		background: $white;
+		color: $dark-grey;
+	}
 
+	body {
+		background: $white;
+		color: $dark-grey;
+	}
 
-//::: COLOR ASSIGNMENT :::::::::::::::::::::::::::::
+	th {
+		background-color: $black;
+		color: $white;
+	}
+	td {
+		border-bottom: 1px dotted $light-grey;
+	}
 
-// Assign these based on the colors defined above
+	/*--- Links ---*/
 
-	// Page
-	$page-bkg: $cream;
-	$page-txt: $dark-grey;
+	a:link, a:visited { color: $orange; }
+	a:hover, a:active, a:focus { color: $black; }
+	
+	// Show-Hide
 
-	// Links
-	$link-default-off: $orange;
-	$link-default-on: $black;
+		.make-link {
+			color: $orange;
+		}
+		.make-link:hover,
+		.make-link:focus,
+		.make-link:active {
+			color: $black;
+		}
 
-	// Borders
-	$borders: $dark-grey;
+	.indicator a {
+		background-color: $orange;
+	}
 
-	// Header
-	$header-bkg: $cream;
-
-	// Forms
-
-		// General
-		$form-bkg-off: $black;
-		$form-bkg-on: $orange;
-		$form-txt-off: $white;
-		$form-txt-on: $black;
-
-		// Placeholder Text
-		$form-placeholder-off: $grey;
-		$form-placeholder-on: $light-grey;
-
-		// Buttons
-		$btn-bkg-off: $black;
-		$btn-bkg-on: $orange;
-		$btn-txt-off: $orange;
-		$btn-txt-on: $black;
+	input, textarea, select {
+		background: $lighter-grey;
+		color: $dark-grey;
+	}
 
 
 
 /* ::: COLORED SECTIONS ::::::::::::::::::::::::::::::::: */
+// Colors are added based on background
 
-// add this class to a section of the page that you want to change to have a certain background color
-// this is just here to show you how to make a re-usable class for big sections of the site that change colors
+	// ORANGE SECTION
 
 	.orange-section {
 		background: $orange;
 		color: $black;
 		a {
 			&:link, &:visited {
-				color: $black;
+				color: $orange-50;
 			}
 			&:hover, &:focus, &:active {
-				color: $black-50;
+				color: $black;
 			}
 		}
 		.button {
+			&:hover, &:focus, &:active {
+				background: $black-50;
+				color: $orange;
+			}
+		}
+
+		input[type='text'], input[type='email']  {
+			@include placeholder {
+				color: $orange-70;
+			}
+			&:hover, &:active {
+				@include placeholder {
+					color: $white;
+				}
+			}
+			&:focus {
+				color: $black;
+				background-color: $black-50;
+				@include placeholder {
+					color: $black;
+				}	
+			}
+		}
+
+		input[type='submit'], .button {
+			background: $black;
+			color: $orange;
+			&:link, &:visited {
+				color: $orange;
+			}
 			&:hover, &:focus, &:active {
 				background: $black-50;
 				color: $orange;
@@ -84,4 +123,4 @@ $cream: #F9F4EB;
 /* ::: CLASSES ::::::::::::::::::::::::::::::::: */
 
 // example of how to make classes you can use inline in your html
-	.orange { color: $orange;}
+	.orange { color: $orange; }

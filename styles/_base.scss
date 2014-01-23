@@ -67,7 +67,6 @@ Base is for standard things that don't change from project to project
 	}
 	td {
 		padding: .5em;
-		border-bottom: 1px dotted $borders;
 	}
 
 
@@ -145,7 +144,6 @@ Base is for standard things that don't change from project to project
 
 	// Show-Hide
 	.make-link {
-		color: $link-default-off;
 		text-decoration: none;
 		margin-bottom: .5em;
 		@include transition (all .4s ease-in-out);
@@ -154,7 +152,6 @@ Base is for standard things that don't change from project to project
 	.make-link:focus,
 	.make-link:active {
 		cursor: pointer;
-		color: $link-default-on;
  	}
  	ul.hide {
  		margin: 0 0 0 1em !important;
@@ -167,7 +164,7 @@ Base is for standard things that don't change from project to project
 	
 	// Indicators
 	.indicator { position: absolute; z-index: 100; text-align: center; left: 0; top: 0; }
-	.indicator a { width: 20em; background-color: #FF0; display: block; text-transform: uppercase; text-decoration: none; padding: 1em; }
+	.indicator a { width: 20em; display: block; text-transform: uppercase; text-decoration: none; padding: 1em; }
 	.indicator a:link, .indicator a:visited { color: black; }
 	.indicator a:hover, .indicator a:focus, .indicator a:active { color: black; background-color: #FFF; text-decoration: none; cursor: pointer; }
 
