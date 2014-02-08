@@ -35,6 +35,9 @@ http://bourbon.io/
 	  @else if $point == medium {
 	    @media (min-width: em(650)) { @content; }
 	  }
+	  @else if $point == small { // most styles for small screen should go outside of any media queries, this is useful for stuff like hiding the nav for mobile
+	    @media (min-width: em(0)) { @content; }
+	  }
 	}
 
 
