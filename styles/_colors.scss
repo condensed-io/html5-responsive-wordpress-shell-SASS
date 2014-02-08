@@ -67,23 +67,25 @@ $orange-70: rgba(255,102,0,.70);
 /* ::: COLORED SECTIONS ::::::::::::::::::::::::::::::::: */
 // Colors are added based on background
 
+	
+	// BLACK SECTION
+	.black-section {
+		// add colors
+	}
+
 	// ORANGE SECTION
 
 	.orange-section {
-		background: $orange;
+		
+		background-color: $orange;
 		color: $black;
+
 		a {
 			&:link, &:visited {
 				color: $orange-50;
 			}
 			&:hover, &:focus, &:active {
 				color: $black;
-			}
-		}
-		.button {
-			&:hover, &:focus, &:active {
-				background: $black-50;
-				color: $orange;
 			}
 		}
 
@@ -106,13 +108,12 @@ $orange-70: rgba(255,102,0,.70);
 		}
 
 		input[type='submit'], .button {
-			background: $black;
-			color: $orange;
 			&:link, &:visited {
+				background-color: $black;
 				color: $orange;
 			}
 			&:hover, &:focus, &:active {
-				background: $black-50;
+				background-color: $black-50;
 				color: $orange;
 			}
 		}
