@@ -21,6 +21,8 @@
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
+	<!--ADD GOOGLE FONTS HERE-->
+
 	<!-- CSS -->
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" media="screen" />
 
