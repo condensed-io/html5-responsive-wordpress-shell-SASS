@@ -136,21 +136,18 @@ Base is for standard things that don't change from project to project
 /* ::: UTILITY ::::::::::::::::::::::::::::::::::::::::: */
 
 	// Fixed header jumplink -- http://css-tricks.com/hash-tag-links-padding/
-	.anchor:before { 
+	.anchor:before { // adjust the margin and height for your situation
 	  display: block; 
 	  content: " "; 
-	  margin-top: -20px; 
-	  height: 10px; 
+	  margin-top: -60px; 
+	  height: 40px; 
 	  visibility: hidden; 
 	}
 	.col-fix:before {
 	  content: " "; 
 	  visibility: hidden; 
 	}
-	.footer .anchor:before {
-		height: 140px;
-		margin-top: -120px;
-	}
+
 
 
 /* ::: WARNINGS ::::::::::::::::::::::::::::::::::::::::: */
