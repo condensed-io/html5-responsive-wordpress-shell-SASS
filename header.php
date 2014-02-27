@@ -27,6 +27,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" media="screen" />
 
 	<!-- BEGIN: IE Specific Hacks -->
+	<!--[if IE 9]><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/styles/ie9.css" media="screen" /><![endif]-->
 	<!--[if IE 8]><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/styles/ie8.css" media="screen" /><![endif]-->
 	<!--[if IE 7]><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/styles/ie7.css" media="screen" /><![endif]-->
 	<!--END: IE Specific Hacks-->

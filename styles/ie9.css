@@ -1,0 +1,5 @@
+/*
+ie9 hacks
+*/
+
+img { -ms-interpolation-mode: bicubic; } /* fixes image resizing */
