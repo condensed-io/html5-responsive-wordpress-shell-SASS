@@ -27,8 +27,7 @@
 		<!--END: Contact Info-->
 		
 		<!--BEGIN: Credits :: If you use this theme please consider keeping our credit in the footer.  You can delete it if you need to. -->
-		<p class="cred-yours"><small><a href="http://html5.mimoymima.com" title="keyword rich title">Your Credit Here</a></small></p>
-		<p class="cred-mine"><small><a href="http://html5.mimoymima.com" title="Build your Wordpress themes faster - HTML5 WordPress Shell">built using the shell</a></small></p>
+		<article class="credit"><h1><a href="http://html5.mimoymima.com" title="Build your Wordpress themes faster - HTML5 WordPress Shell">built using the shell</a></h1></article>
 		<!--END: Credits-->
 		
 		<p class="copyright"><small>&copy; <?php echo date('Y'); ?> <?php bloginfo('name')?></small></p>
