@@ -192,14 +192,16 @@ Base is for standard things that don't change from project to project
 
 /* ::: LISTS ::::::::::::::::::::::::::::::::::::::::: */
 
-	// bulleted lists in the content area
 	.content-main ul {
-		margin-left: 2em;
+		margin-left: 1em;
+		@include breakpoint(medium) {
+			margin-left: 2em;
+		}
 		margin-top: 1em;
 		margin-bottom: 1.5em;
-		list-style-type: square;
 		li {
-			margin: 0 2em .2em 1em;
+			margin: 0 2em .2em 0;
+			list-style-type: square;
 		}
 		ul {
 			margin: .5em 2em .8em 1em;
@@ -209,9 +211,26 @@ Base is for standard things that don't change from project to project
 			}
 		}
 	}
-	
+
+	.content-main dl {
+		margin-left: 1em;
+		@include breakpoint(medium) {
+			margin-left: 2em;
+		}
+		dt {
+			border-bottom: 1px dotted;
+			font-weight: 900;
+			margin-bottom: .5em;
+			padding-bottom: .2em;
+			margin-top: 1.5em;
+		}
+	}
+
 	.content-main ol {
-		margin-left: 2em;
+		margin-left: 1em;
+		@include breakpoint(medium) {
+			margin-left: 2em;
+		}
 		li {
 			margin-bottom: 1em;
 		}
