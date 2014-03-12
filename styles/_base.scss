@@ -111,12 +111,35 @@ Base is for standard things that don't change from project to project
 /* ::: WordPress ::::::::::::::::::::::::::::::::::::::::: */
 	
 	// WordPress WYSIWYG alignment -- when you put in images that span the entire width of the content area remove the width and height
-	img.aligncenter { max-width: 100%; display: block; margin: 5px auto; }
-    img.alignright { padding: 4px; margin: 0 0 2px 7px; display: inline; }
-    img.alignleft { padding: 4px; margin: 0 7px 2px 0; display: inline; }
+	img.aligncenter.size-full {
+		max-width: 100%;
+		display: block;
+		margin: 5px auto;
+	}
+    img.alignright.size-full {
+    	padding: 4px;
+    	margin: 0 0 2px 15px;
+    	display: inline;
+    	@include breakpoint(medium) {
+    		max-width: 40%;
+    	}
+    	max-width: 100%;
+    }
+    img.alignleft.size-full {
+    	padding: 4px;
+    	margin: 0 15px 2px 0;
+    	display: inline;
+    	@include breakpoint(medium) {
+    		max-width: 40%;
+    	}
+    	max-width: 100%;
+    }
     .alignright { float: right; }
 	.alignleft { float: left; }
-
+	.flush-margin {
+		margin: 0 !important;
+	}
+	
 
 
 /* ::: CLEAR FIXES ::::::::::::::::::::::::::::::::::::::::: */
