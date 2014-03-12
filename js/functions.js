@@ -29,6 +29,9 @@
 // DOCUMENT READY FUNCTION: uses noConflict to work with other libraries
 jQuery(document).ready(function($) {
 
+//*** HACK - should be able to remove this one day when Chrome gets fixed: https://code.google.com/p/chromium/issues/detail?id=336476
+// Forces a re-paint to fix an issue with open sans not showing up on new version of chrome
+$('body').width(jQuery('body').width()+1).width('auto')
 
 
 /* ::: SHOW AND HIDE ::::::::::::::::::::::::::::::::: */
