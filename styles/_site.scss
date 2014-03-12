@@ -35,7 +35,8 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 
 	.site-header {
 		h1 {
-			@include hide(); // this h1 is just for SEO and keeping a good HTML5 document model
+			@include hide(); 
+			// this h1 is just for SEO and keeping a good HTML5 document model
 		}
 	}
 	
