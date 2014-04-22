@@ -13,7 +13,7 @@ Template Name: home-template
 
 <div class="light-grey-section hero">
 	<div class="row">
-		<img class="alignnone size-full" src="<?php the_field('big_splash_image') ?>" alt="beautiful glass doors looking out on a pool" />
+		<img class="alignnone size-full" src="<?php //uncomment to use advanced custom fields// the_field('big_splash_image') ?>" alt="beautiful glass doors looking out on a pool" />
 		<div class="dark-grey-section">
 			<h3><?php //uncomment to use advanced custom fields// the_field( "heading_under_large_image"); ?></h3>
 			<p><?php //uncomment to use advanced custom fields// the_field( "text_under_large_image"); ?></p>
