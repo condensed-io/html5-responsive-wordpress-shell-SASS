@@ -26,8 +26,8 @@
 		</dl-->
 		<!--END: Contact Info-->
 		
-		<!--BEGIN: Credits :: If you use this theme please consider keeping our credit in the footer.  You can delete it if you need to. -->
-		<article class="credit"><h1><a href="http://html5.mimoymima.com" title="Build your Wordpress themes faster - HTML5 WordPress Shell">built using the shell</a></h1></article>
+		<!--BEGIN: Credits :: Web Design Credit -->
+		<article class="credit"><h1>Web Design by <a href="http://www.mimoymima.com" title="web design brooklyn">mimoYmima.com</a></h1></article>
 		<!--END: Credits-->
 		
 		<p class="copyright"><small>&copy; <?php echo date('Y'); ?> <?php bloginfo('name')?></small></p>
