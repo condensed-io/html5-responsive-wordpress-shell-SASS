@@ -33,7 +33,7 @@
 	<!--END: IE Specific Hacks-->
 	
 	<!--REMOVE this viewport code if you are making a site that is NOT responsive-->
-	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
  	<!--REMOVE this viewport code if you are making a site that is NOT responsive-->
 	
 	<?php wp_head(); // wp_head hook for Plugins ~ always keep this just before the /head tag ?>
