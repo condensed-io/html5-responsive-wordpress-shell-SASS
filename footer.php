@@ -1,5 +1,5 @@
 	<!--BEGIN: Footer Section-->
-	<footer class="footer clear-fix row-site">
+	<footer class="footer clear-fix row">
 
 		<!--BEGIN: Footer Nav-->
 		<nav role="navigation">
