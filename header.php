@@ -38,11 +38,6 @@
 	
 	<?php wp_head(); // wp_head hook for Plugins ~ always keep this just before the /head tag ?>
 
-	<!--SCRIPTS-->
-		<script type="text/JavaScript" src="<?php bloginfo('template_url'); ?>/js/functions.js"></script>
-		<!--this is the development version of modernizr, you should get a production version before going live ~ see http://www.modernizr.com-->
-		<script type="text/JavaScript" src="<?php bloginfo('template_url'); ?>/js/modernizr.custom.js"></script>
-
 </head>
 
 <!--see http://www.mimoymima.com/2010/03/lab/wordpress-body-tag/-->

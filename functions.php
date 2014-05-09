@@ -1,5 +1,6 @@
 <?php
 
+
 // BEGIN: if you are logged into the admin area, show what template someone is using on the top of all pages
 //  if (is_user_logged_in()) { add_action('wp_footer', 'show_template'); }
 //
@@ -9,21 +10,6 @@
 //      //global $wp_taxonomies;
 //      //print_r($wp_taxonomies['sections']);
 //  }
-
-// // create a new taxonomy called 'Countries'
-// function countries_init() {
-//   register_taxonomy(
-//     'countries',
-//     'post',
-//     array(
-//       'label' => __('Countries'),
-//       'sort' => true,
-//       'args' => array('orderby' => 'term_order'),
-//       'rewrite' => array('slug' => 'countries'),
-//     )
-//   );
-// }
-// add_action( 'init', 'countries_init' );
 
 
 // For Responsive images and thumbnails, removes the width and height from the markup
@@ -42,8 +28,6 @@ remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wp_generator');
 
 
-// Load jQuery
-// you can either load the local or google CDN version below by commenting out one or another wp_register_script line function
 
 
     function my_init_method() {
@@ -63,7 +47,7 @@ remove_action('wp_head', 'wp_generator');
     add_action('init', 'my_init_method');
 
 
-// Add theme support
+/* ::: ADD THEME SUPPORT ::::::::::::::::::::::::::::::::: */
     
 if (function_exists('add_theme_support')) {
     
@@ -136,7 +120,7 @@ function get_the_custom_excerpt($length){
     return substr( get_the_excerpt(), 0, strrpos( substr( get_the_excerpt(), 0, $length), ' ' ) ).'...';
 }
 
-// Register wigetized sidebars, changing the default output from lists to divs
+// REGISTER SIDEBARS - changing the default output from lists to divs
 
     if ( function_exists('register_sidebar') )
 
@@ -161,6 +145,7 @@ function get_the_custom_excerpt($length){
     //     'after_title' => '</h4>',
     // ));
 
+
 // This function is used to get the slug of the page
     function get_the_slug() {
         global $post;
@@ -175,13 +160,5 @@ function get_the_custom_excerpt($length){
 // To REMOVE unused dashboard widgets you can uncomment the next line and customize /includes/remove.php
 // require_once('includes/remove.php');
 
-/*
-COMMENT FUNCTIONS:
-we usually use LiveFyre, Disqus, or Intense Debate for comments
-also jetpack has some kind of commenting plugin that we haven't tried yet
-if you're making a site that requires a totally custom comments area,
-check this tutorial which has a bunch of functions to customize comments:
-http://themeshaper.com/2009/07/01/wordpress-theme-comments-template-tutorial/
-*/
 
 ?>

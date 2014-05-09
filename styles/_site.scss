@@ -8,100 +8,58 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 
 */
 
-
-/* ::: HTML ELEMENTS ::::::::::::::::::::::::::::::::::::::::: */
-
-
-	// transition all links by default
-	a:hover, a:active, a:focus {
-		@include transition (all .3s ease-in-out);
-	}
-
-
-/* ::: PAGE WRAPPER ::::::::::::::::::::::::::::::::::::::::: */
-	
+// Bourbon Neat Grid Settings
 	.row {
-		padding: 0;
-		@include breakpoint(medium) {
-			padding: 0 5%;
-			max-width: 1400px;
-			margin: 0 auto // center the content
-		}
+		@include pad(0 5%); 
+		@include outer-container;
 	}
-
 
 
 /* ::: SITE HEADER ::::::::::::::::::::::::::::::::: */
 
 	.site-header {
-		h1 {
+		h1 { // this h1 is just for SEO and keeping a good HTML5 document model
 			@include hide(); 
-			// this h1 is just for SEO and keeping a good HTML5 document model
 		}
-	}
-	
-	.site-header .site-title {
+		.site-title {
 
+		}
 	}
 
 
 
 /* ::: MAIN NAV ::::::::::::::::::::::::::::::::: */
 	
-	.fixed { // this is used for the sticky header
-	    position: fixed;
-	    top: 0;
-	}
-
-	.nav-menu a {
-		text-decoration: none;
-		display: inline-block;
-		line-height: 1.8em;
-		padding: 1em 2em;
-	}
-
-	.nav-menu a:link, .nav-menu a:visited {
-
-	}
-	.nav-menu a:hover, .nav-menu a:active, .nav-menu a:focus {
-
-	}
-
-	/* Down States */
-	.nav-menu .current_page_item a {
-
+	.nav-main {
+		a {
+			text-decoration: none;
+			display: inline-block;
+			line-height: 1.8em;
+			padding: 1em 2em;
+			&:link, &:visited {
+				// style the links
+			}
+			&:hover, &:active, &:focus {
+				// style the links
+			}
+		}
+		/* Down States */
+		.current_page_item a {
+		}
 	}
 	
 		
 
 /* ::: CONTENT AREA ::::::::::::::::::::::::::::::::: */
 	
-	.content-main {}
-	
-	/* Page Nav */
-	.page-nav a {
-	}
-
-	/* Page */
-	.page {
-
-	}
-
-	/* Posts */
-	.post {
-
-	}
-
-	/* Single */
-	.single-template {
-
+	.content-main {
 	}
 
 
 
 /* ::: COMMENTS ::::::::::::::::::::::::::::::::: */
 	
-	/*--- If you use the Facebook comments plugin this makes it responsive ---*/
+	/*--- If you use the Facebook comments plugin this makes it responsive, if not trash this---*/
 	/*--- http://wordpress.org/plugins/facebook-comments-plugin/ ---*/
 	.fb-comments, .fb-comments span, .fb-comments iframe {
 		width: 100% !important;
@@ -110,14 +68,13 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 
 	
 	
-/* ::: SIDEBAR: MAIN (NOTE: make it pop below the content on mobile) ::::::::::::::::::::::::::::::::: */
+/* ::: SIDEBAR: MAIN ::::::::::::::::::::::::::::::::: */
 
 	.sidebar-main {
 		padding-bottom: 3em;
-	}
-
-	.sidebar-main ul {
-		list-style-position: inside;
+		ul {
+			list-style-position: inside;
+		}
 	}
 	
 	
@@ -126,12 +83,11 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 
 	.footer {
 		clear: both;
-		padding-bottom: 20px;
-	}
 		
-	/* Credit */
-	.site-credits a {
-		letter-spacing: 1px;
+		/* Credit */
+		.site-credits a {
+			letter-spacing: 1px;
+		}
 	}
 
 

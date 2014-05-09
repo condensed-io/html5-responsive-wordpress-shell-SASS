@@ -45,8 +45,36 @@ Base is for standard things that don't change from project to project
 	}
 
 
+/* ::: HTML ELEMENTS ::::::::::::::::::::::::::::::::::::::::: */
 
-/* ::: Tables ::::::::::::::::::::::::::::::::::::::::: */
+	// transition all links by default
+	a:hover, a:active, a:focus {
+		@include transition (all .3s ease-in-out);
+	}
+
+
+/* ::: UTILITY ::::::::::::::::::::::::::::::::::::::::: */
+
+	// Fixed header jumplink -- http://css-tricks.com/hash-tag-links-padding/
+	.anchor:before { // adjust the margin and height for your situation
+	  display: block; 
+	  content: " "; 
+	  margin-top: -60px; 
+	  height: 40px; 
+	  visibility: hidden; 
+	}
+
+	// .clear-fix is attached to the element you want to clear
+	.clear-fix:before,
+	.clear-fix:after { content: ""; display: table; } 
+	.clear-fix:after { clear: both; }
+
+	// You can also add an <hr class=".clear-all" /> wherever you are when doing production work and it will force a clear
+	.clear-all { visibility: hidden; clear: both; margin: 0 !important; padding: 0 !important; font-size: 0; height: 1px; }
+
+
+
+/* ::: TABLES ::::::::::::::::::::::::::::::::::::::::: */
 
 	// mobile scroll fix
 	table {
@@ -139,38 +167,6 @@ Base is for standard things that don't change from project to project
 	.flush-margin {
 		margin: 0 !important;
 	}
-	
-
-
-/* ::: CLEAR FIXES ::::::::::::::::::::::::::::::::::::::::: */
-
-	// Two methods
-
-	// .clear-fix is attached to the element you want to clear
-	.clear-fix:before,
-	.clear-fix:after { content: ""; display: table; } 
-	.clear-fix:after { clear: both; }
-
-	// You can also add an <hr class=".clear-all" /> wherever you are when doing production work and it will force a clear
-	.clear-all { visibility: hidden; clear: both; margin: 0 !important; padding: 0 !important; font-size: 0; height: 1px; }
-	
-
-
-/* ::: UTILITY ::::::::::::::::::::::::::::::::::::::::: */
-
-	// Fixed header jumplink -- http://css-tricks.com/hash-tag-links-padding/
-	.anchor:before { // adjust the margin and height for your situation
-	  display: block; 
-	  content: " "; 
-	  margin-top: -60px; 
-	  height: 40px; 
-	  visibility: hidden; 
-	}
-	.col-fix:before {
-	  content: " "; 
-	  visibility: hidden; 
-	}
-
 
 
 /* ::: WARNINGS ::::::::::::::::::::::::::::::::::::::::: */
