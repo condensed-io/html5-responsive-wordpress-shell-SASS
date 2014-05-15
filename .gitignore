@@ -1,2 +1,5 @@
 .DS_Store
 js/functions-ck.js
+**/.sass-cache
+**/.sass-cache/*
+style.css
