@@ -49,18 +49,18 @@ remove_action('wp_head', 'wp_generator');
                 wp_register_script( 'modernizr', get_template_directory_uri().'/js/modernizr.custom.js',null,null,true);
                 wp_enqueue_script( 'modernizr' );
         }
-    } 
+    }
     add_action('wp_enqueue_scripts', 'load_my_scripts_yo');
 
 
 
 /* ::: ADD THEME SUPPORT ::::::::::::::::::::::::::::::::: */
-    
+
 if (function_exists('add_theme_support')) {
-    
+
     // Activates menu features
     add_theme_support('menus');
-    
+
     // Activates Featured Image functions
     add_theme_support( 'post-thumbnails' );
 
@@ -71,11 +71,11 @@ if (function_exists('add_theme_support')) {
 // call it like this: if(tree()=="myPageSlug1"){ echo "Hello World"; }
     function tree(){
       $class = '';
-      if( is_page() ) { 
+      if( is_page() ) {
       global $post;
           /* Get an array of Ancestors and Parents if they exist */
       $parents = get_post_ancestors( $post->ID );
-          /* Get the top Level page->ID count base 1, array base 0 so -1 */ 
+          /* Get the top Level page->ID count base 1, array base 0 so -1 */
       $id = ($parents) ? $parents[count($parents)-1]: $post->ID;
          /* Get the parent and set the $class with the page slug (post_name) */
       $parent = get_page( $id );
@@ -98,7 +98,7 @@ function condensed_body_class($classes) {
     // add a class for the parent page name
     $post_parent = get_post($post->post_parent);
     $parentSlug = $post_parent->post_name;
-    
+
     if ( is_page() && $post->post_parent ) {
             $classes[] = "parent_".$parentSlug;
     }
@@ -134,13 +134,13 @@ function get_the_custom_excerpt($length){
     register_sidebar(array(
         'id' => 'sidebar-main',
         'name' => 'Sidebar: Main',
-        'description' => 'The second (secondary) sidebar.',
+        'description' => 'The main content sidebar.',
         'before_widget' => '<div class="%1$s widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h4 class="widgettitle">',
         'after_title' => '</h4>',
     ));
-    
+
     // // if you want to add more just keep adding them like this:
     // register_sidebar(array(
     //     'id' => 'sidebar-footer',
@@ -163,7 +163,9 @@ function get_the_custom_excerpt($length){
         }
     }
 
-    
+// Adds meta box for disableSidebar (according to http://www.mimoymima.com/2010/03/lab/disable-sidebar/)
+//require_once('includes/sidebar_metabox.php');
+
 // To REMOVE unused dashboard widgets you can uncomment the next line and customize /includes/remove.php
 // require_once('includes/remove.php');
 
