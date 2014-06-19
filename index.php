@@ -1,32 +1,32 @@
 <?php get_header(); ?>
 
-<!--BEGIN: Content div-->
-<div class="content-main clear-fix" role="main">
+<!--BEGIN: sidebar~main-->
+<?php // to disable this sidebar on a page by page basis just add a custom field to your page or post of disableSidebar = true
+$disableSidebar = get_post_meta($post->ID, 'disableSidebar', $single = true);
+if ($disableSidebar !== 'true'): ?>
+
+<aside class="sidebar-main">
+	<h1>Main Sidebar</h1>
+	<?php dynamic_sidebar('sidebar-main'); ?>
+</aside>
+
+<?php endif; ?>
+<!--END: sidebar~main-->
+
+<!--BEGIN: content div-->
+<section class="main-content clear-fix" role="main">
+
+	<h1 class="access-hide">Latest Posts</h1>
 	
 	<?php if (have_posts()) : // BEGIN THE LOOP ?>
 
 		<?php while (have_posts()) : the_post(); //LOOPING through all the posts, we split onto two lines for clean indentation ?>
 
-			<article class="row" <?php post_class('clear-fix'); ?>> <!--the row class adds the gutter for the content, you can add it to other containers that you want to pad consistantly -->
-
-				<header>
-					<h1><?php the_title(); ?></h1>
-					<time datetime="<?php the_time('c'); ?>" pubdate="pubdate"><?php the_time('F jS, Y'); ?></time>
-					<p>by <?php the_author() ?></p>
-				</header>
+			<article <?php post_class('clear-fix'); ?>>
 				
-				<div class="entry">
-					<?php the_content(); ?>
-				</div>
-							
-				<footer class="post-meta-data">
-					<ul class="no-bullet">
-						<li class="add-comment"><?php comments_popup_link('Share your comments', '1 Comment', '% Comments'); ?></li>
-						<li>Posted in <?php the_category(', ') ?></li>
-						<li><?php edit_post_link('[Edit]', '<small>', '</small>'); ?></li>
-						<li><?php the_tags('Tags: ', ', ', '<br />'); ?></li>
-					</ul>
-				</footer>
+				<h1><?php the_title(); ?></h1>
+				
+				<?php the_content(); ?>
 			
 			</article>
 
@@ -34,7 +34,7 @@
 				
 		<?php endwhile; //END: looping through all the posts ?>
 
-			<!--BEGIN: Page Nav  ~  if there's a prob with this try moving it out fo the loop -->
+			<!--BEGIN: Page Nav-->
 			<?php if ( $wp_query->max_num_pages > 1 ) : // if there's more than one page turn on pagination ?>
 				<nav class="page-nav">
 		        	<h1 class="hide">Page Navigation</h1>
@@ -52,21 +52,7 @@
 
 	<?php endif; //END: The Loop ?>
 	
-</div>
-<!--END: Content Div-->
-
-<!--BEGIN: Sidebar Main-->
-<?php // to disable this sidebar on a page by page basis just add a custom field to your page or post of disableSidebar = true
-$disableSidebar = get_post_meta($post->ID, 'disableSidebar', $single = true);
-if ($disableSidebar !== 'true'): ?>
-
-<aside class="sidebar-main">
-	<h1>Main Sidebar</h1>
-	<?php dynamic_sidebar('sidebar-main'); ?>
-</aside>
-
-<?php endif; ?>
-<!--END: Sidebar Main-->
+</section>
+<!--END: content div-->
 
 <?php get_footer(); ?>
-
