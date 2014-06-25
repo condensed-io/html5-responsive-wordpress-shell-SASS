@@ -53,20 +53,13 @@
 	<?php endif; //END: The Loop ?>
 	
 </div>
-<!--END: Content Div-->
+<!--END: Default Layout-->
 
 <!--BEGIN: Sidebar Main-->
-<?php // to disable this sidebar on a page by page basis just add a custom field to your page or post of disableSidebar = true
-$disableSidebar = get_post_meta($post->ID, 'disableSidebar', $single = true);
-if ($disableSidebar !== 'true'): ?>
-
 <aside class="sidebar-main">
 	<h1>Main Sidebar</h1>
 	<?php dynamic_sidebar('sidebar-main'); ?>
 </aside>
-
-<?php endif; ?>
 <!--END: Sidebar Main-->
 
 <?php get_footer(); ?>
-
