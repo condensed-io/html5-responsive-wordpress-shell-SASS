@@ -84,8 +84,10 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 		clear: both;
 		
 		/* Credit */
-		.site-credits a {
-			letter-spacing: 1px;
+		.credit {
+			h1 {
+			font-size: 1em;				
+			}
 		}
 	}
 
