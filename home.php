@@ -10,7 +10,8 @@ Template Name: home-template
 
 <?php get_header(); ?>
 
-<div class="light-grey-section hero">
+<!--BEGIN: Home Section-->
+<article class="white-section">
 	<div class="row">
 		<img class="alignnone size-full" src="<?php //uncomment to use advanced custom fields// the_field('big_splash_image') ?>" alt="beautiful glass doors looking out on a pool" />
 		<div class="dark-grey-section">

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-<!--BEGIN: Content div-->
-<div class="content-main clear-fix" role="main">
+<!--BEGIN: Default Layout-->
+<div class="white-section clear-fix" role="main">
 	
 	<?php if (have_posts()) : // BEGIN THE LOOP ?>
 
