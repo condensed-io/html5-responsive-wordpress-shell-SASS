@@ -10,7 +10,6 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 
 // Bourbon Neat Grid Settings
 	.row {
-		@include pad(0 5%); 
 		@include outer-container;
 	}
 
