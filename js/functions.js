@@ -126,21 +126,24 @@ jQuery(document).ready(function($) {
 
 
 /* ::: MOVE LABELS INTO INPUTS IN FORMS ::::::::::::::::::::::::::::::::: */
-
-	// target gform fields and mailchimp fields (you can add more)
-	// there's probably a better way to do this, try rewriting this script one day
 	
-	$('ul[id*=gform_fields] li, .mc-field-group').each(function(){
+	// Detect support for placeholder attribute
+	placeholderSupport = ("placeholder" in document.createElement("input"));
+	
+	// if it's supported move the labels into the form fields
+	if(placeholderSupport){
+		$('label').each(function(){
 
-		var el = $(this),
-			field = el.find('input, textarea'),
-			label = el.find('label'),
-			labelText = el.find('label').text();
+			var label = $(this);
+			label.hide();
 
-		label.hide();
-		field.attr('placeholder', labelText);
+			var field = label.next(); // assumes that your labels are directly before your inputs
+			var labelText = label.text();
 
-	});
+			field.attr('placeholder', labelText);
+
+		});
+	} // end browser check
 
 
 
