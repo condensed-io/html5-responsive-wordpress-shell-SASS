@@ -29,12 +29,16 @@ remove_action('wp_head', 'wp_generator');
 
 
 
+
 /* ::: LOAD SCRIPTS ::::::::::::::::::::::::::::::::: */
 
+    // detect if page is the login page
+    function is_login_page() {
+        return in_array($GLOBALS['pagenow'], array('wp-login.php', 'wp-register.php'));
+    }
 
     function load_my_scripts_yo() {
-        if (!is_admin()) {
-
+        if ( !is_admin() && !is_login_page() ) {
             // jQuery
             // To use our local copy (if you don't have an internet connection and you're developing locally) you can uncomment these two lines
                 //wp_deregister_script( 'jquery' );
@@ -48,11 +52,11 @@ remove_action('wp_head', 'wp_generator');
             // modernizr
                 wp_register_script( 'modernizr', get_template_directory_uri().'/js/modernizr.custom.js',null,null,true);
                 wp_enqueue_script( 'modernizr' );
-
-            add_action('wp_enqueue_scripts', 'load_my_scripts_yo');
-            
         }
     }
+    add_action('wp_enqueue_scripts', 'load_my_scripts_yo');
+
+
 
 
 /* ::: ADD THEME SUPPORT ::::::::::::::::::::::::::::::::: */
