@@ -124,7 +124,6 @@ jQuery(document).ready(function($) {
 	}
 
 
-
 /* ::: MOVE LABELS INTO INPUTS IN FORMS ::::::::::::::::::::::::::::::::: */
 	
 	// Detect support for placeholder attribute
@@ -137,7 +136,7 @@ jQuery(document).ready(function($) {
 			var label = $(this);
 			label.hide();
 
-			var field = label.next(); // assumes that your labels are directly before your inputs
+			var field = label.parent().find('input, textarea');
 			var labelText = label.text();
 
 			field.attr('placeholder', labelText);
