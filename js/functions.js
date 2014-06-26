@@ -26,6 +26,10 @@
 }(document));
 
 
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+//  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 // DOCUMENT READY FUNCTION: uses noConflict to work with other libraries
 jQuery(document).ready(function($) {
 
