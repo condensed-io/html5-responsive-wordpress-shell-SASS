@@ -48,10 +48,11 @@ remove_action('wp_head', 'wp_generator');
             // modernizr
                 wp_register_script( 'modernizr', get_template_directory_uri().'/js/modernizr.custom.js',null,null,true);
                 wp_enqueue_script( 'modernizr' );
+
+            add_action('wp_enqueue_scripts', 'load_my_scripts_yo');
+            
         }
     }
-    add_action('wp_enqueue_scripts', 'load_my_scripts_yo');
-
 
 
 /* ::: ADD THEME SUPPORT ::::::::::::::::::::::::::::::::: */
