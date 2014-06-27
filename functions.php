@@ -12,27 +12,75 @@
 //  }
 
 
-// For Responsive images and thumbnails, removes the width and height from the markup
-add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
-add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
 
-function remove_width_attribute( $html ) {
-   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
-   return $html;
-}
+/* ::: TWEAK SOME WORDPRESS DEFAULTS ::::::::::::::::::::::::::::::::: */
+
+    // ** For Responsive images and thumbnails, removes the width and height from the markup
+    add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+    add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+
+    function remove_width_attribute( $html ) {
+       $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+       return $html;
+    }
+
+    // ** Removes tags generated in the WordPress Head that we don't use, you could read up and re-enable them if you think they're needed
+    remove_action('wp_head', 'wlwmanifest_link');
+    remove_action('wp_head', 'rsd_link');
+    remove_action('wp_head', 'wp_generator');
+
+    // ** Makes it so you can upload svgs through the Wordpress Uploader - http://css-tricks.com/snippets/wordpress/allow-svg-through-wordpress-media-uploader/
+    function cc_mime_types( $mimes ){
+        $mimes['svg'] = 'image/svg+xml';
+        return $mimes;
+    }
+    add_filter( 'upload_mimes', 'cc_mime_types' );
+
+    // ** Improves the body_class function
+    function condensed_body_class($classes) {
+        global $post;
+
+        // add a class for the name of the page - later might want to remove the auto generated pageid class which isn't very useful
+        if( is_page()) {
+            $pn = $post->post_name;
+            $classes[] = "page_".$pn;
+        }
+
+        // add a class for the parent page name
+        $post_parent = get_post($post->post_parent);
+        $parentSlug = $post_parent->post_name;
+
+        if ( is_page() && $post->post_parent ) {
+                $classes[] = "parent_".$parentSlug;
+        }
+
+        // add class for the name of the custom template used (if any)
+        $temp = get_page_template();
+        if ( $temp != null ) {
+            $path = pathinfo($temp);
+            $tmp = $path['filename'] . "." . $path['extension'];
+            $tn= str_replace(".php", "", $tmp);
+            $classes[] = "template_".$tn;
+        }
+
+        return $classes;
+
+    }
+
+    add_filter('body_class', 'condensed_body_class');
 
 
-// Removes tags generated in the WordPress Head that we don't use, you could read up and re-enable them if you think they're needed
-remove_action('wp_head', 'wlwmanifest_link');
-remove_action('wp_head', 'rsd_link');
-remove_action('wp_head', 'wp_generator');
+    // ** Removes the automatic paragraph tags from the excerpt, we leave it on for the content and have a custom field you can use to turn it off on a page by page basis --> wpautop = false
+        remove_filter('the_excerpt', 'wpautop');
 
-
-
+    // ** Used to create custom length excerpts
+    function get_the_custom_excerpt($length){
+        return substr( get_the_excerpt(), 0, strrpos( substr( get_the_excerpt(), 0, $length), ' ' ) ).'...';
+    }
 
 /* ::: LOAD SCRIPTS ::::::::::::::::::::::::::::::::: */
 
-    // detect if page is the login page
+    // ** Detect if page is the login page
     function is_login_page() {
         return in_array($GLOBALS['pagenow'], array('wp-login.php', 'wp-register.php'));
     }
@@ -61,19 +109,22 @@ remove_action('wp_head', 'wp_generator');
 
 /* ::: ADD THEME SUPPORT ::::::::::::::::::::::::::::::::: */
 
-if (function_exists('add_theme_support')) {
+    if (function_exists('add_theme_support')) {
 
-    // Activates menu features
-    add_theme_support('menus');
+        // Activates menu features
+        add_theme_support('menus');
 
-    // Activates Featured Image functions
-    add_theme_support( 'post-thumbnails' );
+        // Activates Featured Image functions
+        add_theme_support( 'post-thumbnails' );
 
-}
+    }
 
 
-// CONDITIONAL FUNCTION to determine if a page is a child of another page
-// call it like this: if(tree()=="myPageSlug1"){ echo "Hello World"; }
+
+/* ::: UTILITY ::::::::::::::::::::::::::::::::: */
+
+    // ** CONDITIONAL FUNCTION to determine if a page is a child of another page
+    // call it like this: if(tree()=="myPageSlug1"){ echo "Hello World"; }
     function tree(){
       $class = '';
       if( is_page() ) {
@@ -89,48 +140,17 @@ if (function_exists('add_theme_support')) {
     return $class;
     }
 
-
-// Improves the body_class function
-function condensed_body_class($classes) {
-    global $post;
-
-    // add a class for the name of the page - later might want to remove the auto generated pageid class which isn't very useful
-    if( is_page()) {
-        $pn = $post->post_name;
-        $classes[] = "page_".$pn;
+    // This function is used to get the slug of the page
+    function get_the_slug() {
+        global $post;
+        if ( is_single() || is_page() ) {
+            return $post->post_name;
+        } else {
+            return "";
+        }
     }
 
-    // add a class for the parent page name
-    $post_parent = get_post($post->post_parent);
-    $parentSlug = $post_parent->post_name;
 
-    if ( is_page() && $post->post_parent ) {
-            $classes[] = "parent_".$parentSlug;
-    }
-
-    // add class for the name of the custom template used (if any)
-    $temp = get_page_template();
-    if ( $temp != null ) {
-        $path = pathinfo($temp);
-        $tmp = $path['filename'] . "." . $path['extension'];
-        $tn= str_replace(".php", "", $tmp);
-        $classes[] = "template_".$tn;
-    }
-
-    return $classes;
-
-}
-
-add_filter('body_class', 'condensed_body_class');
-
-
-// Removes the automatic paragraph tags from the excerpt, we leave it on for the content and have a custom field you can use to turn it off on a page by page basis --> wpautop = false
-    remove_filter('the_excerpt', 'wpautop');
-
-// Used to create custom length excerpts
-function get_the_custom_excerpt($length){
-    return substr( get_the_excerpt(), 0, strrpos( substr( get_the_excerpt(), 0, $length), ' ' ) ).'...';
-}
 
 // REGISTER SIDEBARS - changing the default output from lists to divs
 
@@ -157,16 +177,6 @@ function get_the_custom_excerpt($length){
     //     'after_title' => '</h4>',
     // ));
 
-
-// This function is used to get the slug of the page
-    function get_the_slug() {
-        global $post;
-        if ( is_single() || is_page() ) {
-            return $post->post_name;
-        } else {
-            return "";
-        }
-    }
 
 // Adds meta box for disableSidebar (according to http://www.mimoymima.com/2010/03/lab/disable-sidebar/)
 //require_once('includes/sidebar_metabox.php');
