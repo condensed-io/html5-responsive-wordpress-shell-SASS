@@ -6,23 +6,24 @@
 
 //::: DEFINE FONT FAMILIES ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-	@mixin monospace() {
-		font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+	// These mixins makes it easy to add font to elements in your stylesheets
+	@mixin sans() {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		font-weight: 300;
 	}
 
 	@mixin serif() {
 		font-family: Baskerville, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", times, serif; // cambria, cochin ??
 	}
 
-	@mixin sans() {
-		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-		font-weight: 300;
+	@mixin monospace() {
+		font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 	}
+
 
 
 /*--- Display Fonts ~ try to use one or two at max in your design. this one is here for reference---*/
 
-	// The mixin makes it easy to add the font to elements in the stylesheet
 	@mixin condensed() {
 		font-family: 'condensed';
 		font-weight: normal;
