@@ -5,8 +5,8 @@
 
 
 //::: DEFINE FONT FAMILIES ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-	// These mixins makes it easy to add font to elements in your stylesheets
+// These mixins makes it easy to add font to elements in your stylesheets
+	
 	@mixin sans() {
 		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 		font-weight: 300;
@@ -20,10 +20,7 @@
 		font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 	}
 
-
-
-/*--- Display Fonts ~ try to use one or two at max in your design. this one is here for reference---*/
-
+	// our icon font
 	@mixin condensed() {
 		font-family: 'condensed';
 		font-weight: normal;
@@ -31,6 +28,23 @@
 	// The class makes it easy to add the font to elements in the HTML
 	.icon-font {
 		@include condensed();
+	}
+
+
+
+//::: REUSABLE FONT SIZES ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+	@mixin big-type() {
+		font-size: 1.6em;
+		@include breakpoint(mini) {
+			font-size: 1.8em;
+		}
+		@include breakpoint(medium) {
+			font-size: 2em;
+		}
+		@include breakpoint(large) {
+			font-size: 2.8em;
+		}
 	}
 
 
