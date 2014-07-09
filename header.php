@@ -40,8 +40,7 @@
 
 </head>
 
-<!--see http://www.mimoymima.com/2010/03/lab/wordpress-body-tag/-->
-<body <?php body_class(); ?>>
+<body <?php body_class(); // we add to the body classes with a function in functions.php ?>>
 
 	<!--SITE HEADER ~ for SEO ~ hidden with CSS-->
 	<header class="site-header" role="banner">
