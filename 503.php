@@ -60,20 +60,7 @@
 	<div class="content-main clear-fix" role="main">
 
 		<!-- coming soon image ~ should be roughly 1000px wide ** don't put the width in the image tag below ** -->
-		<img class="abs-center" src="/wp-content/themes/html5-responsive-wordpress-shell/images/img_coming-soon.png" alt="coming soon" />
-
-		<dl class="company-address vcard">
-
-			<dt class="org fn">company name</dt>
-
-			<dd class="adr">
-				<span class="locality">City</span>
-				<span class="region">State</span>
-			</dd>
-			<dd class="tel">phone number</dd>
-			<dd class="email"><a href="mailto:email@address.com">email@address.com</a></dd>
-
-		</dl>
+		put your coming soon image here
 
 	</div>
 	<!--END: Content-->
