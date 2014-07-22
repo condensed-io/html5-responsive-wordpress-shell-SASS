@@ -1,0 +1,1 @@
+This folder is here for the ACF Pro plugin to auto-save json files with the configuration of custom fields
