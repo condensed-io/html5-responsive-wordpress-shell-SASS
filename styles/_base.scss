@@ -52,9 +52,8 @@ Base is for standard things that don't change from project to project
 		@include transition(all .3s ease-in-out);
 	}
 	a:hover, a:active, a:focus {
-		//DEPRECATED CODE CAUSES LINKS TO FLICKER ON WEBSITE
+		//Fixes a bug with webkit where links flicker
 		//See http://stackoverflow.com/questions/3461441/prevent-flicker-on-webkit-transition-of-webkit-transform
-		//@include transition (all .3s ease-in-out);
 		-webkit-backface-visibility: hidden;
 		-webkit-transform-style: preserve-3d;
 	}
