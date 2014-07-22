@@ -48,8 +48,15 @@ Base is for standard things that don't change from project to project
 /* ::: HTML ELEMENTS ::::::::::::::::::::::::::::::::::::::::: */
 
 	// transition all links by default
+	a:link, a:visited {
+		@include transition(all .3s ease-in-out);
+	}
 	a:hover, a:active, a:focus {
-		@include transition (all .3s ease-in-out);
+		//DEPRECATED CODE CAUSES LINKS TO FLICKER ON WEBSITE
+		//See http://stackoverflow.com/questions/3461441/prevent-flicker-on-webkit-transition-of-webkit-transform
+		//@include transition (all .3s ease-in-out);
+		-webkit-backface-visibility: hidden;
+		-webkit-transform-style: preserve-3d;
 	}
 
 
