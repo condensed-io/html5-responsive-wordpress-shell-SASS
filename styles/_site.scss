@@ -8,9 +8,24 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 
 */
 
-// Bourbon Neat Grid Settings
+/* ::: GENERAL ::::::::::::::::::::::::::::::::: */
+
+	// Bourbon Neat Grid Settings -- NOT SURE IF THESE ARE NECESSARY
 	.row {
+		padding: 0 4%; // necessary?
+	}
+	.outer-container {
 		@include outer-container;
+	}
+
+	// Customize the look of selected text -- feel free to change the colors
+	::-moz-selection { // Mozilla
+       background-color: $black;
+       color: $white;
+	}
+	::selection { // Safari
+       background-color: $black;
+       color: $white;
 	}
 
 
