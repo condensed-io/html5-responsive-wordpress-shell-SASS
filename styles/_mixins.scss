@@ -44,8 +44,8 @@ http://bourbon.io/
 
 /* ::: BOURBON NEAT GRID HACKS ::::::::::::::::::::::::::::::::::::::::: */
 	
-	//reset margins when you're changing the column span of a collection
-	@mixin omega-reset($nth) {
-	  &:nth-child(#{$nth}) { margin-right: flex-gutter($grid-columns, $gutter); }
-	  &:nth-child(#{$nth}+1) { clear: none }
-	}
+// this stuff is causing a compile error // look into it///////   	//reset margins when you're changing the column span of a collection
+// this stuff is causing a compile error // look into it///////   	@mixin omega-reset($nth) {
+// this stuff is causing a compile error // look into it///////   	  &:nth-child(#{$nth}) { margin-right: flex-gutter($grid-columns, $gutter); }
+// this stuff is causing a compile error // look into it///////   	  &:nth-child(#{$nth}+1) { clear: none; }
+// this stuff is causing a compile error // look into it///////   	}
