@@ -1,5 +1,11 @@
 js/functions-ck.js
+
 **/.sass-cache
+
 **/.sass-cache/*
-style.css
+
 **/.DS_Store
+
+style.css
+
+*.codekit
