@@ -42,6 +42,8 @@
 
 <body <?php body_class(); // we add to the body classes with a function in functions.php ?>>
 
+<!--[if lt IE 8]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+
 	<!--SITE HEADER ~ for SEO ~ hidden with CSS-->
 	<header class="site-header" role="banner">
 		<h1 class="site-title"><?php if(!is_front_page() || !is_home()) { wp_title(''); echo " :: "; } ?><a href="/"><?php bloginfo('name'); ?></a></h1>
