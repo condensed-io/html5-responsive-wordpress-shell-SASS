@@ -13,8 +13,7 @@ FORMS
 		vertical-align: middle;
 		padding: .7em 1em;
 	}
-
-	input[type='text'], input[type='email']  {
+	input[type='text'], input[type='email'], textarea  {
 		width: 100%;
 		@include transition (all .3s ease-in-out);
 		@include placeholder {
@@ -25,10 +24,6 @@ FORMS
 		height: 2.7em;
 		width: 100%;
 	}
-	textarea {
-		width: 100%;
-	}
-
 	input[type='submit'], .button {
 		border-radius: .5em;
 		padding: .5em 1em;
@@ -50,11 +45,9 @@ FORMS
 	}
 
 
-// the styles below are only relevant if you use gravity forms or a mailchimp email signup, so feel free to remove them
-
 
 /* ::: GRAVITY FORMS ::::::::::::::::::::::::::::::::::::::::: */
-
+// the styles below are only relevant if you use gravity forms or a mailchimp email signup, so feel free to remove them
 
 	.gform_body {
 		ul {
@@ -66,7 +59,6 @@ FORMS
 			}
 		}
 	}
-
 	li.gfield {
 		list-style-type: none !important;
 	}
