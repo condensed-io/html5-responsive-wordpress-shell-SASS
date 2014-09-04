@@ -47,12 +47,37 @@
 		}
 	}
 
+	@mixin medium-type() {
+		font-size: 1.6em;
+		@include breakpoint(mini) {
+			font-size: 1.8em;
+		}
+		@include breakpoint(medium) {
+			font-size: 2em;
+		}
+		@include breakpoint(large) {
+			font-size: 2.8em;
+		}
+	}
+
+	@mixin small-type() {
+		font-size: 1.6em;
+		@include breakpoint(mini) {
+			font-size: 1.8em;
+		}
+		@include breakpoint(medium) {
+			font-size: 2em;
+		}
+		@include breakpoint(large) {
+			font-size: 2.8em;
+		}
+	}
 
 
-//::: APPLY FONT STYLES ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-/*--- Base Font Settings ---*/
+//::: BASE FONT SETTINGS ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 	body {
 		@include sans();
 		font-size: 14px; // base font size
@@ -91,10 +116,13 @@
 
 	// add default sizes
 	h1 {
-		font-size: 2.5em;
+		@include big-type();
 	}
 	h2 {
-		font-size: 1.7em;
+		@include medium-type();
+	}
+	h2 {
+		@include small-type();
 	}
 
 
