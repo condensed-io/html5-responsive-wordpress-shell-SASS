@@ -1,18 +1,5 @@
 <?php get_header(); ?>
 
-<!--BEGIN: sidebar~main-->
-<?php // to disable this sidebar on a page by page basis just add a custom field to your page or post of disableSidebar = true
-$disableSidebar = get_post_meta($post->ID, 'disableSidebar', $single = true);
-if ($disableSidebar !== 'true'): ?>
-
-<aside class="sidebar-main">
-	<h1>Main Sidebar</h1>
-	<?php dynamic_sidebar('sidebar-main'); ?>
-</aside>
-
-<?php endif; ?>
-<!--END: sidebar~main-->
-
 <!--BEGIN: Content-->
 <div class="content-main clear-fix" role="main">
 	
