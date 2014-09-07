@@ -23,36 +23,34 @@ $dark-grey: #333;
 		background: $white;
 		color: $dark-grey;
 	}
-
 	body {
 		background: $white;
 		color: $dark-grey;
 	}
-
-	th {
-		background-color: $black;
-		color: $white;
+	.data-table {
+		th {
+			background-color: $black;
+			color: $white;
+		}
+		td {
+			border-bottom: 1px dotted $light-grey;
+		}
 	}
-	td {
-		border-bottom: 1px dotted $light-grey;
-	}
 
-	/*--- Links ---*/
-
+	// Links
 	a:link, a:visited { color: $orange; }
 	a:hover, a:active, a:focus { color: $black; }
 	
 	// Show-Hide
-
-		.make-link {
-			color: $orange;
-		}
-		.make-link:hover,
-		.make-link:focus,
-		.make-link:active {
-			color: $black;
-		}
-
+	.make-link {
+		color: $orange;
+	}
+	.make-link:hover,
+	.make-link:focus,
+	.make-link:active {
+		color: $black;
+	}
+	
 	.indicator a {
 		background-color: $orange;
 	}
