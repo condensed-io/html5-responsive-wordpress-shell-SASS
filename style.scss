@@ -23,11 +23,11 @@ Author URI: http://html5.mimoymima.com/
 // colors used through the site
 @import "./styles/_colors.scss";
 
-// typography
-@import "./styles/_type.scss";
-
 // reset + general styles
 @import "./styles/_base.scss";
+
+// typography
+@import "./styles/_type.scss";
 
 // forms
 @import "./styles/_forms.scss";
