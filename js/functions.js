@@ -131,7 +131,7 @@ jQuery(document).ready(function($) {
 	
 	// if it's supported move the labels into the form fields
 	if(placeholderSupport){
-		$('label').each(function(){
+		$('label').not('.gfield_checkbox label').each(function(){ // don't hide checkbox labels but hide others
 
 			var label = $(this);
 			label.hide();
