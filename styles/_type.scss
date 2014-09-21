@@ -60,6 +60,19 @@
 		}
 	}
 
+	@mixin normal-type() {
+		font-size: 1em;
+		@include breakpoint(mini) {
+			font-size: 1.2em;
+		}
+		@include breakpoint(medium) {
+			font-size: 1.3em;
+		}
+		@include breakpoint(large) {
+			font-size: 1.4em;
+		}
+	}
+
 	@mixin small-type() {
 		font-size: .8em;
 		@include breakpoint(mini) {
