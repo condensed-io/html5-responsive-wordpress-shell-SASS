@@ -302,10 +302,17 @@ Base is for standard things that don't change from project to project
 	}
 
 	// Horizontal List
-	.horiz-list { display: inline-block; }
-	.horiz-list ul { display: inline-block; }
-	.horiz-list ul ul { display: none; }
-	.horiz-list li { display: inline-block; }
+	.horiz-list {
+		@include breakpoint(medium) {
+			display: inline-block;
+			ul {
+				display: inline-block;
+			}
+			li {
+				display: inline-block;
+			}
+		}
+	}
 
 	// Lists Without Bullets
 	ul.no-bullet {
