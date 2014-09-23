@@ -90,6 +90,10 @@ Base is for standard things that don't change from project to project
 	  visibility: hidden; 
 	}
 
+	.noborder {
+		border: none;
+	}
+
 	// .clear-fix is attached to the element you want to clear
 	.clear-fix:before,
 	.clear-fix:after { content: ""; display: table; } 
