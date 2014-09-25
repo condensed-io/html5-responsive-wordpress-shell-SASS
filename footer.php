@@ -12,19 +12,18 @@
 			<!--END: Footer Nav-->
 
 			<!--BEGIN: Optional Contact Info using microformats: http://microformats.org/-->
-			<!--dl class="vcard">
-				<dt class="org fn">OrgName or Full Name of person - remove one or the other class</dt>
-				<dd class="adr">
-					<span class="street-address"></span>
-					<span class="locality">City</span>
-					<span class="region">State</span>
+			<!--div class="vcard">
+				<h1 class="org fn">OrgName or Full Name of person - remove one or the other class</h1>
+				<p class="adr">
+					<span class="street-address"></span><br />
+					<span class="locality">City</span>, 
+					<span class="region">State</span><br />
 					<span class="postal-code">xxxxx</span>		
-				</dd>
-				<dd class="tel"></dd>
-				<dd class="tel"></dd>
-				<dd class="email"><a href="mailto:"></a></dd>
-				<dd class="fax"></dd>
-			</dl-->
+				</p>
+				<p class="tel"></p>
+				<p class="email"><a href="mailto:"></a></p>
+				<p class="fax"></p>
+			</div-->
 			<!--END: Contact Info-->
 			
 			<!--BEGIN: Credits :: Web Design Credit -->
