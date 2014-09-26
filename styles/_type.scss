@@ -34,7 +34,7 @@
 
 //::: REUSABLE FONT SIZES ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-	@mixin big-type() {
+	@mixin huge-type() {
 		font-size: 1.6em;
 		@include breakpoint(mini) {
 			font-size: 1.8em;
@@ -43,46 +43,53 @@
 			font-size: 2em;
 		}
 		@include breakpoint(large) {
-			font-size: 2.8em;
+			font-size: 2.5em;
 		}
 	}
-
-	@mixin medium-type() {
-		font-size: 1.2em;
-		@include breakpoint(mini) {
-			font-size: 1.4em;
-		}
+	@mixin large-type() {
+		font-size: 1.4em;
+		font-weight: lighter;
 		@include breakpoint(medium) {
 			font-size: 1.6em;
 		}
 		@include breakpoint(large) {
-			font-size: 1.8em;
+			font-size: 1.9em;
+		}
+		@include breakpoint(mega) {
+			font-size: 2.2em;
 		}
 	}
-
-	@mixin normal-type() {
-		font-size: 1em;
-		@include breakpoint(mini) {
-			font-size: 1.2em;
-		}
+	@mixin medium-type() {
+		font-size: 1.1em;
+		font-weight: lighter;
 		@include breakpoint(medium) {
 			font-size: 1.3em;
 		}
 		@include breakpoint(large) {
 			font-size: 1.4em;
 		}
-	}
-
-	@mixin small-type() {
-		font-size: .8em;
-		@include breakpoint(mini) {
-			font-size: .9em;
+		@include breakpoint(mega) {
+			font-size: 1.5em;
 		}
+	}
+	@mixin normal-type() {
+		font-size: 1em;
+		font-weight: lighter;
 		@include breakpoint(medium) {
 			font-size: 1em;
 		}
 		@include breakpoint(large) {
 			font-size: 1.1em;
+		}
+		@include breakpoint(mega) {
+			font-size: 1.3em;
+		}
+	}
+	@mixin small-type() {
+		font-size: 100%;
+		font-weight: lighter;
+		@include breakpoint(medium) {
+			font-size: 95%;
 		}
 	}
 
@@ -129,7 +136,7 @@
 
 	// add default sizes
 	h1 {
-		@include big-type();
+		@include large-type();
 	}
 	h2 {
 		@include medium-type();
