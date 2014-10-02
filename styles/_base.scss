@@ -308,12 +308,23 @@ Base is for standard things that don't change from project to project
 	// Horizontal List
 	.horiz-list {
 		@include breakpoint(medium) {
+			list-style-type: none;
 			display: inline-block;
+			width: 100%;
+			a {
+				display: block;
+				padding: 1em;
+			}
 			ul {
 				display: inline-block;
 			}
 			li {
-				display: inline-block;
+				display: block;
+				width: 100%;
+				@include breakpoint(medium) {
+					display: inline-block;
+					width: auto;
+				}
 			}
 		}
 	}
