@@ -53,30 +53,7 @@ jQuery(document).ready(function($) {
 			}
 		return false;
 	});
-
-
-
-/* ::: MOBILE NAV ::::::::::::::::::::::::::::::::: */
-
-//uncomment these lines to use//////////	$(function() {
-//uncomment these lines to use//////////		var mobileBtn = $('.icon-list');
-//uncomment these lines to use//////////		var menu = $('.topnav-links');
-//uncomment these lines to use//////////		//unused// var menuHeight  = menu.height();
-//uncomment these lines to use//////////		$(mobileBtn).on('click', function(e) {
-//uncomment these lines to use//////////			e.preventDefault();
-//uncomment these lines to use//////////			menu.slideToggle();
-//uncomment these lines to use//////////		});
-//uncomment these lines to use//////////	});
-//uncomment these lines to use//////////
-//uncomment these lines to use//////////	// If the browser size gets bigger than 500px make the nav visible again
-//uncomment these lines to use//////////	$(window).resize(function(){
-//uncomment these lines to use//////////		var w = $(window).width();
-//uncomment these lines to use//////////		var menu = $('.topnav-links');
-//uncomment these lines to use//////////		if(w > 900 && menu.is(':hidden')) {
-//uncomment these lines to use//////////			menu.css( "display", "block" );
-//uncomment these lines to use//////////		}
-//uncomment these lines to use//////////	});
-
+		
 
 
 /* ::: STICKY NAV ::::::::::::::::::::::::::::::::: */
