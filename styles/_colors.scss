@@ -73,14 +73,14 @@ $dark-grey: #333;
 
 	// ORANGE SECTION
 
-	.orange-section {
+	.white-section { // need to tweak these colors, they're all messy
 		
-		background-color: $orange;
-		color: $black;
+		background-color: $white;
+		color: $dark-grey;
 
 		a {
 			&:link, &:visited {
-				color: $orange-50;
+				color: $orange;
 			}
 			&:hover, &:focus, &:active {
 				color: $black;
@@ -89,11 +89,11 @@ $dark-grey: #333;
 
 		input[type='text'], input[type='email']  {
 			@include placeholder {
-				color: $orange-70;
+				color: $orange;
 			}
 			&:hover, &:active {
 				@include placeholder {
-					color: $white;
+					color: $black;
 				}
 			}
 			&:focus {
@@ -106,10 +106,8 @@ $dark-grey: #333;
 		}
 
 		input[type='submit'], .button {
-			&:link, &:visited {
-				background-color: $black;
-				color: $orange;
-			}
+			background-color: $black;
+			color: $orange;
 			&:hover, &:focus, &:active {
 				background-color: $black-50;
 				color: $orange;
