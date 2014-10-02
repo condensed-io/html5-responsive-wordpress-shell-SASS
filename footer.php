@@ -1,5 +1,5 @@
 	<!--BEGIN: Footer Section-->
-	<footer class="footer white-section clear-fix">
+	<footer class="footer white-area clear-fix">
 
 		<!--BEGIN: Row-->
 		<div class="row">

@@ -11,7 +11,7 @@ Template Name: home-template
 <?php get_header(); ?>
 
 <!--BEGIN: Home Section-->
-<article class="white-section">
+<article class="white-area">
 	<div class="row">
 		<!--the advanced custom field examples below can be deleted if you aren't using the plugin-->
 		<h2>Headline</h2>

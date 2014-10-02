@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!--BEGIN: Default Content Section-->
-<div class="white-section clear-fix" role="main">
+<div class="white-area clear-fix" role="main">
 
 	<h1 class="access-hide">Latest Posts</h1>
 	
