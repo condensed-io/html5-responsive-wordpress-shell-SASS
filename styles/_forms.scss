@@ -68,13 +68,28 @@ FORMS
 		list-style-type: none !important;
 	}
 	.validation_message {
-		color: red;
-		width: 100%;
-		border-top: .2em solid red;
 		margin-top: -1.5em;
 		margin-bottom: 2em;
 		padding-top: .5em;
+		font-weight: bold;
 	}
+	.validation_error {
+		@include medium-type();
+		padding: 1.5em 1em;
+		border-radius: .2em;
+		font-weight: bold;
+	}
+	.white-area {
+		.validation_message {
+			color: red;
+			border-top: .2em solid red;
+		}
+		.validation_error {
+			color: white;
+			background-color: red;
+		}
+	}
+
 
 
 
