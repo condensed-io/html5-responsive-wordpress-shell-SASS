@@ -9,3 +9,10 @@ input, label {
 	display: block !important;
 	clear: both !important;
 }
+
+.browsehappy {
+	padding: 4em;
+	background: yellow;
+	color: blue;
+	font-size: 2em;
+}
