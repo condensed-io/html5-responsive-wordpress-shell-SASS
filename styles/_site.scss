@@ -62,6 +62,36 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 
 
 
+/* ::: PAGINATION :: some default styling for the PageNavi Plugin ::::::::::::::::::::::::::::::: */
+
+	.wp-pagenavi {
+		margin-top: 3em;
+	}
+	.wp-pagenavi .pages {
+	    display: none;
+	}
+	.wp-pagenavi a, .wp-pagenavi a:link, .wp-pagenavi a:visited, .wp-pagenavi span.current {
+	    background: $lighter-grey;
+	    color: $grey;
+	    border-radius: 1.3em;
+	    display: inline-block;
+	    text-decoration: none;
+	    margin: 0 .3em 12px;
+	    padding: .5em 1em;
+	    border: none;
+	}
+	.nextpostslink, .previouspostslink {
+		background: none !important;
+	}
+	.wp-pagenavi span.current {
+	    background: $light-grey;
+	    color: $white;
+	}
+	.wp-pagenavi a:hover {
+	}
+
+
+
 /* ::: COMMENTS ::::::::::::::::::::::::::::::::: */
 	
 	/*--- If you use the Facebook comments plugin this makes it responsive, if not trash this---*/
