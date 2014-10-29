@@ -217,8 +217,15 @@ Base is for standard things that don't change from project to project
     	}
     	max-width: 100%;
     }
-    .alignright { float: right; }
-	.alignleft { float: left; }
+    .alignright {
+    	float: right;
+    }
+	.alignleft {
+		float: left;
+	}
+	.aligncenter {
+		text-align: center;
+	}
 	.flush-margin {
 		margin: 0 !important;
 	}
