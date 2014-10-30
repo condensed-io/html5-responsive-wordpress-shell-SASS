@@ -48,7 +48,6 @@
 	}
 	@mixin large-type() {
 		font-size: 1.4em;
-		font-weight: lighter;
 		@include breakpoint(medium) {
 			font-size: 1.6em;
 		}
@@ -61,7 +60,6 @@
 	}
 	@mixin medium-type() {
 		font-size: 1.1em;
-		font-weight: lighter;
 		@include breakpoint(medium) {
 			font-size: 1.3em;
 		}
@@ -74,7 +72,6 @@
 	}
 	@mixin normal-type() {
 		font-size: 1em;
-		font-weight: lighter;
 		@include breakpoint(medium) {
 			font-size: 1em;
 		}
@@ -87,7 +84,6 @@
 	}
 	@mixin small-type() {
 		font-size: 100%;
-		font-weight: lighter;
 		@include breakpoint(medium) {
 			font-size: 95%;
 		}
