@@ -42,6 +42,13 @@
 		
 		<?php endwhile; ?>
 
+			<!--Search Box-->
+			<div class="row">
+				<h2>Search Again</h2>
+				<?php get_search_form(); ?>
+			</div>
+			<!--Search Box-->
+
 			<div class="navigation">
 				<?php posts_nav_link('&nbsp;','<div class="alignleft">&laquo; Previous Page</div>','<div class="alignright">Next Page &raquo;</div>') ?>
 			</div>
