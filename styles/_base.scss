@@ -310,16 +310,11 @@ Base is for standard things that don't change from project to project
 	}
 
 	.content-main dl {
-		margin-left: 1em;
-		@include breakpoint(medium) {
-			margin-left: 2em;
-		}
+		margin: 2em 0;
 		dt {
-			border-bottom: 1px dotted;
 			font-weight: 900;
-			margin-bottom: .5em;
-			padding-bottom: .2em;
 			margin-top: 1.5em;
+			margin-bottom: .5em;
 		}
 	}
 
