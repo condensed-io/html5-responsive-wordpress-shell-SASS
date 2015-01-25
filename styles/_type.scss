@@ -72,15 +72,6 @@
 	}
 	@mixin normal-type() {
 		font-size: 1em;
-		@include breakpoint(medium) {
-			font-size: 1em;
-		}
-		@include breakpoint(large) {
-			font-size: 1.1em;
-		}
-		@include breakpoint(mega) {
-			font-size: 1.3em;
-		}
 	}
 	@mixin small-type() {
 		font-size: 90%;
