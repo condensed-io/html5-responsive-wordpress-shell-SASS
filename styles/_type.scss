@@ -83,9 +83,9 @@
 		}
 	}
 	@mixin small-type() {
-		font-size: 100%;
+		font-size: 90%;
 		@include breakpoint(medium) {
-			font-size: 95%;
+			font-size: 80%;
 		}
 	}
 
