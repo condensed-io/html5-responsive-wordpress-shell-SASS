@@ -43,11 +43,10 @@
         }
 
         // add a class for the parent page name
-        $post_parent = get_post($post->post_parent);
-        $parentSlug = $post_parent->post_name;
-
         if ( is_page() && $post->post_parent ) {
-                $classes[] = "parent_".$parentSlug;
+            $post_parent = get_post($post->post_parent);
+            $parentSlug = $post_parent->post_name;
+            $classes[] = "parent_".$parentSlug;
         }
 
         // add class for the name of the custom template used (if any)
