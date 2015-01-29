@@ -121,6 +121,7 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		clear: both; // this is needed for headings between floated content areas
+		line-height: 1;
 	}
 
 	// add default sizes
