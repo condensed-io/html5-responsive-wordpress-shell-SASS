@@ -67,6 +67,10 @@ FORMS
 	li.gfield {
 		list-style-type: none !important;
 	}
+	.gfield_label {
+		margin-top: 1.5em;
+		display: block;
+	}
 	.validation_message {
 		margin-top: -1.5em;
 		margin-bottom: 2em;
