@@ -67,6 +67,10 @@ FORMS
 	li.gfield {
 		list-style-type: none !important;
 	}
+	.gfield_label {
+		margin-top: 1.5em;
+		display: block;
+	}
 	.validation_message {
 		margin-top: -1.5em;
 		margin-bottom: 2em;
@@ -78,6 +82,9 @@ FORMS
 		padding: 1.5em 1em;
 		border-radius: .2em;
 		font-weight: bold;
+	}
+	.gform_footer {
+		margin-top: 1em;
 	}
 	.white-area {
 		.validation_message {

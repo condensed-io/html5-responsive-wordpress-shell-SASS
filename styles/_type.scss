@@ -48,7 +48,6 @@
 	}
 	@mixin large-type() {
 		font-size: 1.4em;
-		font-weight: lighter;
 		@include breakpoint(medium) {
 			font-size: 1.6em;
 		}
@@ -61,7 +60,6 @@
 	}
 	@mixin medium-type() {
 		font-size: 1.1em;
-		font-weight: lighter;
 		@include breakpoint(medium) {
 			font-size: 1.3em;
 		}
@@ -74,22 +72,11 @@
 	}
 	@mixin normal-type() {
 		font-size: 1em;
-		font-weight: lighter;
-		@include breakpoint(medium) {
-			font-size: 1em;
-		}
-		@include breakpoint(large) {
-			font-size: 1.1em;
-		}
-		@include breakpoint(mega) {
-			font-size: 1.3em;
-		}
 	}
 	@mixin small-type() {
-		font-size: 100%;
-		font-weight: lighter;
+		font-size: 90%;
 		@include breakpoint(medium) {
-			font-size: 95%;
+			font-size: 80%;
 		}
 	}
 
@@ -105,18 +92,21 @@
 		@include breakpoint(medium) {
 			font-size: 16px;
 		}
+		@include breakpoint(large) {
+			font-size: 18px;
+		}
 		font-weight: 300;
 		line-height: 1.5;
 	}
 
-	// main content area
-	.content-main em {
+	// general
+	em {
 		font-style: italic;
 	}
 	strong {
 		font-weight: 900;
 	}
-	.content-main p {
+	p {
 		margin-bottom: 1.5em;
 	}
 
@@ -131,6 +121,7 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		clear: both; // this is needed for headings between floated content areas
+		line-height: 1;
 	}
 
 	// add default sizes

@@ -43,11 +43,10 @@
         }
 
         // add a class for the parent page name
-        $post_parent = get_post($post->post_parent);
-        $parentSlug = $post_parent->post_name;
-
         if ( is_page() && $post->post_parent ) {
-                $classes[] = "parent_".$parentSlug;
+            $post_parent = get_post($post->post_parent);
+            $parentSlug = $post_parent->post_name;
+            $classes[] = "parent_".$parentSlug;
         }
 
         // add class for the name of the custom template used (if any)
@@ -85,12 +84,12 @@
         if ( !is_admin() && !is_login_page() ) {
             // jQuery
             // To use our local copy (if you don't have an internet connection and you're developing locally) you can uncomment these two lines
-                //wp_deregister_script( 'jquery' );
+                //wp_deregister_script( 'jquery' ); // de-register the default wordpress version of jquery if you are using your own local version
                 //wp_register_script( 'jquery', '/wp-includes/js/jquery/jquery.js',null,null,true);
                 wp_enqueue_script( 'jquery' );
 
             // functions
-                wp_register_script( 'functions', get_template_directory_uri().'/js/functions.js', array('jquery'),'1.1', true); // true loads this script in the footer
+                wp_register_script( 'functions', get_template_directory_uri().'/js/functions.js', array('jquery'),'1.1', true); // version number is for cache busting, true loads this script in the footer
                 wp_enqueue_script( 'functions' );
 
             // modernizr

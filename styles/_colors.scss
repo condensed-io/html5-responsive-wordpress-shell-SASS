@@ -8,8 +8,6 @@ $black-50: rgba(0,0,0,.50);
 // Define your color values here, these are placeholders
 
 $orange: #F60;
-$orange-50: rgba(255,102,0,.50);
-$orange-70: rgba(255,102,0,.70);
 $lighter-grey: #EEE;
 $light-grey: #CCC;
 $grey: #666;
@@ -66,13 +64,12 @@ $dark-grey: #333;
 // Colors are added based on background
 
 	
-	// BLACK SECTION
-	.black-area {
+	// XXXXX AREA
+	.XXXX-area {
 		// add colors
 	}
 
-	// ORANGE SECTION
-
+	// WHITE AREA
 	.white-area { // need to tweak these colors, they're all messy
 		
 		background-color: $white;
