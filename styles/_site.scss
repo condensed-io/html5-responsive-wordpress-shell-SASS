@@ -93,12 +93,7 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 
 /* ::: COMMENTS ::::::::::::::::::::::::::::::::: */
 	
-	/*--- If you use the Facebook comments plugin this makes it responsive, if not trash this---*/
-	/*--- http://wordpress.org/plugins/facebook-comments-plugin/ ---*/
-	.fb-comments, .fb-comments span, .fb-comments iframe {
-		width: 100% !important;
-	}
-	.fb-comments { margin-top: 2em; }
+	@import "./_comments.scss";
 
 	
 	
