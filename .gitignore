@@ -9,3 +9,5 @@ js/functions-ck.js
 style.css
 
 *.codekit
+
+js/min/functions-ck.js
