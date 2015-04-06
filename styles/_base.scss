@@ -27,7 +27,6 @@ Base is for standard things that don't change from project to project
 // }
 
 
-
 /* ::: modified version of RESET CSS 2.0 by Eric Meyer ::::::::::::::::::::::::::::::::::::::::: */
 	
 	// http://meyerweb.com/eric/tools/css/reset/ - http://cssreset.com
@@ -44,7 +43,6 @@ Base is for standard things that don't change from project to project
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
 	}
-	
 	body {
 		line-height: 1;
 	}
@@ -59,7 +57,6 @@ Base is for standard things that don't change from project to project
 	table {
 		border-collapse: collapse; border-spacing: 0;
 	}
-
 	sub, sup { // see: https://gist.github.com/unruthless/413930
 		/* Specified in % so that the sup/sup is the
 		right size relative to the surrounding text */
@@ -77,12 +74,10 @@ Base is for standard things that don't change from project to project
 		is already set and you can remove this rule */
 		vertical-align: baseline;
 	}
- 
 	sup {
   		/* Move the superscripted text up */
   		top: -0.5em;
 	}
- 
 	sub {
 		/* Move the subscripted text down, but only
 		half as far down as the superscript moved up */
@@ -403,6 +398,10 @@ Base is for standard things that don't change from project to project
 	.fixed {
 	    position: fixed !important;
 	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    z-index: 999;
+	    margin-top: 0 !important;
 	}
 
 	// FitVid CSS
