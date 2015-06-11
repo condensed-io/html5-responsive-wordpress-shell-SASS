@@ -80,6 +80,8 @@
         return in_array($GLOBALS['pagenow'], array('wp-login.php', 'wp-register.php'));
     }
 
+    // enqueue css instead in the future: http://code.tutsplus.com/tutorials/loading-css-into-wordpress-the-right-way--cms-20402
+
     function load_my_scripts_yo() {
         if ( !is_admin() && !is_login_page() ) {
             // jQuery
