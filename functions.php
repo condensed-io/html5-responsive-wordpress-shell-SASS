@@ -80,7 +80,21 @@
         return in_array($GLOBALS['pagenow'], array('wp-login.php', 'wp-register.php'));
     }
 
-    // enqueue css instead in the future: http://code.tutsplus.com/tutorials/loading-css-into-wordpress-the-right-way--cms-20402
+
+    // Enqueue css -- http://code.tutsplus.com/tutorials/loading-css-into-wordpress-the-right-way--cms-20402
+    // Auto cache busting: https://markjaquith.wordpress.com/2009/05/04/force-css-changes-to-go-live-immediately/
+    wp_enqueue_style(
+       // handle name
+       'theme-styles', 
+       // the URI of the stylesheet
+       get_stylesheet_directory_uri() . '/style.css', 
+       // an array of dependent styles
+       null, 
+       // dynamic version number. returns file modification time. e.g. ?ver=5546165464654
+       filemtime(get_stylesheet_directory() . '/style.css'), 
+       // CSS media type
+       'screen' 
+   );
 
     function load_my_scripts_yo() {
         if ( !is_admin() && !is_login_page() ) {

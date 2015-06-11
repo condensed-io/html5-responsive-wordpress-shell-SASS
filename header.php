@@ -23,10 +23,6 @@
 
 	<!--ADD GOOGLE FONTS HERE-->
 
-	<!-- CSS with auto cache busting: https://markjaquith.wordpress.com/2009/05/04/force-css-changes-to-go-live-immediately/ -->
-
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>" type="text/css" media="screen, projection" />
-
 	<!-- BEGIN: IE Specific Hacks -->
 	<!--[if IE 9]><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/styles/ie9.css" media="screen" /><![endif]-->
 	<!--[if IE 8]><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/styles/ie8.css" media="screen" /><![endif]-->
