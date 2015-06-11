@@ -4,6 +4,7 @@ FORMS
 
 
 /* ::: ELEMENTS ::::::::::::::::::::::::::::::::::::::::: */
+	
 
 	input, textarea, select {
 		border: 0;
@@ -32,6 +33,7 @@ FORMS
 		width: 100%;
 	}
 	input[type='submit'], .button {
+    	-webkit-appearance: none; // removes the default styling that gets applied by ios
 		border-radius: .5em;
 		padding: .5em 1em;
 		text-decoration: none;
