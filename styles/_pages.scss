@@ -24,3 +24,15 @@ THIS SHEET IS FOR STYLING SPECIFIC PAGES ON YOUR SITE
 			margin-bottom: 1.5em;
 		}
 	}
+
+/* ::: BLOG TEMPLATE ::::::::::::::::::::::::::::::::::::::::: */
+
+	.template_blog {
+		.row {
+			@include outer-container;
+		}
+		article.post {
+			text-align: center;
+			margin-bottom: 3em;
+		}
+	}
