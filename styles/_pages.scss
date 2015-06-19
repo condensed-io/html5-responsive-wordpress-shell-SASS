@@ -9,7 +9,6 @@ THIS SHEET IS FOR STYLING SPECIFIC PAGES ON YOUR SITE
 */
 
 
-
 /* ::: HOME ::::::::::::::::::::::::::::::::::::::::: */
 	.page_home {
 		.nested-stuff {}
@@ -18,11 +17,10 @@ THIS SHEET IS FOR STYLING SPECIFIC PAGES ON YOUR SITE
 	}
 
 
+/* ::: SEARCH RESULTS ::::::::::::::::::::::::::::::::::::::::: */
 
-/* ::: ABOUT ::::::::::::::::::::::::::::::::::::::::: */
-	.page_about {
-		.nested-stuff {}
-		.nested-stuff {}
-		.nested-stuff {}
-
+	.search-results {
+		.search-result-item	{
+			margin-bottom: 1.5em;
+		}
 	}

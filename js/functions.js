@@ -26,12 +26,12 @@
 }(document));
 
 
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+//  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 // DOCUMENT READY FUNCTION: uses noConflict to work with other libraries
 jQuery(document).ready(function($) {
 
-//*** HACK - should be able to remove this one day when Chrome gets fixed: https://code.google.com/p/chromium/issues/detail?id=336476
-// Forces a re-paint to fix an issue with open sans not showing up on new version of chrome
-$('body').width(jQuery('body').width()+1).width('auto')
 
 
 /* ::: SHOW AND HIDE ::::::::::::::::::::::::::::::::: */
@@ -52,30 +52,7 @@ $('body').width(jQuery('body').width()+1).width('auto')
 			}
 		return false;
 	});
-
-
-
-/* ::: MOBILE NAV ::::::::::::::::::::::::::::::::: */
-
-//uncomment these lines to use//////////	$(function() {
-//uncomment these lines to use//////////		var mobileBtn = $('.icon-list');
-//uncomment these lines to use//////////		var menu = $('.topnav-links');
-//uncomment these lines to use//////////		//unused// var menuHeight  = menu.height();
-//uncomment these lines to use//////////		$(mobileBtn).on('click', function(e) {
-//uncomment these lines to use//////////			e.preventDefault();
-//uncomment these lines to use//////////			menu.slideToggle();
-//uncomment these lines to use//////////		});
-//uncomment these lines to use//////////	});
-//uncomment these lines to use//////////
-//uncomment these lines to use//////////	// If the browser size gets bigger than 500px make the nav visible again
-//uncomment these lines to use//////////	$(window).resize(function(){
-//uncomment these lines to use//////////		var w = $(window).width();
-//uncomment these lines to use//////////		var menu = $('.topnav-links');
-//uncomment these lines to use//////////		if(w > 900 && menu.is(':hidden')) {
-//uncomment these lines to use//////////			menu.css( "display", "block" );
-//uncomment these lines to use//////////		}
-//uncomment these lines to use//////////	});
-
+		
 
 
 /* ::: STICKY NAV ::::::::::::::::::::::::::::::::: */
@@ -123,23 +100,25 @@ $('body').width(jQuery('body').width()+1).width('auto')
 	}
 
 
-
 /* ::: MOVE LABELS INTO INPUTS IN FORMS ::::::::::::::::::::::::::::::::: */
-
-	// target gform fields and mailchimp fields (you can add more)
-	// there's probably a better way to do this, try rewriting this script one day
 	
-	$('ul[id*=gform_fields] li, .mc-field-group').each(function(){
+	// Detect support for placeholder attribute
+	placeholderSupport = ("placeholder" in document.createElement("input"));
+	
+	// if it's supported move the labels into the form fields
+	if(placeholderSupport){
+		$('label').not('.gfield_checkbox label').each(function(){ // don't hide checkbox labels but hide others
 
-		var el = $(this),
-			field = el.find('input, textarea'),
-			label = el.find('label'),
-			labelText = el.find('label').text();
+			var label = $(this);
+			label.hide();
 
-		label.hide();
-		field.attr('placeholder', labelText);
+			var field = label.parent().find('input, textarea');
+			var labelText = label.text();
 
-	});
+			field.attr('placeholder', labelText);
+
+		});
+	} // end browser check
 
 
 

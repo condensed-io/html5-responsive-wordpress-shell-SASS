@@ -8,10 +8,21 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 
 */
 
-// Bourbon Neat Grid Settings
+/* ::: GENERAL ::::::::::::::::::::::::::::::::: */
+
+	// Bourbon Neat Grid Settings -- NOT SURE IF THESE ARE NECESSARY
 	.row {
-		@include pad(0 5%); 
-		@include outer-container;
+		padding: 0 4%; // default padding to keep the content from touching the edge of the site (this may cause issues, keep an eye on it)
+	}
+
+	// Customize the look of selected text -- feel free to change the colors
+	::-moz-selection { // Mozilla
+       background-color: $black;
+       color: $white;
+	}
+	::selection { // Safari
+       background-color: $black;
+       color: $white;
 	}
 
 
@@ -25,7 +36,6 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 
 		}
 	}
-
 
 
 /* ::: MAIN NAV ::::::::::::::::::::::::::::::::: */
@@ -47,24 +57,59 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 		.current_page_item a {
 		}
 	}
-	
-		
 
-/* ::: CONTENT AREA ::::::::::::::::::::::::::::::::: */
-	
-	.content-main {
+
+/* ::: PAGINATION :: some default styling for the PageNavi Plugin ::::::::::::::::::::::::::::::: */
+
+	.wp-pagenavi {
+		margin-top: 3em;
+	}
+	.wp-pagenavi .pages {
+	    display: none;
+	}
+	.wp-pagenavi a, .wp-pagenavi a:link, .wp-pagenavi a:visited, .wp-pagenavi span.current {
+	    background: $lighter-grey;
+	    color: $grey;
+	    border-radius: 1.3em;
+	    display: inline-block;
+	    text-decoration: none;
+	    margin: 0 .3em 12px;
+	    padding: .5em 1em;
+	    border: none;
+	}
+	.nextpostslink, .previouspostslink {
+		background: none !important;
+	}
+	.wp-pagenavi span.current {
+	    background: $light-grey;
+	    color: $white;
+	}
+	.wp-pagenavi a:hover {
 	}
 
+
+/* ::: CONTENT ::::::::::::::::::::::::::::::::: */
+
+		// Tags
+		a[rel="tag"] {
+			display: inline-block;
+			padding: .1em .5em;
+			margin: .2em;
+			border-radius: .3em;
+			background: $lighter-grey;
+			&:link, &:visited {
+				text-decoration: none;
+			}
+			&:hover, &:active, &:focus {
+				background: $orange;
+				color: $white;
+			}
+		}
 
 
 /* ::: COMMENTS ::::::::::::::::::::::::::::::::: */
 	
-	/*--- If you use the Facebook comments plugin this makes it responsive, if not trash this---*/
-	/*--- http://wordpress.org/plugins/facebook-comments-plugin/ ---*/
-	.fb-comments, .fb-comments span, .fb-comments iframe {
-		width: 100% !important;
-	}
-	.fb-comments { margin-top: 2em; }
+	@import "./_comments.scss";
 
 	
 	
@@ -85,10 +130,14 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 		clear: both;
 		
 		/* Credit */
-		.site-credits a {
-			letter-spacing: 1px;
+		.credit {
+			h1 {
+			font-size: 1em;
+			font-weight: normal;
+			}
 		}
 	}
+
 
 
 

@@ -25,7 +25,7 @@ if ($disableSidebar !== 'true'): ?>
 			<!--BEGIN: Post-->
 			<article <?php post_class() ?> class="post-<?php the_ID(); ?>">
 				
-				<h1 class="alt"><a href="<?php the_permalink(); ?>" rel="bookmark" title='Click to read: "<?php strip_tags(the_title()); ?>"'><?php the_title(); ?></a></h2>
+				<h1 class="alt"><a href="<?php the_permalink(); ?>" rel="bookmark" title='Click to read: "<?php strip_tags(the_title()); ?>"'><?php the_title(); ?></a></h1>
 				<p>by <?php the_author(); ?></p>
 				<p class="post-date"><?php the_time('F jS, Y') ?> &#8212; <?php the_category(', ') ?></p>
 				<p><?php the_tags('Topics Covered: ', ', ', '<br />'); ?></p>
@@ -34,25 +34,18 @@ if ($disableSidebar !== 'true'): ?>
 			</article>
 			<!--END: Post-->
 				
-		<?php endwhile; ?>
-
-			<!--BEGIN: Page Nav-->
-			<?php if ( $wp_query->max_num_pages > 1 ) : // if there's more than one page turn on pagination ?>
-		        <nav class="page-nav">
-		        	<h1 class="hide">Page Navigation</h1>
-			        <ul class="clear-fix">
-				        <li class="next-link"><?php next_posts_link('Next Page') ?></li>
-				        <li class="prev-link"><?php previous_posts_link('Previous Page') ?></li>
-			        </ul>
-		        </nav>
-			<?php endif; ?>
-			<!--END: Page Nav-->
-			
-		<?php else : ?>
+		<?php endwhile; else : ?>
 
 			<h2>No posts were found :(</h2>
 
 	<?php endif; //END: The Loop ?>
+
+	<?php // we use the pagenavi plugin for pagination, there's a check here so if it doesn't exist it won't cuase an error
+		if(function_exists('wp_pagenavi')) :
+		wp_pagenavi();
+		wp_reset_postdata(); // avoid errors further down the page
+		endif;
+	?>
 
 </div>
 <!--END: Content-->

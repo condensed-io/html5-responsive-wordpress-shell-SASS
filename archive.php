@@ -72,25 +72,18 @@ if ($disableSidebar !== 'true'): ?>
 		</article>
 		<!--END: Archive-->
 				
-		<?php endwhile; ?>
-
-		<!--BEGIN: Page Nav-->
-		<?php if ( $wp_query->max_num_pages > 1 ) : // if there's more than one page turn on pagination ?>
-	        <nav class="page-nav">
-	        	<h1 class="hide">Page Navigation</h1>
-		        <ul class="clear-fix">
-			        <li class="prev-link"><?php next_posts_link('Next Page') ?></li>
-			        <li class="next-link"><?php previous_posts_link('Previous Page') ?></li>
-		        </ul>
-	        </nav>
-		<?php endif; ?>
-		<!--END: Page Nav-->
-		
-		<?php else : ?>
+		<?php endwhile; else : ?>
 
 			<h2>No posts were found :(</h2>
 			
 	<?php endif; //END: The Loop ?>
+
+	<?php // we use the pagenavi plugin for pagination, there's a check here so if it doesn't exist it won't cuase an error
+		if(function_exists('wp_pagenavi')) :
+		wp_pagenavi();
+		wp_reset_postdata(); // avoid errors further down the page
+		endif;
+	?>
 
 </div>
 <!--END: Content-->

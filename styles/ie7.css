@@ -2,6 +2,12 @@
 ie7 hacks
 */
 
+/* since we show labels outside form fields on IE they need to stack */
+input, label {
+	display: block !important;
+	clear: both !important;
+}
+
 /* Self Clearing Floats */
 .clear-fix { min-height: 1%; }
 
@@ -12,3 +18,10 @@ img { -ms-interpolation-mode: bicubic; } /* fixes image resizing */
 #container-name li { width: 100%; }
 
 */
+
+.browsehappy {
+	padding: 4em;
+	background: yellow;
+	color: blue;
+	font-size: 2em;
+}
