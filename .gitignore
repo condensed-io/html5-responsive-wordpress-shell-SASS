@@ -11,3 +11,5 @@ style.css
 *.codekit
 
 js/min/functions-ck.js
+
+fonts/.DS_Store
