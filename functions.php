@@ -1,12 +1,12 @@
 <?php
 
 
-////// BEGIN: if you are logged into the admin area, show what template someone is using on the top of all pages
-//    if (is_user_logged_in()) { add_action('wp_footer', 'show_template'); }
-//    function show_template() {
-//        global $template;
-//        print_r($template);
-//    }
+//// BEGIN: if you are logged into the admin area, show what template someone is using on the top of all pages
+   if (is_user_logged_in()) { add_action('wp_footer', 'show_template'); }
+   function show_template() {
+       global $template;
+       print_r($template);
+   }
 
 
 // ::: UTILITY FUNCTIONS :::::::::::::::::::::::::::::::::::::::::::::

@@ -11,9 +11,9 @@ THIS SHEET IS FOR STYLING SPECIFIC PAGES ON YOUR SITE
 
 /* ::: HOME ::::::::::::::::::::::::::::::::::::::::: */
 	.page_home {
-		.nested-stuff {}
-		.nested-stuff {}
-		.nested-stuff {}
+		.nested-stuff { }
+		.nested-stuff { }
+		.nested-stuff { }
 	}
 
 
@@ -25,14 +25,69 @@ THIS SHEET IS FOR STYLING SPECIFIC PAGES ON YOUR SITE
 		}
 	}
 
-/* ::: BLOG TEMPLATE ::::::::::::::::::::::::::::::::::::::::: */
+/* ::: BLOG Listing Page ::::::::::::::::::::::::::::::::::::::::: */
 
-	.template_blog {
-		.row {
-			@include outer-container;
+	.blog-listing {
+		margin-top: 2em;
+		text-align: center;
+		margin-bottom: 3em;
+		article {
+			position: relative;
 		}
-		article.post {
-			text-align: center;
-			margin-bottom: 3em;
+		@include breakpoint(medium) {
+			h2 {
+				position: absolute;
+				z-index: 99;
+				left: 0;
+				top: 0;
+				font-size: 90%;
+				padding: 1.5em;
+				background-color: rgba(0,0,0,.2);
+				color: $white;
+				font-weight: bold;
+				margin: 2em;
+			}
+		}
+		img {
+			max-width: 100%;
+		}
+		.blog-content {
+			margin-bottom: 4em;
+			@include span-columns(10);
+			@include shift(1);
+			@include breakpoint(large) {
+				margin-top: -2em;
+				border-radius: .5em;
+				padding: 0 5em;
+				margin-top: -5em;
+				margin-bottom: 5em;
+				@include span-columns(8);
+				@include shift(2);
+			}
+			background: $white;
+			z-index: 50;
+			h1 {
+				margin-bottom: 1em;
+				padding: 2em 0 .5em 0
+			}
+		}
+	}
+
+	// Single page
+	.single {
+		.content-main {
+			margin-bottom: 4em;
+			
+			header {
+				margin: 3em 0;
+				h1 {
+					margin-bottom: .5em;
+					@include huge-type;
+				}
+				.meta {
+					font-weight: bold;
+					font-size: 80%;
+				}
+			}
 		}
 	}

@@ -7,7 +7,7 @@
 			<!--BEGIN: Footer Nav-->
 			<nav role="navigation">
 				<h1 class="access-hide">Footer Navigation</h1>
-				<?php wp_nav_menu(array('menu' => 'footerNav', 'menu_class' => 'nav-footer')); // create the footerNav menu inside Appearance menus and go to town -- for more on menus see: http://templatic.com/news/wordpress-3-0-menu-management ?>
+				<?php wp_nav_menu(array('menu' => 'footerNav', 'menu_class' => 'nav-footer horiz-list')); // create the footerNav menu inside Appearance menus and go to town -- for more on menus see: http://templatic.com/news/wordpress-3-0-menu-management ?>
 			</nav>
 			<!--END: Footer Nav-->
 

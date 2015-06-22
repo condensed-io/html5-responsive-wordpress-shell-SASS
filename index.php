@@ -37,7 +37,6 @@
 
 <!--BEGIN: Sidebar Main-->
 <aside class="sidebar-main">
-	<h1>Main Sidebar</h1>
 	<?php dynamic_sidebar('sidebar-main'); ?>
 </aside>
 <!--END: Sidebar Main-->

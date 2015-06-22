@@ -1,29 +1,16 @@
 <?php get_header(); ?>
 
-<!--BEGIN: sidebar~main-->
-<?php // to disable this sidebar on a page by page basis just add a custom field to your page or post of disableSidebar = true
-$disableSidebar = get_post_meta($post->ID, 'disableSidebar', $single = true);
-if ($disableSidebar !== 'true'): ?>
-
-<aside class="sidebar-main">
-	<h1>Main Sidebar</h1>
-	<?php dynamic_sidebar('sidebar-main'); ?>
-</aside>
-
-<?php endif; ?>
-<!--END: sidebar~main-->
-
 <div class="content-main clear-fix" role="main">
 	
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
 	<!--BEGIN: Single Post-->
-	<article <?php post_class('clear-fix'); ?>>
+	<article <?php post_class('clear-fix row'); ?>>
 				
 		<header>
 			<h1><?php the_title(); ?></h1>	
-			<time datetime="<?php the_time('c'); ?>" pubdate="pubdate"><?php the_time('F jS, Y'); ?></time>
-			<p>by <?php the_author(); ?></p>
+			<time class="meta" datetime="<?php the_time('c'); ?>" pubdate="pubdate"><?php the_time('F jS, Y'); ?></time>
+			<p class="meta">by <?php the_author(); ?></p>
 		</header>
 		
 		<div class="entry">
@@ -56,5 +43,9 @@ if ($disableSidebar !== 'true'): ?>
 		
 </div>
 <!--END: Content-->
+
+<aside class="sidebar-main">
+	<?php dynamic_sidebar('sidebar-main'); ?>
+</aside>
 
 <?php get_footer(); ?>

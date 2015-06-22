@@ -113,26 +113,28 @@
 
 /*--- Links ---*/
 
-	a:link, a:visited { text-decoration: underline; }
+	a:link, a:visited { text-decoration: none; }
 	a:hover, a:active, a:focus { text-decoration: none; }
 
 
 /*--- Headings ---*/
 
+	// add default sizes and vertical spacing
+
 	h1, h2, h3, h4, h5, h6 {
 		clear: both; // this is needed for headings between floated content areas
 		line-height: 1;
+		margin-bottom: 1.5em;
 	}
-
-	// add default sizes
+	
 	h1 {
 		@include large-type();
 	}
 	h2 {
 		@include medium-type();
 	}
-	h2 {
-		@include small-type();
+	h4 {
+		font-weight: bold;
 	}
 
 
