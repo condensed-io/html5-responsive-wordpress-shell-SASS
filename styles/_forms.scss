@@ -13,8 +13,9 @@ FORMS
 		font-weight: 100;
 		vertical-align: middle;
 		padding: .7em 1em;
+		@include sans();
 	}
-	input[type='text'], input[type='url'], input[type='file'], input[type='email'], textarea, select {
+	input[type='text'], input[type='url'], input[type='file'], input[type='tel'], input[type='email'], textarea, select {
 		width: 100%;
 		border-radius: .2em;
 		@include transition (all .3s ease-in-out);
@@ -74,7 +75,6 @@ FORMS
 		display: block;
 	}
 	.validation_message {
-		margin-top: -1.5em;
 		margin-bottom: 2em;
 		padding-top: .5em;
 		font-weight: bold;
