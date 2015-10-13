@@ -27,6 +27,14 @@
     }
 
 
+    // Function used to see if you are in a post type
+    function is_post_type($type){
+        global $wp_query;
+        if($type == get_post_type($wp_query->post->ID)) return true;
+        return false;
+    }
+
+
 // ::: TWEAK SOME WORDPRESS DEFAULTS :::::::::::::::::::::::::::::::::
 
     // ** For Responsive images and thumbnails, removes the width and height from the markup
