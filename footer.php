@@ -16,9 +16,6 @@
 			<!--END: Credits-->
 			
 			<p class="copyright"><small>&copy; <?php echo date('Y'); ?> <?php bloginfo('name')?></small></p>
-			
-			<!-- wp_footer hook for Plugins -->
-			<?php wp_footer(); ?>
 
 		</div>
 		<!--END: Row-->
@@ -30,5 +27,8 @@
 	<div class="js-ind indicator"><a href="http://www.mimoymima.com/help/turning-javascript-on-and-off/" title="You don't have javascript enabled, click here to learn more.">Enable Javascript</a></div>
 	<!--Javascript Indicator-->
 
+    <!-- wp_footer hook for Plugins -->
+    <?php wp_footer(); ?>
+			
 </body>
 </html>
