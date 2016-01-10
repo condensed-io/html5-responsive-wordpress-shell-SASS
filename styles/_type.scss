@@ -97,6 +97,11 @@
 		}
 		font-weight: 300;
 		line-height: 1.5;
+        
+        //Open Type Defaults -- http://practice.typekit.com/lesson/caring-about-opentype-features/
+        font-kerning: normal;
+        font-variant-ligatures: common-ligatures, contextual;
+        font-feature-settings: "kern", "liga", "clig", "calt";
 	}
 
 	// general
