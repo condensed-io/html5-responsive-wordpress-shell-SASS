@@ -36,6 +36,9 @@ FORMS
 	input[type='submit'], .button {
     	-webkit-appearance: none; // removes the default styling that gets applied by ios
 		border-radius: .5em;
+        white-space: nowrap; // helps stack buttons nicely vertically
+        vertical-align: top; // helps stack buttons nicely vertically
+        line-height: 4; // helps stack buttons nicely vertically
 		padding: .5em 1em;
 		text-decoration: none;
 		@include transition (all .3s ease-in-out);
