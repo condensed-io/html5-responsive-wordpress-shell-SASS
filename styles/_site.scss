@@ -8,6 +8,8 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 
 */
 
+
+
 /* ::: GENERAL ::::::::::::::::::::::::::::::::: */
 
 	// Bourbon Neat Grid Settings -- NOT SURE IF THESE ARE NECESSARY
@@ -26,6 +28,7 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 	}
 
 
+
 /* ::: SITE HEADER ::::::::::::::::::::::::::::::::: */
 
 	.site-header {
@@ -36,6 +39,7 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 
 		}
 	}
+
 
 
 /* ::: MAIN NAV ::::::::::::::::::::::::::::::::: */
@@ -57,6 +61,7 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 		.current_page_item a {
 		}
 	}
+
 
 
 /* ::: PAGINATION :: some default styling for the PageNavi Plugin ::::::::::::::::::::::::::::::: */
@@ -88,6 +93,7 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 	}
 
 
+
 /* ::: CONTENT ::::::::::::::::::::::::::::::::: */
 
     // Tags
@@ -110,12 +116,14 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
     }
 
 
+
 /* ::: COMMENTS ::::::::::::::::::::::::::::::::: */
 	
 	// uncomment the next line if you end up using WordPress' default comments (usually we use Disqus so it's commented out by default)
 	// @import "./_comments.scss";
 
 	
+
 /* ::: SIDEBAR: MAIN ::::::::::::::::::::::::::::::::: */
 
 	.sidebar-main {
@@ -144,6 +152,7 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 		}
 	}
 	
+
 
 /* ::: FOOTER ::::::::::::::::::::::::::::::::: */
 
