@@ -22,12 +22,6 @@ FORMS
 		@include placeholder {
 			@include transition (all .3s ease-in-out);
 		}
-		@include breakpoint(medium) {
-			width: 70%;
-		}
-		@include breakpoint(large) {
-			width: 92%;
-		}
 	}
 	select {
 		height: 2.7em;
