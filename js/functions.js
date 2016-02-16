@@ -33,6 +33,51 @@
 jQuery(document).ready(function($) {
 
 
+/* ::: Equal Height Divs ::::::::::::::::::::::::::::::::: */
+
+equalheight = function(container){
+
+var currentTallest = 0,
+     currentRowStart = 0,
+     rowDivs = new Array(),
+     $el,
+     topPosition = 0;
+ $(container).each(function() {
+
+   $el = $(this);
+   $($el).height('auto')
+   topPostion = $el.position().top;
+
+   if (currentRowStart != topPostion) {
+     for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+       rowDivs[currentDiv].height(currentTallest);
+     }
+     rowDivs.length = 0; // empty the array
+     currentRowStart = topPostion;
+     currentTallest = $el.height();
+     rowDivs.push($el);
+   } else {
+     rowDivs.push($el);
+     currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+  }
+   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+     rowDivs[currentDiv].height(currentTallest);
+   }
+ });
+}
+
+// USAGE: Add your Equal Height Selectors here, some examples are commented out below
+$(window).load(function() {
+//  equalheight('.amenities li');
+//  equalheight('.membership article');// you can put as many as you want
+});
+
+
+$(window).resize(function(){
+//  equalheight('.amenities li');
+//  equalheight('.membership article');
+});
+    
 
 /* ::: SHOW AND HIDE ::::::::::::::::::::::::::::::::: */
 
