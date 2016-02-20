@@ -104,10 +104,6 @@ $dark-grey: #333;
 
 		input[type='submit'], .button {
 			color: $orange;
-			text-decoration: none;
-			font-weight: bold;
-			padding: .5em 2em;
-			margin: 1em;
 			border: .15em solid $orange;
 			&:hover, &:focus, &:active {
 				color: $black;
