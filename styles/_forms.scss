@@ -71,17 +71,22 @@ FORMS
 		margin-top: 1.5em;
 		display: block;
 	}
-	.validation_message {
-		margin-bottom: 2em;
+    .validation_error {
+        background: $orange;
+        color: $white;
+        margin: .5em;
+		padding: 1.5em 1em;
+		font-weight: bold;
+    }
+    .validation_message {
+        border-top: 2px solid $orange;
+        color: $orange;
+        margin: .5em;
+        margin-bottom: 2em;
 		padding-top: .5em;
 		font-weight: bold;
-	}
-	.validation_error {
-		@include medium-type();
-		padding: 1.5em 1em;
-		border-radius: .2em;
-		font-weight: bold;
-	}
+        clear: both;
+    }
 	.gform_footer {
 		margin-top: 1em;
 	}
