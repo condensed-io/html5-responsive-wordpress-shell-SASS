@@ -84,7 +84,7 @@
 
 
     // Removes the automatic paragraph tags from the excerpt, we leave it on for the content and have a custom field you can use to turn it off on a page by page basis --> wpautop = false
-        remove_filter('the_excerpt', 'wpautop');
+    remove_filter('the_excerpt', 'wpautop');
 
 
 
@@ -100,17 +100,17 @@
         if ( !is_admin() && !is_login_page() ) {
             // jQuery
             // To use our local copy (if you don't have an internet connection and you're developing locally) you can uncomment these two lines
-                //wp_deregister_script( 'jquery' ); // de-register the default wordpress version of jquery if you are using your own local version
-                //wp_register_script( 'jquery', '/wp-includes/js/jquery/jquery.js',null,null,true);
-                wp_enqueue_script( 'jquery' );
+            //wp_deregister_script( 'jquery' ); // de-register the default wordpress version of jquery if you are using your own local version
+            //wp_register_script( 'jquery', '/wp-includes/js/jquery/jquery.js',null,null,true);
+            wp_enqueue_script( 'jquery' );
 
             // functions
-                wp_register_script( 'functions', get_template_directory_uri().'/js/functions.js', array('jquery'),'1.1', true); // version number is for cache busting, true loads this script in the footer
-                wp_enqueue_script( 'functions' );
+            wp_register_script( 'functions', get_template_directory_uri().'/js/functions.js', array('jquery'),'1.1', true); // version number is for cache busting, true loads this script in the footer
+            wp_enqueue_script( 'functions' );
 
             // modernizr
-                wp_register_script( 'modernizr', get_template_directory_uri().'/js/modernizr.custom.js',null,null,false); // keep the last argument as false which loads modernizr in the head
-                wp_enqueue_script( 'modernizr' );
+            wp_register_script( 'modernizr', get_template_directory_uri().'/js/modernizr.custom.js',null,null,false); // keep the last argument as false which loads modernizr in the head
+            wp_enqueue_script( 'modernizr' );
             
             // Enqueue css -- http://code.tutsplus.com/tutorials/loading-css-into-wordpress-the-right-way--cms-20402
             // Auto cache busting: https://markjaquith.wordpress.com/2009/05/04/force-css-changes-to-go-live-immediately/
