@@ -88,7 +88,7 @@
 
 
 
-/* ::: LOAD SCRIPTS ::::::::::::::::::::::::::::::::: */
+/* ::: LOAD SCRIPTS AND STYLES ::::::::::::::::::::::::::::::::: */
 
     // Detect if page is the login page
     function is_login_page() {
@@ -96,25 +96,7 @@
     }
 
 
-    // Enqueue css -- http://code.tutsplus.com/tutorials/loading-css-into-wordpress-the-right-way--cms-20402
-    // Auto cache busting: https://markjaquith.wordpress.com/2009/05/04/force-css-changes-to-go-live-immediately/
-    if ( !is_admin() && !is_login_page() ) {
-
-        wp_enqueue_style(
-           // handle name
-           'theme-styles', 
-           // the URI of the stylesheet
-           get_stylesheet_directory_uri() . '/style.css', 
-           // an array of dependent styles
-           null, 
-           // dynamic version number. returns file modification time. e.g. ?ver=5546165464654
-           filemtime(get_stylesheet_directory() . '/style.css'), 
-           // CSS media type
-           'screen' 
-       );
-    }
-
-    function load_my_scripts_yo() {
+    function load_my_scripts_and_styles_yo() {
         if ( !is_admin() && !is_login_page() ) {
             // jQuery
             // To use our local copy (if you don't have an internet connection and you're developing locally) you can uncomment these two lines
@@ -129,9 +111,24 @@
             // modernizr
                 wp_register_script( 'modernizr', get_template_directory_uri().'/js/modernizr.custom.js',null,null,false); // keep the last argument as false which loads modernizr in the head
                 wp_enqueue_script( 'modernizr' );
+            
+            // Enqueue css -- http://code.tutsplus.com/tutorials/loading-css-into-wordpress-the-right-way--cms-20402
+            // Auto cache busting: https://markjaquith.wordpress.com/2009/05/04/force-css-changes-to-go-live-immediately/
+            wp_enqueue_style(
+               // handle name
+               'theme-styles', 
+               // the URI of the stylesheet
+               get_stylesheet_directory_uri() . '/style.css', 
+               // an array of dependent styles
+               null, 
+               // dynamic version number. returns file modification time. e.g. ?ver=5546165464654
+               filemtime(get_stylesheet_directory() . '/style.css'), 
+               // CSS media type
+               'screen' 
+            );    
         }
     }
-    add_action('wp_enqueue_scripts', 'load_my_scripts_yo');
+    add_action('wp_enqueue_scripts', 'load_my_scripts_and_styles_yo');
 
 
 
