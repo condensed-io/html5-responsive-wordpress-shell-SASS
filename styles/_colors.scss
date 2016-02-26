@@ -103,11 +103,14 @@ $dark-grey: #333;
 		}
 
 		input[type='submit'], .button {
-			color: $orange;
 			border: .15em solid $orange;
+            &:link, &:visited {
+				color: $white;
+                background: $orange;
+			}
 			&:hover, &:focus, &:active {
-				color: $black;
-				border-color: $black;
+				color: $white;
+                background: $black;
 			}
 		}
 	}
