@@ -5,11 +5,10 @@
 
 
 //::: DEFINE FONT FAMILIES ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-// These mixins makes it easy to add font to elements in your stylesheets
+// These mixins makes it easy to add font to elements in your stylesheets, change them to your liking :D
 	
 	@mixin sans() {
 		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-		font-weight: 300;
 	}
 
 	@mixin serif() {
