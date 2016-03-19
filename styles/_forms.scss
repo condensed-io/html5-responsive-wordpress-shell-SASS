@@ -32,7 +32,7 @@ FORMS
 		border-radius: .5em;
         white-space: nowrap; // helps stack buttons nicely vertically
         vertical-align: top; // helps stack buttons nicely vertically
-		padding: .5em 1em;
+		padding: 1em 1.5em;
 		text-decoration: none;
 		@include transition (all .3s ease-in-out);
 		&:hover, &:focus, &:active {
