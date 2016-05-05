@@ -29,11 +29,14 @@ FORMS
 	}
 	input[type='submit'], .button {
     	-webkit-appearance: none; // removes the default styling that gets applied by ios
+    	-moz-appearance: none; // removes the default styling that gets applied by ios
 		border-radius: .5em;
         white-space: nowrap; // helps stack buttons nicely vertically
         vertical-align: top; // helps stack buttons nicely vertically
 		padding: 1em 1.5em;
 		text-decoration: none;
+        border: none;
+        outline: none;
 		@include transition (all .3s ease-in-out);
 		&:hover, &:focus, &:active {
 			text-decoration: none;
