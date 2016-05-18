@@ -8,26 +8,6 @@ Base is for standard things that don't change from project to project
 
 
 
-// turn this on and off to show what breakpoint is being used
-
-// body:before {
-// 	position: absolute; right: 1em; top: 1em; z-index: 999; background: $white; padding: 1em; content: 'no breakpoint';
-// 	@include breakpoint(mini) {
-// 		content: 'mini breakpoint';
-// 	}
-// 	@include breakpoint(medium) {
-// 		content: 'medium breakpoint';
-// 	}
-// 	@include breakpoint(large) {
-// 		content: 'large breakpoint';
-// 	}
-// 	@include breakpoint(mega) {
-// 		content: 'mega breakpoint';
-// 	}
-// }
-
-
-
 /* ::: modified version of RESET CSS 2.0 by Eric Meyer ::::::::::::::::::::::::::::::::::::::::: */
 	
 	// http://meyerweb.com/eric/tools/css/reset/ - http://cssreset.com
