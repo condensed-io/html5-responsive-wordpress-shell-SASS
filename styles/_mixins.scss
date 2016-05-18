@@ -23,37 +23,6 @@ http://bourbon.io/
 	}
 
 
-
-/* ::: BREAKPOINTS ::::::::::::::::::::::::::::::::::::::::: */
-
-	// http://web-design-weekly.com/2013/05/12/handy-sass-mixins/
-
-	@mixin breakpoint($point) {
-	  @if $point == small { // most styles for small screen should go outside of any media queries, this is useful for stuff like hiding the nav for mobile
-	    @media (min-width: em(0)) { @content; }
-	  }
-     @if $point == smallmed { // most styles for small screen should go outside of any media queries, this is useful for stuff like hiding the nav for mobile
-	    @media (min-width: em(400)) { @content; }
-	  }
-	  @else if $point == medium {
-	    @media (min-width: em(650)) { @content; }
-	  }
-	  @else if $point == medlrg {
-	    @media (min-width: em(800)) { @content; }
-	  }
-	  @else if $point == large {
-	    @media (min-width: em(980)) { @content; }
-	  }
-	  @else if $point == lrgmega {
-	    @media (min-width: em(1010)) { @content; }
-	  }
-	  @else if $point == mega {
-	    @media (min-width: em(1200)) { @content; }
-	  }
-	}
-
-
-
 /* ::: BOURBON NEAT GRID HACKS ::::::::::::::::::::::::::::::::::::::::: */
 	
 //reset margins when you're changing the column span of a collection
