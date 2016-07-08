@@ -5,10 +5,9 @@
 <!--BEGIN: Content-->
 <div class="content-main row" role="main">
 
-		<h1>Keep searching.</h1>
+		<h1>Keep Searching</h1>
 	
-		<p style="margin-top: 1em;">The URL you've come to doesn't exist...<br />  If it's an error with our site <a href="/contact/">please tell us about it</a>, if not use the searchbox below to find what you're looking for.</p>
-		<?php get_search_form(); ?>
+		<p>This URL doesn't bring up a web page on our site, if you think there's an error, please <a href="/contact/">tell us about it.</a></p>
 	
 		<h2>Or Choose A Popular Topic</h2>
 		<p><?php wp_tag_cloud(''); ?> </p>
