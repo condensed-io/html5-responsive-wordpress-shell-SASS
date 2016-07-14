@@ -4,6 +4,22 @@
 
 
 
+//::: ACTIVATE LIGATURES ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+    // Currently using this method: http://www.elliotjaystocks.com/blog/the-fine-flourish-of-the-ligature/
+    // there's also this which might be supported better in the future: https://helpx.adobe.com/typekit/using/open-type-syntax.html#calt
+
+    body { 
+        -moz-font-feature-settings:"liga=1, dlig=1"; 
+        -moz-font-feature-settings:"liga", "dlig"; /* EDIT: new syntax for FF 15+ */ 
+        -ms-font-feature-settings:"liga", "dlig"; 
+        -o-font-feature-settings:"liga", "dlig"; 
+        -webkit-font-feature-settings:"liga", "dlig"; 
+        font-feature-settings:"liga", "dlig";
+    }
+
+
+
 //::: DEFINE FONT FAMILIES ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 // These mixins makes it easy to add font to elements in your stylesheets, change them to your liking :D
 	
