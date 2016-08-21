@@ -61,8 +61,9 @@ $dark-grey: #333;
 
 
 /* ::: COLORED SECTIONS ::::::::::::::::::::::::::::::::: */
-// Colors are added based on background
+// Colors schemes are established based on background
     	
+
 	// ORANGE AREA - CHANGE TO WHATEVER COLORS YOU NEED AND ADD MORE SECTIONS LIKE THIS WHEN NEEDEDS
 	.orange-area {
         background-color: $orange;
@@ -102,7 +103,7 @@ $dark-grey: #333;
                 background: $white;
 			}
 		}
-	}
+	} // END: Orange Area
 
 	// WHITE AREA
 	.white-area { // need to tweak these colors, they're all messy
@@ -147,7 +148,31 @@ $dark-grey: #333;
                 background: $black;
 			}
 		}
-	}
+        .validation_error {
+            background: $orange;
+            color: $white;
+        }
+        .validation_message {
+            border-top: 2px solid $orange;
+            color: $orange;
+        }
+        
+        // Tags
+        a[rel="tag"],
+        .tags a {
+            background: $lighter-grey;
+            &:link, &:visited {
+                text-decoration: none;
+                font-color: dark-grey;
+            }
+            &:hover, &:active, &:focus {
+                background: $orange;
+                color: $white;
+            }
+        }
+        
+	} // END: White Area
+
 
 
 

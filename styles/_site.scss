@@ -105,15 +105,6 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
         vertical-align: middle;
         margin: .2em;
         border-radius: .3em;
-        background: $lighter-grey;
-        &:link, &:visited {
-            text-decoration: none;
-            font-color: dark-grey;
-        }
-        &:hover, &:active, &:focus {
-            background: $orange;
-            color: $white;
-        }
     }
 
 
