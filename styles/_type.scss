@@ -4,21 +4,6 @@
 
 
 
-//::: ACTIVATE LIGATURES ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-    // Currently using this method: http://www.elliotjaystocks.com/blog/the-fine-flourish-of-the-ligature/
-    // there's also this which might be supported better in the future: https://helpx.adobe.com/typekit/using/open-type-syntax.html#calt
-
-    body { 
-        -moz-font-feature-settings:"liga=1, dlig=1"; 
-        -moz-font-feature-settings:"liga", "dlig"; /* EDIT: new syntax for FF 15+ */ 
-        -ms-font-feature-settings:"liga", "dlig"; 
-        -o-font-feature-settings:"liga", "dlig"; 
-        -webkit-font-feature-settings:"liga", "dlig"; 
-        font-feature-settings:"liga", "dlig";
-    }
-
-
 
 //::: DEFINE FONT FAMILIES ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 // These mixins makes it easy to add font to elements in your stylesheets, change them to your liking :D
@@ -44,6 +29,45 @@
 	.icon-font {
 		@include condensed();
 	}
+
+
+
+
+//::: BASE FONT SETTINGS ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+	body {
+		@include sans();
+		font-size: 14px; // base font size
+		letter-spacing: .01em; // most fonts look better opened up just a little, you can adjust the value
+		@include media($medium) {
+			font-size: 16px;
+		}
+		@include media($large) {
+			font-size: 18px;
+		}
+		font-weight: 300;
+		line-height: 1.5;
+        
+        // activates ligatures and other open type features -- http://practice.typekit.com/lesson/caring-about-opentype-features/
+        font-kerning: normal;
+        font-variant-ligatures: common-ligatures, contextual;
+        font-feature-settings: "kern", "liga", "clig", "calt";
+        
+        // also see http://www.elliotjaystocks.com/blog/the-fine-flourish-of-the-ligature/
+        // and https://helpx.adobe.com/typekit/using/open-type-syntax.html#calt
+	}
+
+	// general
+	em {
+		font-style: italic;
+	}
+	strong {
+		font-weight: 900;
+	}
+	p {
+		margin-bottom: 1.5em;
+	}
+
 
 
 
@@ -97,44 +121,13 @@
 
 
 
-
-//::: BASE FONT SETTINGS ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-	body {
-		@include sans();
-		font-size: 14px; // base font size
-		letter-spacing: .01em; // most fonts look better opened up just a little, you can adjust the value
-		@include media($medium) {
-			font-size: 16px;
-		}
-		@include media($large) {
-			font-size: 18px;
-		}
-		font-weight: 300;
-		line-height: 1.5;
-        
-        //Open Type Defaults -- http://practice.typekit.com/lesson/caring-about-opentype-features/
-        font-kerning: normal;
-        font-variant-ligatures: common-ligatures, contextual;
-        font-feature-settings: "kern", "liga", "clig", "calt";
-	}
-
-	// general
-	em {
-		font-style: italic;
-	}
-	strong {
-		font-weight: 900;
-	}
-	p {
-		margin-bottom: 1.5em;
-	}
-
-
 /*--- Links ---*/
 
 	a:link, a:visited { text-decoration: none; }
 	a:hover, a:active, a:focus { text-decoration: none; }
+
+
+
 
 
 /*--- Headings ---*/
