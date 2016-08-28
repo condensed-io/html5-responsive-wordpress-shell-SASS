@@ -117,7 +117,7 @@ Base is for standard things that don't change from project to project
 	    width: 100%;
 	    -webkit-overflow-scrolling: touch;
 		font-size: 80%;
-		@include breakpoint(medium) {
+		@include media(medium) {
 			font-size: 90%;
 			display: table;
 		}
@@ -182,7 +182,7 @@ Base is for standard things that don't change from project to project
     	padding: 4px;
     	margin: 0 0 2px 15px;
     	display: inline;
-    	@include breakpoint(medium) {
+    	@include media(medium) {
     		max-width: 40%;
     	}
     	max-width: 100%;
@@ -191,7 +191,7 @@ Base is for standard things that don't change from project to project
     	padding: 4px;
     	margin: 0 15px 2px 0;
     	display: inline;
-    	@include breakpoint(medium) {
+    	@include media(medium) {
     		max-width: 40%;
     	}
     	max-width: 100%;
@@ -271,7 +271,7 @@ Base is for standard things that don't change from project to project
 
 	.content-main ul {
 		margin-left: 1em;
-		@include breakpoint(medium) {
+		@include media(medium) {
 			margin-left: 2em;
 		}
 		margin-top: 1em;
@@ -300,7 +300,7 @@ Base is for standard things that don't change from project to project
 
 	.content-main ol {
 		margin-left: 1em;
-		@include breakpoint(medium) {
+		@include media(medium) {
 			margin-left: 2em;
 		}
 		li {
@@ -314,7 +314,7 @@ Base is for standard things that don't change from project to project
 
 	// Horizontal List
 	.horiz-list {
-		@include breakpoint(medium) {
+		@include media(medium) {
 			list-style-type: none;
 			display: inline-block;
 			width: 100%;
@@ -328,13 +328,14 @@ Base is for standard things that don't change from project to project
 			li {
 				display: block;
 				width: 100%;
-				@include breakpoint(medium) {
+				@include media(medium) {
 					display: inline-block;
 					width: auto;
 				}
 			}
 		}
 	}
+
 
 	// Lists Without Bullets
 	ul.no-bullet {
