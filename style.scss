@@ -18,17 +18,6 @@ Author URI: http://html5.mimoymima.com/
 
 
 
-/* ::: BREAKPOINT VARIABLES ::::::::::::::::::::::::::::::::::::::::: */
-
-    $small: new-breakpoint(min-width 0px );
-    $smallmed: new-breakpoint(min-width 400px );
-    $medium: new-breakpoint(min-width 650px);
-    $medlrg: new-breakpoint(min-width 800px);
-    $large: new-breakpoint(min-width 980px);
-    $lrgmega: new-breakpoint(min-width 1010px);
-    $mega: new-breakpoint(min-width 1200px);
-
-
 // bourbon neat grid system
 @import "./styles/neat/neat/";
 
