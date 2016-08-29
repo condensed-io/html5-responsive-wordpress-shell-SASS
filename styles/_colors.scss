@@ -94,6 +94,8 @@ $dark-grey: #333;
 			}
 		}
 		input[type='submit'], .button {
+            background: $black;
+            color: $white;
             &:link, &:visited {
 				color: $white;
                 background: $black;
