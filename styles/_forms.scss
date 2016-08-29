@@ -56,7 +56,7 @@ FORMS
 
 
 /* ::: GRAVITY FORMS ::::::::::::::::::::::::::::::::::::::::: */
-// the styles below are only relevant if you use gravity forms or a mailchimp email signup, so feel free to remove them
+// the styles below are only relevant if you use gravity forms, so feel free to remove them
 
 	.gform_body {
 		ul {
@@ -99,12 +99,4 @@ FORMS
 			color: white;
 			background-color: red;
 		}
-	}
-
-
-
-/* ::: MAILCHIMP EMAIL SIGNUP ::::::::::::::::::::::::::::::::::::::::: */
-
-	#mc-embedded-subscribe-form {
-		.mc-field-group { margin-bottom: .5em; }
 	}
