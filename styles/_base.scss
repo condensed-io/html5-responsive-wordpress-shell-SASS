@@ -292,9 +292,9 @@ Base is for standard things that don't change from project to project
 	.content-main dl {
 		margin: 2em 0;
 		dt {
-			font-weight: 900;
 			margin-top: 1.5em;
 			margin-bottom: .5em;
+            padding-left: 0;
 		}
 	}
 
