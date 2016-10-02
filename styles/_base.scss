@@ -258,9 +258,16 @@ Base is for standard things that don't change from project to project
 	    transform: rotate(90deg);
 	    transform-origin: left bottom;
 	}
-	.indicator a { display: block; text-transform: uppercase; text-decoration: none; padding: .3em 1em; }
-	.indicator a:link, .indicator a:visited { color: $white; background-color: $grey; }
-	.indicator a:hover, .indicator a:focus, .indicator a:active { color: $white; background-color: $black; text-decoration: none; cursor: pointer; }
+	.indicator a {
+        display: block;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: .3em 1em;
+    }
+	.indicator a:hover, .indicator a:focus, .indicator a:active {
+        text-decoration: none;
+        cursor: pointer;
+    }
 
 	// Hide these items when Javascript is active
 	.js .js-ind, .js .hide { display: none; }
