@@ -18,16 +18,6 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 		padding: 0 4%; // default padding to keep the content from touching the edge of the site (this may cause issues, keep an eye on it)
 	}
 
-	// Customize the look of selected text -- feel free to change the colors
-	::-moz-selection { // Mozilla
-       background-color: $black;
-       color: $white;
-	}
-	::selection { // Safari
-       background-color: $black;
-       color: $white;
-	}
-
 
 
 

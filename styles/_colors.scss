@@ -25,6 +25,18 @@ $dark-grey: #333;
 		background: $white;
 		color: $dark-grey;
 	}
+
+	// Customize the look of selected text -- feel free to change the colors
+	::-moz-selection { // Mozilla
+       background-color: $black;
+       color: $white;
+	}
+	::selection { // Safari
+       background-color: $black;
+       color: $white;
+	}
+
+
 	.data-table {
 		th {
 			background-color: $black;
