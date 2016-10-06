@@ -1,0 +1,1267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>L:\svg-sprite\docs\.configuration.md.html</title>
+
+
+<style type="text/css">
+body {
+	color: #333;
+	font: 13px/1.4 "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	background: transparent;
+	color: #4183c4;
+	text-decoration: none;
+}
+
+a:active,
+a:hover {
+	outline: 0 none;
+	text-decoration: underline;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+mark {
+	background: #ff0;
+	color: #000;
+}
+small {
+	font-size: 80%;
+}
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+img {
+	border: 0 none;
+}
+svg:not(:root) {
+	overflow: hidden;
+}
+figure {
+	margin: 1em 40px;
+}
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace,monospace;
+	font-size: 1em;
+}
+
+pre {
+	overflow: auto;
+	font: 12px Consolas,"Liberation Mono",Menlo,Courier,monospace;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.markdown-body {
+	padding: 30px;
+	font-size: 16px;
+	line-height: 1.6;
+	word-wrap: break-word;
+}
+
+.markdown-body>*:first-child {
+	margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+	margin-bottom: 0 !important;
+}
+
+.markdown-body .absent {
+	color: #c00;
+}
+
+.markdown-body .anchor {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	display: block;
+	padding-right: 6px;
+	padding-left: 30px;
+	margin-left: -30px;
+}
+
+.markdown-body .anchor:focus {
+	outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+	position: relative;
+	margin-top: 1em;
+	margin-bottom: 16px;
+	font-weight: bold;
+	line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+	display: none;
+	color: #000;
+	vertical-align: middle;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+	padding-left: 8px;
+	margin-left: -30px;
+	line-height: 1;
+	text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+	display: inline-block;
+}
+
+.markdown-body h1 tt,
+.markdown-body h1 code,
+.markdown-body h2 tt,
+.markdown-body h2 code,
+.markdown-body h3 tt,
+.markdown-body h3 code,
+.markdown-body h4 tt,
+.markdown-body h4 code,
+.markdown-body h5 tt,
+.markdown-body h5 code,
+.markdown-body h6 tt,
+.markdown-body h6 code {
+	font-size: inherit;
+}
+
+.markdown-body h1 {
+	padding-bottom: 0.3em;
+	font-size: 2.25em;
+	line-height: 1.2;
+	border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+	padding-bottom: 0.3em;
+	font-size: 1.75em;
+	line-height: 1.225;
+	border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+	font-size: 1.5em;
+	line-height: 1.43;
+}
+
+.markdown-body h4 {
+	font-size: 1.25em;
+}
+
+.markdown-body h5 {
+	font-size: 1em;
+}
+
+.markdown-body h6 {
+	font-size: 1em;
+	color: #777;
+}
+
+.markdown-body p,.markdown-body blockquote,
+.markdown-body ul,.markdown-body ol,
+.markdown-body dl,.markdown-body table,
+.markdown-body pre {
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.markdown-body hr {
+	height: 4px;
+	padding: 0;
+	margin: 16px 0;
+	background-color: #e7e7e7;
+	border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+	padding-left: 2em;
+}
+
+.markdown-body ul.no-list,
+.markdown-body ol.no-list {
+	padding: 0;
+	list-style-type: none;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body li>p {
+	margin-top: 16px;
+}
+
+.markdown-body dl {
+	padding: 0;
+}
+
+.markdown-body dl dt {
+	padding: 0;
+	margin-top: 16px;
+	font-size: 1em;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.markdown-body dl dd {
+	padding: 0 16px;
+	margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+	padding: 0 15px;
+	color: #777;
+	border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+	margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+	margin-bottom: 0;
+}
+
+.markdown-body table {
+	display: block;
+	width: 100%;
+	overflow: auto;
+	word-break: normal;
+	word-break: keep-all;
+}
+
+.markdown-body table th {
+	font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+	padding: 6px 13px;
+	border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+	background-color: #fff;
+	border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+	background-color: #f8f8f8;
+}
+
+.markdown-body img {
+	max-width: 100%;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.markdown-body span.frame {
+	display: block;
+	overflow: hidden;
+}
+
+.markdown-body span.frame>span {
+	display: block;
+	float: left;
+	width: auto;
+	padding: 7px;
+	margin: 13px 0 0;
+	overflow: hidden;
+	border: 1px solid #ddd;
+}
+
+.markdown-body span.frame span img {
+	display: block;
+	float: left;
+}
+
+.markdown-body span.frame span span {
+	display: block;
+	padding: 5px 0 0;
+	clear: both;
+	color: #333;
+}
+
+.markdown-body span.align-center {
+	display: block;
+	overflow: hidden;
+	clear: both;
+}
+
+.markdown-body span.align-center>span {
+	display: block;
+	margin: 13px auto 0;
+	overflow: hidden;
+	text-align: center;
+}
+
+.markdown-body span.align-center span img {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.markdown-body span.align-right {
+	display: block;
+	overflow: hidden;
+	clear: both;
+}
+
+.markdown-body span.align-right>span {
+	display: block;
+	margin: 13px 0 0;
+	overflow: hidden;
+	text-align: right;
+}
+
+.markdown-body span.align-right span img {
+	margin: 0;
+	text-align: right;
+}
+
+.markdown-body span.float-left {
+	display: block;
+	float: left;
+	margin-right: 13px;
+	overflow: hidden;
+}
+
+.markdown-body span.float-left span {
+	margin: 13px 0 0;
+}
+
+.markdown-body span.float-right {
+	display: block;
+	float: right;
+	margin-left: 13px;
+	overflow: hidden;
+}
+
+.markdown-body span.float-right>span {
+	display: block;
+	margin: 13px auto 0;
+	overflow: hidden;
+	text-align: right;
+}
+
+.markdown-body code,.markdown-body tt {
+	padding: 0;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	margin: 0;
+	font-size: 85%;
+	background-color: rgba(0,0,0,0.04);
+	border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after,
+.markdown-body tt:before,
+.markdown-body tt:after {
+	letter-spacing: -0.2em;
+	content: "\00a0";
+}
+
+.markdown-body code br,
+.markdown-body tt br {
+	display: none;
+}
+
+.markdown-body del code {
+	text-decoration: inherit;
+}
+
+.markdown-body pre>code {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	word-break: normal;
+	white-space: pre;
+	background: transparent;
+	border: 0;
+}
+
+.markdown-body .highlight {
+	margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+	padding: 16px;
+	overflow: auto;
+	font-size: 85%;
+	line-height: 1.45;
+	background-color: #f7f7f7;
+	border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+	margin-bottom: 0;
+	word-break: normal;
+}
+
+.markdown-body pre {
+	word-wrap: normal;
+}
+
+.markdown-body pre code,
+.markdown-body pre tt {
+	display: inline;
+	max-width: initial;
+	padding: 0;
+	margin: 0;
+	overflow: initial;
+	line-height: inherit;
+	word-wrap: normal;
+	background-color: transparent;
+	border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after,
+.markdown-body pre tt:before,
+.markdown-body pre tt:after {
+	content: normal;
+}
+
+.highlight .pl-coc,
+.highlight .pl-entl,
+.highlight .pl-entm,
+.highlight .pl-eoa,
+.highlight .pl-mai .pl-sf,
+.highlight .pl-mm,
+.highlight .pl-pdv,
+.highlight .pl-sc,
+.highlight .pl-som,
+.highlight .pl-sr,
+.highlight .pl-v,
+.highlight .pl-vpf {
+	color: #0086b3;
+}
+.highlight .pl-eoac,
+.highlight .pl-mdht,
+.highlight .pl-mi1,
+.highlight .pl-mri,
+.highlight .pl-va,
+.highlight .pl-vpu {
+	color: #008080;
+}
+.highlight .pl-c,
+.highlight .pl-pdc {
+	color: #b4b7b4;
+	font-style: italic;
+}
+.highlight .pl-k,
+.highlight .pl-ko,
+.highlight .pl-kolp,
+.highlight .pl-mc,
+.highlight .pl-mr,
+.highlight .pl-ms,
+.highlight .pl-s,
+.highlight .pl-sok,
+.highlight .pl-st {
+	color: #6e5494;
+}
+.highlight .pl-ef,
+.highlight .pl-enf,
+.highlight .pl-enm,
+.highlight .pl-entc,
+.highlight .pl-eoi,
+.highlight .pl-sf,
+.highlight .pl-smc {
+	color: #d12089;
+}
+.highlight .pl-ens,
+.highlight .pl-eoai,
+.highlight .pl-kos,
+.highlight .pl-mh .pl-pdh,
+.highlight .pl-mp,
+.highlight .pl-pde,
+.highlight .pl-stp {
+	color: #458;
+}
+.highlight .pl-enti {
+	color: #d12089;
+	font-weight: bold;
+}
+.highlight .pl-cce,
+.highlight .pl-enc,
+.highlight .pl-kou,
+.highlight .pl-mq {
+	color: #f93;
+}
+.highlight .pl-mp1 .pl-sf {
+	color: #458;
+	font-weight: bold;
+}
+.highlight .pl-cos,
+.highlight .pl-ent,
+.highlight .pl-md,
+.highlight .pl-mdhf,
+.highlight .pl-ml,
+.highlight .pl-pdc1,
+.highlight .pl-pds,
+.highlight .pl-s1,
+.highlight .pl-scp,
+.highlight .pl-sol {
+	color: #df5000;
+}
+.highlight .pl-c1,
+.highlight .pl-cn,
+.highlight .pl-pse,
+.highlight .pl-pse .pl-s2,
+.highlight .pl-vi {
+	color: #a31515;
+}
+.highlight .pl-mb,
+.highlight .pl-pdb {
+	color: #df5000;
+	font-weight: bold;
+}
+.highlight .pl-mi,
+.highlight .pl-pdi {
+	color: #6e5494;
+	font-style: italic;
+}
+.highlight .pl-ms1 {
+	background-color: #f5f5f5;
+}
+.highlight .pl-mdh,
+.highlight .pl-mdi {
+	font-weight: bold;
+}
+.highlight .pl-mdr {
+	color: #0086b3;
+	font-weight: bold;
+}
+.highlight .pl-s2 {
+	color: #333;
+}
+.highlight .pl-ii {
+	background-color: #df5000;
+	color: #fff;
+}
+.highlight .pl-ib {
+	background-color: #f93;
+}
+.highlight .pl-id {
+	background-color: #a31515;
+	color: #fff;
+}
+.highlight .pl-iu {
+	background-color: #b4b7b4;
+}
+.highlight .pl-mo {
+	color: #969896;
+}
+
+</style>
+
+
+<script type="text/javascript">
+
+function getDocumentScrollTop() 
+{
+   var res = document.body.scrollTop || document.documentElement.scrollTop || window.pageYOffset || 0;
+   // alert(res);
+   return res;
+}
+
+function setDocumentScrollTop(ypos) 
+{
+	window.scrollTo(0, ypos);
+}
+
+</script>
+
+
+</head>
+<body class="markdown-body">
+<h1> <a id="user-content-svg-sprite-----" class="anchor" href="#svg-sprite-----" aria-hidden="true"><span class="octicon octicon-link"></span></a>svg-sprite <a href="https://npmjs.org/package/svg-sprite"><img src="https://camo.githubusercontent.com/036c60632d1a9e6806a56a6cdd68573bb91bba67/68747470733a2f2f62616467652e667572792e696f2f6a732f7376672d7370726974652e706e67" alt="NPM version" data-canonical-src="https://badge.fury.io/js/svg-sprite.png" style="max-width:100%;" /></a> <a href="http://travis-ci.org/jkphl/svg-sprite"><img src="https://camo.githubusercontent.com/f0a4feac77960ea55a6c95191e8a524fb9aa87df/68747470733a2f2f7365637572652e7472617669732d63692e6f72672f6a6b70686c2f7376672d7370726974652e706e67" alt="Build Status" data-canonical-src="https://secure.travis-ci.org/jkphl/svg-sprite.png" style="max-width:100%;" /></a> <a href="https://coveralls.io/r/jkphl/svg-sprite"><img src="https://camo.githubusercontent.com/88538a07ff70550f26a8b0bc26c00a35a01b75ac/68747470733a2f2f696d672e736869656c64732e696f2f636f766572616c6c732f6a6b70686c2f7376672d7370726974652e737667" alt="Coverage Status" data-canonical-src="https://img.shields.io/coveralls/jkphl/svg-sprite.svg" style="max-width:100%;" /></a> <a href="https://david-dm.org/jkphl/svg-sprite#info=dependencies"><img src="https://camo.githubusercontent.com/9d67a82e7e2a59157ad59e52612f447372fbb227/68747470733a2f2f64617669642d646d2e6f72672f6a6b70686c2f7376672d7370726974652e737667" alt="Dependency Status" data-canonical-src="https://david-dm.org/jkphl/svg-sprite.svg" style="max-width:100%;" /></a> <a href="https://david-dm.org/jkphl/svg-sprite#info=devDependencies"><img src="https://camo.githubusercontent.com/ff0d8a10f5db629707f265e9060b7cdec4dadf78/68747470733a2f2f64617669642d646d2e6f72672f6a6b70686c2f7376672d7370726974652f6465762d7374617475732e737667" alt="Development Dependency Status" data-canonical-src="https://david-dm.org/jkphl/svg-sprite/dev-status.svg" style="max-width:100%;" /></a> </h1> 
+<p>This file is part of the documentation of <em>svg-sprite</em> — a free low-level Node.js module that <strong>takes a bunch of SVG files</strong>, optimizes them and creates <strong>SVG sprites</strong> of several types. The package is <a href="https://github.com/jkphl/svg-sprite">hosted on GitHub</a>.</p> 
+<h2> <a id="user-content-configuration" class="anchor" href="#configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configuration</h2> 
+<p>The <em>svg-sprite</em> <strong>main configuration</strong> is provided to the <a href=".api.md.html#svgspriter-config-">constructor</a> as an <code>Object</code> with the following structure:</p> 
+<div class="highlight highlight-javascript">
+ <pre>{
+    dest            <span class="pl-k">:</span> <span class="pl-k">&lt;</span><span class="pl-c1">String</span><span class="pl-k">&gt;</span>,             <span class="pl-c">// Main output directory</span>
+    log             <span class="pl-k">:</span> <span class="pl-k">&lt;</span><span class="pl-c1">String</span>|Logger<span class="pl-k">&gt;</span>,      <span class="pl-c">// Logging verbosity or custom logger</span>
+    shape           <span class="pl-k">:</span> <span class="pl-k">&lt;</span><span class="pl-c1">Object</span><span class="pl-k">&gt;</span>,             <span class="pl-c">// SVG shape configuration</span>
+    svg             <span class="pl-k">:</span> <span class="pl-k">&lt;</span><span class="pl-c1">Object</span><span class="pl-k">&gt;</span>,             <span class="pl-c">// Sprite SVG options</span>
+    variables       <span class="pl-k">:</span> <span class="pl-k">&lt;</span><span class="pl-c1">Object</span><span class="pl-k">&gt;</span>,             <span class="pl-c">// Custom templating variables</span>
+    mode            <span class="pl-k">:</span> <span class="pl-k">&lt;</span><span class="pl-c1">Object</span><span class="pl-k">&gt;</span>              <span class="pl-c">// Output mode configurations</span>
+}</pre>
+</div> 
+<p>All of these properties are optional, so in fact even an empty object <code>{}</code> is a valid configuration for <em>svg-sprite</em>. What follows is a complete reference of all available configuration settings. For getting off the ground quickly, you may also use the <a href="http://jkphl.github.io/svg-sprite">online configurator &amp; kickstarter</a>, which lets you create a custom configuration in seconds.</p> 
+<h2> <a id="user-content-table-of-contents" class="anchor" href="#table-of-contents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Table of contents</h2> 
+<ul> 
+ <li><a href="#main-output-directory">Main output directory</a></li> 
+ <li><a href="#logging">Logging</a></li> 
+ <li> <a href="#svg-shape-configuration">SVG shape configuration</a> 
+  <ul> 
+   <li><a href="#shape-ids">Shape IDs</a></li> 
+   <li><a href="#shape-dimensions">Shape dimensions</a></li> 
+   <li><a href="#shape-spacing">Shape spacing</a></li> 
+   <li> <a href="#shape-transformations">Shape transformations</a> 
+    <ul> 
+     <li><a href="#pre-defined-shape-transformations-string-values">Pre-defined shape transformations</a></li> 
+     <li> <a href="#custom-shape-transformations-object-values">Custom shape transformations</a> 
+      <ul> 
+       <li><a href="#pre-defined-shape-transformation-with-custom-configuration-object-values">Pre-defined shape transformation with custom configuration</a></li> 
+       <li><a href="#custom-callback-transformation-function-values">Custom callback transformation</a></li> 
+      </ul> </li> 
+    </ul> </li> 
+   <li><a href="#miscellaneous-shape-options">Miscellaneous shape options</a></li> 
+  </ul> </li> 
+ <li> <a href="#sprite-svg-options">Sprite SVG options</a> 
+  <ul> 
+   <li><a href="#svg-sprite-customization">SVG sprite customization</a></li> 
+  </ul> </li> 
+ <li><a href="#custom-templating-variables">Custom templating variables</a></li> 
+ <li> <a href="#output-modes">Output modes</a> 
+  <ul> 
+   <li><a href="#enabling--configuring">Enabling &amp; configuring</a></li> 
+   <li><a href="#common-mode-properties">Common mode properties</a></li> 
+   <li> <a href="#specific-mode-properties">Specific mode properties</a> 
+    <ul> 
+     <li><a href="#css--view-mode">&laquo;css&raquo; &amp; &laquo;view&raquo; mode</a></li> 
+     <li><a href="#defs--symbol-mode">&laquo;defs&raquo; &amp; &laquo;symbol&raquo; mode</a></li> 
+     <li><a href="#stack-mode">&laquo;stack&raquo; mode</a></li> 
+    </ul> </li> 
+   <li><a href="#rendering-configurations">Rendering configurations</a></li> 
+  </ul> </li> 
+</ul> 
+<h3> <a id="user-content-main-output-directory" class="anchor" href="#main-output-directory" aria-hidden="true"><span class="octicon octicon-link"></span></a>Main output directory</h3> 
+<table> 
+ <thead> 
+  <tr> 
+   <th>Property</th> 
+   <th>Type</th> 
+   <th>Default</th> 
+   <th>Description</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td><code>dest</code></td> 
+   <td>String</td> 
+   <td><code>.</code></td> 
+   <td>Main output directory which is used for resolving relative paths. Although <em>svg-sprite</em> doesn't write any files itself, it does need this setting in order to correctly layout the resulting file and directory structures.</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<h3> <a id="user-content-logging" class="anchor" href="#logging" aria-hidden="true"><span class="octicon octicon-link"></span></a>Logging</h3> 
+<table> 
+ <thead> 
+  <tr> 
+   <th>Property</th> 
+   <th>Type</th> 
+   <th>Default</th> 
+   <th>Description</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td><code>log</code></td> 
+   <td>String∣Logger</td> 
+   <td></td> 
+   <td> <em>svg-sprite</em> uses <a href="https://github.com/flatiron/winston">winston</a> for logging, but output is turned off by default. To activate and use the pre-configured console logger, you need to pass the desired log level (<code>'info'</code>, <code>'verbose'</code> or <code>'debug'</code>). Alternatively, you can pass your own custom <code>winston.Logger</code> instance (which needs to handle at least these three log levels).</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<h3> <a id="user-content-svg-shape-configuration" class="anchor" href="#svg-shape-configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>SVG shape configuration</h3> 
+<p>The <code>shape</code> property holds all settings affecting the SVG shapes of the sprite:</p> 
+<div class="highlight highlight-javascript">
+ <pre>shape               <span class="pl-k">:</span> {
+    id              <span class="pl-k">:</span> {                         <span class="pl-c">// SVG shape ID related options</span>
+        separator   <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>--<span class="pl-pds">'</span></span>,                     <span class="pl-c">// Separator for directory name traversal</span>
+        <span class="pl-en">generator</span>   <span class="pl-k">:</span> <span class="pl-k">function</span>() { <span class="pl-c">/*...*/</span> },   <span class="pl-c">// SVG shape ID generator callback</span>
+        pseudo      <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>~<span class="pl-pds">'</span></span>,                      <span class="pl-c">// File name separator for shape states (e.g. ':hover')</span>
+        whitespace  <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>_<span class="pl-pds">'</span></span>                       <span class="pl-c">// Whitespace replacement for shape IDs</span>
+    },
+    dimension       <span class="pl-k">:</span> {                         <span class="pl-c">// Dimension related options</span>
+        maxWidth    <span class="pl-k">:</span> <span class="pl-c1">2000</span>,                     <span class="pl-c">// Max. shape width</span>
+        maxHeight   <span class="pl-k">:</span> <span class="pl-c1">2000</span>,                     <span class="pl-c">// Max. shape height</span>
+        precision   <span class="pl-k">:</span> <span class="pl-c1">2</span>,                        <span class="pl-c">// Floating point precision</span>
+        attributes  <span class="pl-k">:</span> <span class="pl-c1">false</span>,                    <span class="pl-c">// Width and height attributes on embedded shapes</span>
+    },
+    spacing         <span class="pl-k">:</span> {                         <span class="pl-c">// Spacing related options</span>
+        padding     <span class="pl-k">:</span> <span class="pl-c1">0</span>,                        <span class="pl-c">// Padding around all shapes</span>
+        box         <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>content<span class="pl-pds">'</span></span>                 <span class="pl-c">// Padding strategy (similar to CSS `box-sizing`)</span>
+    },
+    transform       <span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>svgo<span class="pl-pds">'</span></span>],                 <span class="pl-c">// List of transformations / optimizations</span>
+    meta            <span class="pl-k">:</span> <span class="pl-c1">null</span>,                     <span class="pl-c">// Path to YAML file with meta / accessibility data</span>
+    align           <span class="pl-k">:</span> <span class="pl-c1">null</span>,                     <span class="pl-c">// Path to YAML file with extended alignment data</span>
+    dest            <span class="pl-k">:</span> <span class="pl-c1">null</span>                      <span class="pl-c">// Output directory for optimized intermediate SVG shapes</span>
+}</pre>
+</div> 
+<h4> <a id="user-content-shape-ids" class="anchor" href="#shape-ids" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shape IDs</h4> 
+<table> 
+ <thead> 
+  <tr> 
+   <th>Property</th> 
+   <th>Type</th> 
+   <th>Default</th> 
+   <th>Description</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td><code>shape.id.separator</code></td> 
+   <td>String</td> 
+   <td><code>&quot;--&quot;</code></td> 
+   <td>Separator for traversing a directory structure into a shape ID</td> 
+  </tr> 
+  <tr> 
+   <td><code>shape.id.generator</code></td> 
+   <td>Function∣String</td> 
+   <td>See desc.</td> 
+   <td>Callback for translating the local part of a shape's file name into a shape ID. The callback's signature is <code>function(name) { /* ... */ return id; }</code>. By default, the file extension <code>&quot;.svg&quot;</code> is stripped off and directory structures get traversed using the <code>id.separator</code> as replacement for the directory separator. You may also provide a template string (e.g. <code>&quot;icon-%s&quot;</code>), in which case the placeholder <code>&quot;%s&quot;</code> gets substituted with the traversed local file name. If the string doesn't contain any placeholder, it is used as a prefix to the local file name.</td> 
+  </tr> 
+  <tr> 
+   <td><code>shape.id.pseudo</code></td> 
+   <td>String</td> 
+   <td><code>&quot;~&quot;</code></td> 
+   <td>String separator for pseudo CSS classes in file names. Example: <code>my-icon.svg</code> and <code>my-icon~hover.svg</code> for an icon with a regular and a <code>:hover</code> state.</td> 
+  </tr> 
+  <tr> 
+   <td><code>shape.id.whitespace</code></td> 
+   <td>String</td> 
+   <td><code>&quot;_&quot;</code></td> 
+   <td>Replacement string for whitespace characters in file names during shape ID generation. Example: By default, <code>My Custom Icon.svg</code> will result in the shape ID <code>my_custom_icon</code>.</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<h4> <a id="user-content-shape-dimensions" class="anchor" href="#shape-dimensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shape dimensions</h4> 
+<table> 
+ <thead> 
+  <tr> 
+   <th>Property</th> 
+   <th>Type</th> 
+   <th>Default</th> 
+   <th>Description</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td><code>shape.dimension.maxWidth</code></td> 
+   <td>Integer</td> 
+   <td><code>2000</code></td> 
+   <td>Maximum shape width in pixels</td> 
+  </tr> 
+  <tr> 
+   <td><code>shape.dimension.maxHeight</code></td> 
+   <td>Integer</td> 
+   <td><code>2000</code></td> 
+   <td>Maximum shape height in pixels</td> 
+  </tr> 
+  <tr> 
+   <td><code>shape.dimension.precision</code></td> 
+   <td>Integer</td> 
+   <td><code>2</code></td> 
+   <td>Precision (number of decimal places) for dimension calculations</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<h4> <a id="user-content-shape-spacing" class="anchor" href="#shape-spacing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shape spacing</h4> 
+<table> 
+ <thead> 
+  <tr> 
+   <th>Property</th> 
+   <th>Type</th> 
+   <th>Default</th> 
+   <th>Description</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td><code>shape.spacing.padding</code></td> 
+   <td>Integer/Array</td> 
+   <td><code>0</code></td> 
+   <td>Padding around shape. May be a single pixel value (which is then applied to all four edges) or an Array of Integers with a length between 1 and 4 (same syntax as for CSS padding)</td> 
+  </tr> 
+  <tr> 
+   <td><code>shape.spacing.box</code></td> 
+   <td>String</td> 
+   <td><code>&quot;content&quot;</code></td> 
+   <td>Box sizing strategy, similar to CSS. When set to <code>&quot;content&quot;</code>, the <code>shape.spacing.padding</code> values will get applied to the outside of each shape, effectively increasing the shape's bounding box. When set to <code>&quot;padding&quot;</code>, the content plus the given <code>spacing.padding</code> values will stay within the dimension contraints <code>shape.dimension.max*</code> (they are the bounding box' maxima). When set to <code>&quot;icon&quot;</code>, the <code>shape.dimension.max*</code> values are used as fixed dimensions for the bounding box around each shape. The shapes get either up- or downscaled proportionally to fit this bounding box (including <code>shape.spacing.padding</code>), resulting in all equally sized and distributed shape tiles (best fit for a set of same size icons).</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<h4> <a id="user-content-shape-transformations" class="anchor" href="#shape-transformations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shape transformations</h4> 
+<p>The <code>shape.transform</code> array holds a list of transformations that are applied — in order — to the each of the SVG shapes before they get combined into the sprite. The list defaults to <code>['svgo']</code>. The items of the <code>shape.transform</code> list might be of type <code>String</code> or <code>Object</code>.</p> 
+<h5> <a id="user-content-pre-defined-shape-transformations-string-values" class="anchor" href="#pre-defined-shape-transformations-string-values" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pre-defined shape transformations (<code>String</code> values)</h5> 
+<p>If a <code>shape.transform</code> item is of type <code>String</code>, it's a shorthand and refers to a <strong>pre-defined transformation</strong> with the transformation's <strong>default configuration</strong>. At the time of this writing, the only supported pre-defined transformation is <code>svgo</code>:</p> 
+<div class="highlight highlight-javascript">
+ <pre><span class="pl-c">// SVGO transformation with default configuration</span>
+{
+    shape               <span class="pl-k">:</span> {
+        transform       <span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>svgo<span class="pl-pds">'</span></span>]
+        <span class="pl-c">/* ... */</span>
+    }
+}</pre>
+</div> 
+<h5> <a id="user-content-custom-shape-transformations-object-values" class="anchor" href="#custom-shape-transformations-object-values" aria-hidden="true"><span class="octicon octicon-link"></span></a>Custom shape transformations (<code>Object</code> values)</h5> 
+<p>If you don't want to use a pre-defined transformation or it's default configuration, you need to use the <code>Object</code> notation. Each of the shorthands can be expanded like this: </p> 
+<div class="highlight highlight-javascript">
+ <pre><span class="pl-c">// Equivalent transformation to ['svgo']</span>
+{
+    shape               <span class="pl-k">:</span> {
+        transform       <span class="pl-k">:</span> [
+            {svgo       <span class="pl-k">:</span> {}}
+        ]
+        <span class="pl-c">/* ... */</span>
+    }
+}</pre>
+</div> 
+<p>In this case, the list item's first object key is used as the <strong>transformation name</strong>. Depending on it's value type,</p> 
+<ul> 
+ <li>a <strong>pre-defined shape transformation with custom configuration</strong> or</li> 
+ <li>a <strong>custom callback</strong> </li> 
+</ul> 
+<p>will be called.</p> 
+<h6> <a id="user-content-pre-defined-shape-transformation-with-custom-configuration-object-values" class="anchor" href="#pre-defined-shape-transformation-with-custom-configuration-object-values" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pre-defined shape transformation with custom configuration (<code>Object</code> values)</h6> 
+<p>To call a pre-defined transformation with custom configuration options, use it's name as the transformation name and provide an object which will get merged over the default configuration:</p> 
+<div class="highlight highlight-javascript">
+ <pre><span class="pl-c">// SVGO transformation with custom plugin configuration</span>
+{
+    shape               <span class="pl-k">:</span> {
+        transform       <span class="pl-k">:</span> [
+            {svgo       <span class="pl-k">:</span> {
+                plugins <span class="pl-k">:</span> [
+                    {transformsWithOnePath<span class="pl-k">:</span> <span class="pl-c1">true</span>},
+                    {moveGroupAttrsToElems<span class="pl-k">:</span> <span class="pl-c1">false</span>}
+                ]
+            }}
+        ]
+        <span class="pl-c">/* ... */</span>
+    }
+}</pre>
+</div> 
+<h6> <a id="user-content-custom-callback-transformation-function-values" class="anchor" href="#custom-callback-transformation-function-values" aria-hidden="true"><span class="octicon octicon-link"></span></a>Custom callback transformation (<code>Function</code> values)</h6> 
+<p>To use a custom callback for transforming a shape's SVG, pass a function with the following signature:</p> 
+<div class="highlight highlight-javascript">
+ <pre><span class="pl-c">// SVGO transformation with custom plugin configuration</span>
+{
+    shape               <span class="pl-k">:</span> {
+        transform       <span class="pl-k">:</span> [
+            {custom     <span class="pl-k">:</span>
+
+                <span class="pl-c">/**</span>
+<span class="pl-c">                 * Custom callback transformation</span>
+<span class="pl-c">                 * </span>
+<span class="pl-c">                 * <span class="pl-k">@param</span> {SVGShape} shape              SVG shape object</span>
+<span class="pl-c">                 * <span class="pl-k">@param</span> {SVGSpriter} spriter          SVG spriter</span>
+<span class="pl-c">                 * <span class="pl-k">@param</span> {Function} callback           Callback</span>
+<span class="pl-c">                 * <span class="pl-k">@return</span> {void}</span>
+<span class="pl-c">                 */</span> 
+                <span class="pl-k">function</span>(<span class="pl-smi">shape</span>, <span class="pl-smi">sprite</span>, <span class="pl-smi">callback</span>) {
+                    <span class="pl-c">/* ... */</span>
+                    callback(<span class="pl-c1">null</span>);
+                }
+            }
+        ]
+        <span class="pl-c">/* ... */</span>
+    }
+}</pre>
+</div> 
+<p>The transformation name (<code>&quot;custom&quot;</code> in this case) is of no significance. Please see <code>lib/svg-sprite/shape.js</code> to learn about what you can do with the shape object. </p> 
+<h4> <a id="user-content-miscellaneous-shape-options" class="anchor" href="#miscellaneous-shape-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Miscellaneous shape options</h4> 
+<table> 
+ <thead> 
+  <tr> 
+   <th>Property</th> 
+   <th>Type</th> 
+   <th>Default</th> 
+   <th>Description</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td><code>shape.meta</code></td> 
+   <td>String</td> 
+   <td></td> 
+   <td>Path to a <a href="http://yaml.org/">YAML</a> file with <a href=".meta-data.md.html">meta data to be injected</a> into the SVG shapes.</td> 
+  </tr> 
+  <tr> 
+   <td><code>shape.align</code></td> 
+   <td>String</td> 
+   <td></td> 
+   <td>Path to a <a href="http://yaml.org/">YAML</a> file with <a href=".shape-alignment.md.html">extended alignment settings</a> for sprites with <code>&quot;vertical&quot;</code> or <code>&quot;horizontal&quot;</code> layout.</td> 
+  </tr> 
+  <tr> 
+   <td><code>shape.dest</code></td> 
+   <td>String</td> 
+   <td></td> 
+   <td>Implicit way of calling <a href=".api.md.html#svgspritergetshapes-dest--callback-"><code>.getShapes()</code></a> during sprite compilation. If given, the <code>result</code> of subsequent <a href=".api.md.html#svgspritercompile-config--callback-"><code>.compile()</code></a> calls will carry an additional <code>shapes</code> property, listing the intermediate SVG files as an Array of <a href="https://github.com/wearefractal/vinyl">vinyl</a> files. The value will be used as destination directory for the files (relative to the main output directory if not absolute anyway).</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<h3> <a id="user-content-sprite-svg-options" class="anchor" href="#sprite-svg-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sprite SVG options</h3> 
+<p>The <code>svg</code> object holds common options that apply to each SVG sprite created. The common options might be overriden by mode configurations (<a href="#output-modes">see below</a>).</p> 
+<table> 
+ <thead> 
+  <tr> 
+   <th>Property</th> 
+   <th>Type</th> 
+   <th>Default</th> 
+   <th>Description</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td><code>xmlDeclaration</code></td> 
+   <td>Boolean∣String</td> 
+   <td><code>true</code></td> 
+   <td>Output an XML declaration at the very beginning of each compiled sprite. If you provide a non-empty string here, it will be used one-to-one as declaration (e.g. <code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</code>). If you set this to <code>TRUE</code>, <em>svg-sprite</em> will look at the registered shapes for an XML declaration and use the first one it can find.</td> 
+  </tr> 
+  <tr> 
+   <td><code>doctypeDeclaration</code></td> 
+   <td>Boolean∣String</td> 
+   <td><code>true</code></td> 
+   <td>Include a <code>&lt;DOCTYPE&gt;</code> declaration in each compiled sprite. If you provide a non-empty string here, it will be used one-to-one as declaration (e.g. <code>&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1 Basic//EN&quot; &quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-basic.dtd&quot;&gt;</code>). If you set this to <code>TRUE</code>, <em>svg-sprite</em> will look at the registered shapes for a DOCTYPE declaration and use the first one it can find.</td> 
+  </tr> 
+  <tr> 
+   <td><code>namespaceIDs</code></td> 
+   <td>Boolean</td> 
+   <td><code>true</code></td> 
+   <td>In order to avoid ID clashes, the default behavior is to namespace all IDs in the source SVGs before compiling them into a sprite. Each ID is prepended with a unique string. In some situations, it might be desirable to disable ID namespacing, e.g. when you want to script the resulting sprite. Just set <code>svg.namespaceIDs</code> to <code>FALSE</code> then and be aware that you might also want to disable SVGO's ID minification (<code>shape.transform.svgo.plugins: [{cleanupIDs: false}]</code>).</td> 
+  </tr> 
+  <tr> 
+   <td><code>dimensionAttributes</code></td> 
+   <td>Boolean</td> 
+   <td><code>true</code></td> 
+   <td>If truthy, <code>width</code> and <code>height</code> attributes will be set on the sprite's <code>&lt;svg&gt;</code> element (where applicable).</td> 
+  </tr> 
+  <tr> 
+   <td><code>rootAttributes</code></td> 
+   <td>Object</td> 
+   <td></td> 
+   <td>Shorthand for applying custom attributes to the outermost <code>&lt;svg&gt;</code> element. Please be aware that certain attributes (e.g. <code>viewBox</code>) will be calculated dynamically and override custom <code>rootAttributes</code> in any case.</td> 
+  </tr> 
+  <tr> 
+   <td><code>transform</code></td> 
+   <td>Function∣Array</td> 
+   <td></td> 
+   <td>Callback (or list of callbacks) that will be applied to the resulting SVG sprites as global <a href="#svg-sprite-customization">post-processing transformation</a>.</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<h4> <a id="user-content-svg-sprite-customization" class="anchor" href="#svg-sprite-customization" aria-hidden="true"><span class="octicon octicon-link"></span></a>SVG sprite customization</h4> 
+<p>The <code>svg.transform</code> option can be used to post-process and customize the SVG sprites. You may specify a callback (or a list of callbacks) with the following signature:</p> 
+<div class="highlight highlight-javascript">
+ <pre><span class="pl-c">// Custom global post-processing transformation</span>
+{
+    svg                 <span class="pl-k">:</span> {
+        transform       <span class="pl-k">:</span> [
+            <span class="pl-c">/**</span>
+<span class="pl-c">             * Custom sprite SVG transformation</span>
+<span class="pl-c">             * </span>
+<span class="pl-c">             * <span class="pl-k">@param</span> {String} svg                  Sprite SVG</span>
+<span class="pl-c">             * <span class="pl-k">@return</span> {String}                     Processed SVG</span>
+<span class="pl-c">             */</span> 
+            <span class="pl-k">function</span>(<span class="pl-smi">svg</span>) {
+                <span class="pl-c">/* ... */</span>
+                <span class="pl-k">return</span> svg;
+            },
+
+            <span class="pl-c">/* ... */</span>
+        ]
+    }
+}</pre>
+</div> 
+<p>The callbacks are processed synchronously and in the given order. Each one gets passed the sprite's SVG source as its first (and only) argument and is expected to return the modified SVG source after transformation. It's completely up to what you do with the SVG source, just don't forget to return it in the end. You may e.g. run some regex or even full-blown DOM operations on the SVG contents (<em>svg-sprite</em> depends on <a href="https://github.com/jindw/xmldom">xmldom</a>, so you may require a parser instance <code>var DOMParser = require('xmldom').DOMParser; /* ... */</code> within your callback ...).</p> 
+<h3> <a id="user-content-custom-templating-variables" class="anchor" href="#custom-templating-variables" aria-hidden="true"><span class="octicon octicon-link"></span></a>Custom templating variables</h3> 
+<p>The top-level <code>variables</code> object lets you define global variables that are passed to all <a href="http://mustache.github.io/">Mustache</a> templating processes across all <a href="#output-modes">output modes</a>. You may either use scalar values or callbacks (see <a href="https://github.com/janl/mustache.js/#functions">here</a> for details on Mustache callbacks). Example:</p> 
+<div class="highlight highlight-javascript">
+ <pre>{
+    variables   <span class="pl-k">:</span> {
+        now     <span class="pl-k">:</span> <span class="pl-k">+</span><span class="pl-k">new</span> <span class="pl-en">Date</span>(),
+        <span class="pl-en">png</span>     <span class="pl-k">:</span> <span class="pl-k">function</span>() {
+            <span class="pl-k">return</span> <span class="pl-k">function</span>(<span class="pl-smi">sprite</span>, <span class="pl-smi">render</span>) {
+                <span class="pl-k">return</span> render(sprite).<span class="pl-c1">split</span>(<span class="pl-s"><span class="pl-pds">'</span>.svg<span class="pl-pds">'</span></span>).<span class="pl-c1">join</span>(<span class="pl-s"><span class="pl-pds">'</span>.png<span class="pl-pds">'</span></span>);
+            }
+        }
+    }
+}</pre>
+</div> 
+<p>Please refer to the <a href=".templating.md.html">templating guide</a> to learn about the <a href=".templating.md.html#builtin-templating-functions">builtin functions</a> provided by <em>svg-sprite</em> as well as the <a href=".templating.md.html#sprite--shape-variables">sprite and shape variables</a> available during rendering.</p> 
+<h3> <a id="user-content-output-modes" class="anchor" href="#output-modes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Output modes</h3> 
+<p><em>svg-sprite</em> currently supports 5 different output modes:</p> 
+<ul> 
+ <li><code>css</code></li> 
+ <li><code>view</code></li> 
+ <li><code>defs</code></li> 
+ <li><code>symbol</code></li> 
+ <li><code>stack</code></li> 
+</ul> 
+<p>Please see the configuration sections below to learn a little about their natures and differences.</p> 
+<h4> <a id="user-content-enabling--configuring" class="anchor" href="#enabling--configuring" aria-hidden="true"><span class="octicon octicon-link"></span></a>Enabling &amp; configuring</h4> 
+<p>Each of them produces it's own specific files and has it's individual configuration. You may enable and configure several modes in parallel so that <em>svg-sprite</em> renders them in one run, saving the redundant SVG optimization overhead. Enabling a specific mode is as easy as adding a like-named key to the <code>mode</code> property, using either the default configuration (by using <code>true</code> as the value) or a custom settings object:</p> 
+<div class="highlight highlight-javascript">
+ <pre><span class="pl-c">// Activate the &laquo;css&raquo; mode with default configuration</span>
+{
+    mode            <span class="pl-k">:</span> {
+        css         <span class="pl-k">:</span> <span class="pl-c1">true</span>
+    }
+}
+
+<span class="pl-c">// Equivalent: Provide an empty configuration object</span>
+{
+    mode            <span class="pl-k">:</span> {
+        css         <span class="pl-k">:</span> {}
+    }
+}</pre>
+</div> 
+<p>It is also possible to configure the same output mode multiple times, each time with a different configuration. In that case, use a custom key for the configuration object and give it the special <code>mode</code> property telling <em>svg-sprite</em> which output mode to use with this configuration:</p> 
+<div class="highlight highlight-javascript">
+ <pre><span class="pl-c">// Multiple sprites of the same output mode</span>
+{
+    mode            <span class="pl-k">:</span> {
+        sprite1     <span class="pl-k">:</span> {
+            mode    <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>css<span class="pl-pds">'</span></span>     <span class="pl-c">// Sprite with &laquo;css&raquo; mode</span>
+        },
+        sprite2     <span class="pl-k">:</span> {
+            mode    <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>css<span class="pl-pds">'</span></span>     <span class="pl-c">// Another sprite with &laquo;css&raquo; mode</span>
+        }
+    }
+}</pre>
+</div> 
+<h4> <a id="user-content-common-mode-properties" class="anchor" href="#common-mode-properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Common mode properties</h4> 
+<p>Many <code>mode</code> properties are common between all sprite types (sometimes their default values differ from type to type, however). The placeholder <code>&quot;&lt;mode&gt;&quot;</code> is used as a substitute for one of <code>&quot;css&quot;</code>, <code>&quot;view&quot;</code>, <code>&quot;defs&quot;</code>, <code>&quot;symbol&quot;</code> or <code>&quot;stack&quot;</code>. Please replace it consequently. </p> 
+<table> 
+ <thead> 
+  <tr> 
+   <th>Property</th> 
+   <th>Type</th> 
+   <th>Default</th> 
+   <th>Description</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td><code>mode.&lt;mode&gt;.dest</code></td> 
+   <td>String</td> 
+   <td><code>&quot;&lt;mode&gt;&quot;</code></td> 
+   <td>Base directory for sprite and CSS file output. If not absolute, the path will be resolved using the main output directory (see global <code>dest</code> option).</td> 
+  </tr> 
+  <tr> 
+   <td><code>mode.&lt;mode&gt;.prefix</code></td> 
+   <td>String</td> 
+   <td><code>&quot;.svg-%s&quot;</code></td> 
+   <td>Used for prefixing the <a href="#shape-ids">shape ID</a> during CSS selector construction. If the value is empty, no prefix will be used. The prefix may contain the placeholder <code>&quot;%s&quot;</code> (e.g. <code>&quot;.svg %s-svg&quot;</code>), which will then get replaced by the shape ID. Please be aware that <code>&quot;%&quot;</code> is a special character in this context and that you'll have to escape it by another percent sign (<code>&quot;%%&quot;</code>) in case you want to output it to your stylesheets (e.g. for a <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholder_selectors_">Sass placeholder selector</a>).</td> 
+  </tr> 
+  <tr> 
+   <td><code>mode.&lt;mode&gt;.dimensions</code></td> 
+   <td>String/Boolean</td> 
+   <td><code>&quot;-dims&quot;</code></td> 
+   <td>A non-empty string value will trigger the creation of additional CSS rules specifying the dimensions of each shape in the sprite. The string will be used as suffix to <code>mode.&lt;mode&gt;.prefix</code> during CSS selector construction and may contain the placeholder <code>&quot;%s&quot;</code>, which will get replaced by the value of <code>mode.&lt;mode&gt;.prefix</code>. A boolean <code>TRUE</code> will cause the dimensions to be included directly into each shape's CSS rule (only available for &laquo;css&raquo; and &laquo;view&raquo; sprites).</td> 
+  </tr> 
+  <tr> 
+   <td><code>mode.&lt;mode&gt;.sprite</code></td> 
+   <td>String</td> 
+   <td><code>&quot;svg/sprite.&lt;mode&gt;.svg&quot;</code></td> 
+   <td>SVG sprite path and file name, relative to the <code>mode.&lt;mode&gt;.dest</code> directory (see above). You may omit the file extension, in which case it will be set to <code>&quot;.svg&quot;</code> automatically.</td> 
+  </tr> 
+  <tr> 
+   <td><code>mode.&lt;mode&gt;.bust</code></td> 
+   <td>Boolean</td> 
+   <td><code>true∣false</code></td> 
+   <td>Add a content based hash to the name of the sprite file so that clients reliably reload the sprite when it's content changes (&laquo;cache busting&raquo;). Defaults to <code>false</code> except for &laquo;css&raquo; and &laquo;view&raquo; sprites.</td> 
+  </tr> 
+  <tr> 
+   <td><code>mode.&lt;mode&gt;.render</code></td> 
+   <td>Object of <a href="#rendering-configurations">Rendering configs</a> </td> 
+   <td><code>{}</code></td> 
+   <td>Collection of <a href="#rendering-configurations">stylesheet rendering configurations</a>. The keys are used as file extensions as well as file return keys. At present, there are default templates for the file extensions <code>css</code> (<a href="http://www.w3.org/Style/CSS/">CSS</a>), <code>scss</code> (<a href="http://sass-lang.com/">Sass</a>), <code>less</code> (<a href="http://lesscss.org/">Less</a>) and <code>styl</code> (<a href="http://learnboost.github.io/stylus/">Stylus</a>), which all reside in the directory <code>tmpl/css</code>. Example: <code>{css: true, scss: {dest: '_sprite.scss'}}</code> </td> 
+  </tr> 
+  <tr> 
+   <td><code>mode.&lt;mode&gt;.example</code></td> 
+   <td><a href="#rendering-configurations">Rendering config</a></td> 
+   <td><code>false</code></td> 
+   <td>Enabling this will trigger the creation of an HTML document demoing the usage of the sprite. Please see below for details on <a href="#rendering-configurations">rendering configurations</a>.</td> 
+  </tr> 
+  <tr> 
+   <td><code>mode.&lt;mode&gt;.example.template</code></td> 
+   <td>String</td> 
+   <td><code>&quot;tmpl/&lt;mode&gt;/sprite.html&quot;</code></td> 
+   <td>HTML document Mustache template</td> 
+  </tr> 
+  <tr> 
+   <td><code>mode.&lt;mode&gt;.example.dest</code></td> 
+   <td>String</td> 
+   <td><code>&quot;sprite.&lt;mode&gt;.html&quot;</code></td> 
+   <td>HTML document destination</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<h4> <a id="user-content-specific-mode-properties" class="anchor" href="#specific-mode-properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Specific mode properties</h4> 
+<h5> <a id="user-content-css--view-mode" class="anchor" href="#css--view-mode" aria-hidden="true"><span class="octicon octicon-link"></span></a>&laquo;css&raquo; &amp; &laquo;view&raquo; mode</h5> 
+<p>The <strong>&laquo;css&raquo;</strong> mode creates a single SVG file by combining the original shapes as nested <code>&lt;svg&gt;</code> elements with individual horizontal and vertical offsets. CSS resources can be created that provide rules for using the shapes as <strong>background images</strong> of HTML elements (known as <a href="http://en.wikipedia.org/wiki/Sprite_(computer_graphics)#Sprites_by_CSS">CSS spriting</a>).</p> 
+<p>The <strong>&laquo;view&raquo;</strong> mode is an extension to the &laquo;css&raquo; mode and shares all it's features. The generated SVG sprite differs only in additionally created <code>&lt;view&gt;</code> elements for each shape in the sprite. By using the views' IDs as fragment identifiers when linking to the sprite, modern browsers will show the referenced shapes only, thus making the sprite useful for <strong>foreground images</strong> as well. Please see <a href="http://css-tricks.com/svg-fragment-identifiers-work/">this article by Chris Coyier</a> for further explanation of the technique.</p> 
+<p>In addition to the <a href="#common-mode-properties">common mode properties</a>, &laquo;css&raquo; and &laquo;view&raquo; sprites have these specific options:</p> 
+<table> 
+ <thead> 
+  <tr> 
+   <th>Property</th> 
+   <th>Type</th> 
+   <th>Default</th> 
+   <th>Description</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td><code>mode.&lt;mode&gt;.layout</code></td> 
+   <td>String</td> 
+   <td><code>&quot;packed&quot;</code></td> 
+   <td>The arrangement of the shapes within the sprite. Might be <code>&quot;vertical&quot;</code>, <code>&quot;horizontal&quot;</code>, <code>&quot;diagonal&quot;</code> or <code>&quot;packed&quot;</code> (with the latter being the most compact type). It depends on your project which layout is best for you.</td> 
+  </tr> 
+  <tr> 
+   <td><code>mode.&lt;mode&gt;.common</code></td> 
+   <td>String</td> 
+   <td></td> 
+   <td>If given and not empty, this will be the selector name of a CSS rule commonly specifying the <code>background-image</code> and <code>background-repeat</code> properties for all the shapes in the sprite (thus saving some bytes by not unnecessarily repeating them for each shape)</td> 
+  </tr> 
+  <tr> 
+   <td><code>mode.&lt;mode&gt;.mixin</code></td> 
+   <td>String</td> 
+   <td></td> 
+   <td>If given and not empty, a mixin with this name will be added to supporting output formats (e.g. Sass, LESS, Stylus), specifying the <code>background-image</code> and <code>background-repeat</code> properties for all the shapes in the sprite. You may use it for creating custom CSS within <strong>@media rules</strong>. The mixin acts much like the <code>common</code> rule. In fact, you can even combine the two — if both are enabled, the <code>common</code> rule will use the <code>mixin</code> internally.</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<h5> <a id="user-content-defs--symbol-mode" class="anchor" href="#defs--symbol-mode" aria-hidden="true"><span class="octicon octicon-link"></span></a>&laquo;defs&raquo; &amp; &laquo;symbol&raquo; mode</h5> 
+<p>The <strong>&laquo;defs&raquo;</strong> mode creates a single SVG file combining the original shapes as children of a global <code>&lt;defs&gt;</code> element. You can then <code>&lt;use&gt;</code> the shapes with either <strong>document-internal references</strong> (<code>&lt;svg viewBox=&quot;0 0 100 100&quot;&gt;&lt;use xlink:href=&quot;#internal-id&quot;/&gt;&lt;/svg&gt;</code> while having the SVG sprite embedded inline into the very same document) or as an <strong>external SVG spritemap</strong> (<code>&lt;svg viewBox=&quot;0 0 100 100&quot;&gt;&lt;use xlink:href=&quot;http://example.com/sprite.svg#fragment-id&quot;/&gt;&lt;/svg&gt;</code>). Please see <a href="http://css-tricks.com/svg-use-external-source/">this article by Chris Coyier</a> for further explanation of the technique.</p> 
+<p>The <strong>&laquo;symbol&raquo;</strong> mode behaves pretty much like the &laquo;defs&raquo; mode except it's using <code>&lt;symbol&gt;</code> elements to combine the original shapes into a sprite. Again, you can <code>&lt;use&gt;</code> the shapes with either <strong>document-internal references</strong> (<code>&lt;svg&gt;&lt;use xlink:href=&quot;#internal-id&quot;/&gt;&lt;/svg&gt;</code> while having the SVG sprite embedded inline into the very same document) or as an <strong>external SVG spritemap</strong> (<code>&lt;svg&gt;&lt;use xlink:href=&quot;http://example.com/sprite.svg#fragment-id&quot;/&gt;&lt;/svg&gt;</code>). Please see <a href="http://css-tricks.com/svg-symbol-good-choice-icons/">this article by Chris Coyier</a> for further explanation of the <code>&lt;symbol&gt;</code> technique. Compared to the <code>defs</code> mode, one of the main benefits is that you don't have to provide the <code>viewBox</code> attribute on every <code>&lt;use&gt;</code> element which makes it a lot easier.</p> 
+<p>For both &laquo;defs&raquo; and &laquo;symbol&raquo; sprites you will have to use something like <a href="https://github.com/jonathantneal/svg4everybody">SVG for Everybody</a> if you want to get external spritemap references working in Internet Explorer 9-11. In addition to the <a href="#common-mode-properties">common mode properties</a>, &laquo;defs&raquo; and &laquo;symbol&raquo; sprites have one extra option:</p> 
+<table> 
+ <thead> 
+  <tr> 
+   <th>Property</th> 
+   <th>Type</th> 
+   <th>Default</th> 
+   <th>Description</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td><code>mode.&lt;mode&gt;.inline</code></td> 
+   <td>Boolean</td> 
+   <td><code>false</code></td> 
+   <td>If you want to embed the sprite into your HTML source, you will want to set this to <code>true</code> in order to prevent the creation of SVG namespace declarations and to set some other attributes for effectively hiding the library sprite.</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<h5> <a id="user-content-stack-mode" class="anchor" href="#stack-mode" aria-hidden="true"><span class="octicon octicon-link"></span></a>&laquo;stack&raquo; mode</h5> 
+<p>The &laquo;stack&raquo; mode creates a single SVG file by combining the original shapes as nested <code>&lt;svg&gt;</code> elements. Instead of spreading the shapes using individual horizontal and / or vertical offsets, the stack contains a small CSS portion that hides all the shapes by default. Only the <em>active</em> shape as determined by the <code>:target</code> pseudo selector will be visible. For this technique to work, the client will have to <a href="http://caniuse.com/#feat=svg-fragment" target="_blank">support SVG fragment identifiers</a> or use a prolyfill like <a href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js" target="_blank">fixsvgstack.jquery.js</a>. Please see <a href="http://simurai.com/blog/2012/04/02/svg-stacks/">this post by simurai</a> for a further explanation of SVG stacks.</p> 
+<p>&laquo;stack&raquo; sprites don't have any options in addition to the <a href="#common-mode-properties">common mode properties</a>.</p> 
+<h4> <a id="user-content-rendering-configurations" class="anchor" href="#rendering-configurations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rendering configurations</h4> 
+<p><em>svg-sprite</em> uses <a href="http://mustache.github.io/">Mustache</a> templates for creating certain output formats. Typically, the generation of these files is optional and you have to switch on the rendering process:</p> 
+<ul> 
+ <li>For creating a <strong>CSS resource</strong> alongside your sprite, you will have to enable / configure at least one output format via the <code>mode.&lt;mode&gt;.render</code> option.</li> 
+ <li>For creating an <strong>example HTML document</strong> demoing the use of your sprite, you will have to enable / configure it using <code>mode.&lt;mode&gt;.example</code>.</li> 
+</ul> 
+<p>In both cases you'll have to use a <strong>rendering configuration</strong> to tell <em>svg-sprite</em> which template it should use and where the result file should be targeted to. Let's take a look at the <code>mode.&lt;mode&gt;.example</code> option. To enable the demo HTML document <strong>with default template and destination</strong>, simply set the value to <code>true</code>:</p> 
+<div class="highlight highlight-javascript">
+ <pre>{
+    mode                <span class="pl-k">:</span> {
+        css             <span class="pl-k">:</span> {
+            example     <span class="pl-k">:</span> <span class="pl-c1">true</span>
+        }
+    }
+}</pre>
+</div> 
+<p>This is absolutely equivalent to:</p> 
+<div class="highlight highlight-javascript">
+ <pre>{
+    mode                <span class="pl-k">:</span> {
+        css             <span class="pl-k">:</span> {
+            example     <span class="pl-k">:</span> {}
+        }
+    }
+}</pre>
+</div> 
+<p>Use the subkey <code>template</code> for configuring the <strong>rendering template</strong> and <code>dest</code> for specifying the <strong>output file destination</strong>:</p> 
+<div class="highlight highlight-javascript">
+ <pre>{
+    mode                <span class="pl-k">:</span> {
+        css             <span class="pl-k">:</span> {
+            template    <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>path/to/template.html<span class="pl-pds">'</span></span>,  <span class="pl-c">// relative to current working directory</span>
+            dest        <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>path/to/demo.html<span class="pl-pds">'</span></span>       <span class="pl-c">// relative to current output directory</span>
+        }
+    }
+}</pre>
+</div> 
+<p>To <strong>disable the rendering</strong> without removing the whole structure, simply set the value to something falsy:</p> 
+<div class="highlight highlight-javascript">
+ <pre>{
+    mode                <span class="pl-k">:</span> {
+        css             <span class="pl-k">:</span> {
+            example     <span class="pl-k">:</span> <span class="pl-c1">false</span>
+        }
+    }
+}</pre>
+</div>
+</body>
+</html>

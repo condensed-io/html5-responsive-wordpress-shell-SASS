@@ -1,0 +1,827 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>L:\svg-sprite\docs\.api.md.html</title>
+
+
+<style type="text/css">
+body {
+	color: #333;
+	font: 13px/1.4 "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	background: transparent;
+	color: #4183c4;
+	text-decoration: none;
+}
+
+a:active,
+a:hover {
+	outline: 0 none;
+	text-decoration: underline;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+mark {
+	background: #ff0;
+	color: #000;
+}
+small {
+	font-size: 80%;
+}
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+img {
+	border: 0 none;
+}
+svg:not(:root) {
+	overflow: hidden;
+}
+figure {
+	margin: 1em 40px;
+}
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace,monospace;
+	font-size: 1em;
+}
+
+pre {
+	overflow: auto;
+	font: 12px Consolas,"Liberation Mono",Menlo,Courier,monospace;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.markdown-body {
+	padding: 30px;
+	font-size: 16px;
+	line-height: 1.6;
+	word-wrap: break-word;
+}
+
+.markdown-body>*:first-child {
+	margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+	margin-bottom: 0 !important;
+}
+
+.markdown-body .absent {
+	color: #c00;
+}
+
+.markdown-body .anchor {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	display: block;
+	padding-right: 6px;
+	padding-left: 30px;
+	margin-left: -30px;
+}
+
+.markdown-body .anchor:focus {
+	outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+	position: relative;
+	margin-top: 1em;
+	margin-bottom: 16px;
+	font-weight: bold;
+	line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+	display: none;
+	color: #000;
+	vertical-align: middle;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+	padding-left: 8px;
+	margin-left: -30px;
+	line-height: 1;
+	text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+	display: inline-block;
+}
+
+.markdown-body h1 tt,
+.markdown-body h1 code,
+.markdown-body h2 tt,
+.markdown-body h2 code,
+.markdown-body h3 tt,
+.markdown-body h3 code,
+.markdown-body h4 tt,
+.markdown-body h4 code,
+.markdown-body h5 tt,
+.markdown-body h5 code,
+.markdown-body h6 tt,
+.markdown-body h6 code {
+	font-size: inherit;
+}
+
+.markdown-body h1 {
+	padding-bottom: 0.3em;
+	font-size: 2.25em;
+	line-height: 1.2;
+	border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+	padding-bottom: 0.3em;
+	font-size: 1.75em;
+	line-height: 1.225;
+	border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+	font-size: 1.5em;
+	line-height: 1.43;
+}
+
+.markdown-body h4 {
+	font-size: 1.25em;
+}
+
+.markdown-body h5 {
+	font-size: 1em;
+}
+
+.markdown-body h6 {
+	font-size: 1em;
+	color: #777;
+}
+
+.markdown-body p,.markdown-body blockquote,
+.markdown-body ul,.markdown-body ol,
+.markdown-body dl,.markdown-body table,
+.markdown-body pre {
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.markdown-body hr {
+	height: 4px;
+	padding: 0;
+	margin: 16px 0;
+	background-color: #e7e7e7;
+	border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+	padding-left: 2em;
+}
+
+.markdown-body ul.no-list,
+.markdown-body ol.no-list {
+	padding: 0;
+	list-style-type: none;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body li>p {
+	margin-top: 16px;
+}
+
+.markdown-body dl {
+	padding: 0;
+}
+
+.markdown-body dl dt {
+	padding: 0;
+	margin-top: 16px;
+	font-size: 1em;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.markdown-body dl dd {
+	padding: 0 16px;
+	margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+	padding: 0 15px;
+	color: #777;
+	border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+	margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+	margin-bottom: 0;
+}
+
+.markdown-body table {
+	display: block;
+	width: 100%;
+	overflow: auto;
+	word-break: normal;
+	word-break: keep-all;
+}
+
+.markdown-body table th {
+	font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+	padding: 6px 13px;
+	border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+	background-color: #fff;
+	border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+	background-color: #f8f8f8;
+}
+
+.markdown-body img {
+	max-width: 100%;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.markdown-body span.frame {
+	display: block;
+	overflow: hidden;
+}
+
+.markdown-body span.frame>span {
+	display: block;
+	float: left;
+	width: auto;
+	padding: 7px;
+	margin: 13px 0 0;
+	overflow: hidden;
+	border: 1px solid #ddd;
+}
+
+.markdown-body span.frame span img {
+	display: block;
+	float: left;
+}
+
+.markdown-body span.frame span span {
+	display: block;
+	padding: 5px 0 0;
+	clear: both;
+	color: #333;
+}
+
+.markdown-body span.align-center {
+	display: block;
+	overflow: hidden;
+	clear: both;
+}
+
+.markdown-body span.align-center>span {
+	display: block;
+	margin: 13px auto 0;
+	overflow: hidden;
+	text-align: center;
+}
+
+.markdown-body span.align-center span img {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.markdown-body span.align-right {
+	display: block;
+	overflow: hidden;
+	clear: both;
+}
+
+.markdown-body span.align-right>span {
+	display: block;
+	margin: 13px 0 0;
+	overflow: hidden;
+	text-align: right;
+}
+
+.markdown-body span.align-right span img {
+	margin: 0;
+	text-align: right;
+}
+
+.markdown-body span.float-left {
+	display: block;
+	float: left;
+	margin-right: 13px;
+	overflow: hidden;
+}
+
+.markdown-body span.float-left span {
+	margin: 13px 0 0;
+}
+
+.markdown-body span.float-right {
+	display: block;
+	float: right;
+	margin-left: 13px;
+	overflow: hidden;
+}
+
+.markdown-body span.float-right>span {
+	display: block;
+	margin: 13px auto 0;
+	overflow: hidden;
+	text-align: right;
+}
+
+.markdown-body code,.markdown-body tt {
+	padding: 0;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	margin: 0;
+	font-size: 85%;
+	background-color: rgba(0,0,0,0.04);
+	border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after,
+.markdown-body tt:before,
+.markdown-body tt:after {
+	letter-spacing: -0.2em;
+	content: "\00a0";
+}
+
+.markdown-body code br,
+.markdown-body tt br {
+	display: none;
+}
+
+.markdown-body del code {
+	text-decoration: inherit;
+}
+
+.markdown-body pre>code {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	word-break: normal;
+	white-space: pre;
+	background: transparent;
+	border: 0;
+}
+
+.markdown-body .highlight {
+	margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+	padding: 16px;
+	overflow: auto;
+	font-size: 85%;
+	line-height: 1.45;
+	background-color: #f7f7f7;
+	border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+	margin-bottom: 0;
+	word-break: normal;
+}
+
+.markdown-body pre {
+	word-wrap: normal;
+}
+
+.markdown-body pre code,
+.markdown-body pre tt {
+	display: inline;
+	max-width: initial;
+	padding: 0;
+	margin: 0;
+	overflow: initial;
+	line-height: inherit;
+	word-wrap: normal;
+	background-color: transparent;
+	border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after,
+.markdown-body pre tt:before,
+.markdown-body pre tt:after {
+	content: normal;
+}
+
+.highlight .pl-coc,
+.highlight .pl-entl,
+.highlight .pl-entm,
+.highlight .pl-eoa,
+.highlight .pl-mai .pl-sf,
+.highlight .pl-mm,
+.highlight .pl-pdv,
+.highlight .pl-sc,
+.highlight .pl-som,
+.highlight .pl-sr,
+.highlight .pl-v,
+.highlight .pl-vpf {
+	color: #0086b3;
+}
+.highlight .pl-eoac,
+.highlight .pl-mdht,
+.highlight .pl-mi1,
+.highlight .pl-mri,
+.highlight .pl-va,
+.highlight .pl-vpu {
+	color: #008080;
+}
+.highlight .pl-c,
+.highlight .pl-pdc {
+	color: #b4b7b4;
+	font-style: italic;
+}
+.highlight .pl-k,
+.highlight .pl-ko,
+.highlight .pl-kolp,
+.highlight .pl-mc,
+.highlight .pl-mr,
+.highlight .pl-ms,
+.highlight .pl-s,
+.highlight .pl-sok,
+.highlight .pl-st {
+	color: #6e5494;
+}
+.highlight .pl-ef,
+.highlight .pl-enf,
+.highlight .pl-enm,
+.highlight .pl-entc,
+.highlight .pl-eoi,
+.highlight .pl-sf,
+.highlight .pl-smc {
+	color: #d12089;
+}
+.highlight .pl-ens,
+.highlight .pl-eoai,
+.highlight .pl-kos,
+.highlight .pl-mh .pl-pdh,
+.highlight .pl-mp,
+.highlight .pl-pde,
+.highlight .pl-stp {
+	color: #458;
+}
+.highlight .pl-enti {
+	color: #d12089;
+	font-weight: bold;
+}
+.highlight .pl-cce,
+.highlight .pl-enc,
+.highlight .pl-kou,
+.highlight .pl-mq {
+	color: #f93;
+}
+.highlight .pl-mp1 .pl-sf {
+	color: #458;
+	font-weight: bold;
+}
+.highlight .pl-cos,
+.highlight .pl-ent,
+.highlight .pl-md,
+.highlight .pl-mdhf,
+.highlight .pl-ml,
+.highlight .pl-pdc1,
+.highlight .pl-pds,
+.highlight .pl-s1,
+.highlight .pl-scp,
+.highlight .pl-sol {
+	color: #df5000;
+}
+.highlight .pl-c1,
+.highlight .pl-cn,
+.highlight .pl-pse,
+.highlight .pl-pse .pl-s2,
+.highlight .pl-vi {
+	color: #a31515;
+}
+.highlight .pl-mb,
+.highlight .pl-pdb {
+	color: #df5000;
+	font-weight: bold;
+}
+.highlight .pl-mi,
+.highlight .pl-pdi {
+	color: #6e5494;
+	font-style: italic;
+}
+.highlight .pl-ms1 {
+	background-color: #f5f5f5;
+}
+.highlight .pl-mdh,
+.highlight .pl-mdi {
+	font-weight: bold;
+}
+.highlight .pl-mdr {
+	color: #0086b3;
+	font-weight: bold;
+}
+.highlight .pl-s2 {
+	color: #333;
+}
+.highlight .pl-ii {
+	background-color: #df5000;
+	color: #fff;
+}
+.highlight .pl-ib {
+	background-color: #f93;
+}
+.highlight .pl-id {
+	background-color: #a31515;
+	color: #fff;
+}
+.highlight .pl-iu {
+	background-color: #b4b7b4;
+}
+.highlight .pl-mo {
+	color: #969896;
+}
+
+</style>
+
+
+<script type="text/javascript">
+
+function getDocumentScrollTop() 
+{
+   var res = document.body.scrollTop || document.documentElement.scrollTop || window.pageYOffset || 0;
+   // alert(res);
+   return res;
+}
+
+function setDocumentScrollTop(ypos) 
+{
+	window.scrollTo(0, ypos);
+}
+
+</script>
+
+
+</head>
+<body class="markdown-body">
+<h1> <a id="user-content-svg-sprite-----" class="anchor" href="#svg-sprite-----" aria-hidden="true"><span class="octicon octicon-link"></span></a>svg-sprite <a href="https://npmjs.org/package/svg-sprite"><img src="https://camo.githubusercontent.com/036c60632d1a9e6806a56a6cdd68573bb91bba67/68747470733a2f2f62616467652e667572792e696f2f6a732f7376672d7370726974652e706e67" alt="NPM version" data-canonical-src="https://badge.fury.io/js/svg-sprite.png" style="max-width:100%;" /></a> <a href="http://travis-ci.org/jkphl/svg-sprite"><img src="https://camo.githubusercontent.com/f0a4feac77960ea55a6c95191e8a524fb9aa87df/68747470733a2f2f7365637572652e7472617669732d63692e6f72672f6a6b70686c2f7376672d7370726974652e706e67" alt="Build Status" data-canonical-src="https://secure.travis-ci.org/jkphl/svg-sprite.png" style="max-width:100%;" /></a> <a href="https://coveralls.io/r/jkphl/svg-sprite"><img src="https://camo.githubusercontent.com/88538a07ff70550f26a8b0bc26c00a35a01b75ac/68747470733a2f2f696d672e736869656c64732e696f2f636f766572616c6c732f6a6b70686c2f7376672d7370726974652e737667" alt="Coverage Status" data-canonical-src="https://img.shields.io/coveralls/jkphl/svg-sprite.svg" style="max-width:100%;" /></a> <a href="https://david-dm.org/jkphl/svg-sprite#info=dependencies"><img src="https://camo.githubusercontent.com/9d67a82e7e2a59157ad59e52612f447372fbb227/68747470733a2f2f64617669642d646d2e6f72672f6a6b70686c2f7376672d7370726974652e737667" alt="Dependency Status" data-canonical-src="https://david-dm.org/jkphl/svg-sprite.svg" style="max-width:100%;" /></a> <a href="https://david-dm.org/jkphl/svg-sprite#info=devDependencies"><img src="https://camo.githubusercontent.com/ff0d8a10f5db629707f265e9060b7cdec4dadf78/68747470733a2f2f64617669642d646d2e6f72672f6a6b70686c2f7376672d7370726974652f6465762d7374617475732e737667" alt="Development Dependency Status" data-canonical-src="https://david-dm.org/jkphl/svg-sprite/dev-status.svg" style="max-width:100%;" /></a> </h1> 
+<p>This file is part of the documentation of <em>svg-sprite</em> — a free low-level Node.js module that <strong>takes a bunch of SVG files</strong>, optimizes them and creates <strong>SVG sprites</strong> of several types. The package is <a href="https://github.com/jkphl/svg-sprite">hosted on GitHub</a>.</p> 
+<h2> <a id="user-content-standard-api" class="anchor" href="#standard-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Standard API</h2> 
+<p><em>svg-sprite</em> comes with four public methods:</p> 
+<ul> 
+ <li> <a href="#svgspriter-config-">SVGSpriter([ config ])</a> — The spriter's constructor (always the entry point)</li> 
+ <li> <a href="#svgspriteraddfile--name-svg-">SVGSpriter.add(file [, name, svg ])</a> — Registering source SVG files</li> 
+ <li> <a href="#svgspritercompile-config--callback-">SVGSpriter.compile([ config ,] callback )</a> — Triggering the sprite compilation</li> 
+ <li> <a href="#svgspritergetshapes-dest--callback-">SVGSpriter.getShapes( dest , callback )</a> — Accessing the intermediate SVG resources</li> 
+</ul> 
+<p>To understand these methods' roles and interaction, please have a look at the following basic example first.</p> 
+<h3> <a id="user-content-usage-example" class="anchor" href="#usage-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage example</h3> 
+<div class="highlight highlight-javascript">
+ <pre><span class="pl-s"><span class="pl-pds">'</span>use strict<span class="pl-pds">'</span></span>;
+
+<span class="pl-k">var</span> SVGSpriter              <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>svg-sprite<span class="pl-pds">'</span></span>),
+mkdirp                      <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>mkdirp<span class="pl-pds">'</span></span>),
+path                        <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>path<span class="pl-pds">'</span></span>),
+fs                          <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>fs<span class="pl-pds">'</span></span>),
+
+<span class="pl-c">// 1. Create and configure a spriter instance</span>
+<span class="pl-c">// ====================================================================</span>
+spriter                     <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">SVGSpriter</span>({
+    dest                    <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>out<span class="pl-pds">'</span></span>,        <span class="pl-c">// Main output directory</span>
+    mode                    <span class="pl-k">:</span>
+        css                 <span class="pl-k">:</span> {             <span class="pl-c">// Create a CSS sprite</span>
+            render          <span class="pl-k">:</span> {
+                css         <span class="pl-k">:</span> <span class="pl-c1">true</span>          <span class="pl-c">// Render a CSS stylesheet</span>
+            }
+        }
+    }
+});
+
+<span class="pl-c">// 2. Add some SVG files to process</span>
+<span class="pl-c">// ====================================================================</span>
+spriter.<span class="pl-c1">add</span>(
+    path.resolve(<span class="pl-s"><span class="pl-pds">'</span>assets/example-1.svg<span class="pl-pds">'</span></span>),
+    <span class="pl-s"><span class="pl-pds">'</span>example-1.svg<span class="pl-pds">'</span></span>,
+    fs.readFileSync(<span class="pl-s"><span class="pl-pds">'</span>assets/example-1.svg<span class="pl-pds">'</span></span>, {encoding<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>utf-8<span class="pl-pds">'</span></span>})
+);
+
+    <span class="pl-c">/* ... */</span>
+
+spriter.<span class="pl-c1">add</span>(
+    path.resolve(<span class="pl-s"><span class="pl-pds">'</span>assets/example-x.svg<span class="pl-pds">'</span></span>),
+    <span class="pl-s"><span class="pl-pds">'</span>example-x.svg<span class="pl-pds">'</span></span>,
+    fs.readFileSync(<span class="pl-s"><span class="pl-pds">'</span>assets/example-x.svg<span class="pl-pds">'</span></span>, {encoding<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>utf-8<span class="pl-pds">'</span></span>})
+);
+
+<span class="pl-c">// 3. Trigger the (asynchronous) compilation process</span>
+<span class="pl-c">// ====================================================================</span>
+spriter.<span class="pl-c1">compile</span>(<span class="pl-k">function</span>(<span class="pl-smi">error</span>, <span class="pl-smi">result</span>, <span class="pl-smi">data</span>){
+
+    <span class="pl-c">// Run through all files that have been created for the `css` mode</span>
+    <span class="pl-k">for</span> (<span class="pl-k">var</span> type <span class="pl-k">in</span> result.css) {
+
+        <span class="pl-c">// Recursively create directories as needed</span>
+        mkdirp.sync(path.dirname(result.css[type].path));
+
+        <span class="pl-c">// Write the generated resource to disk</span>
+        fs.writeFileSync(result.css[type].path, result.css[type].contents);
+    }
+});</pre>
+</div> 
+<h4> <a id="user-content-svgspriter-config-" class="anchor" href="#svgspriter-config-" aria-hidden="true"><span class="octicon octicon-link"></span></a>SVGSpriter([ config ])</h4> 
+<p><strong>Constructor</strong> — This is the only method publicly exposed by <em>svg-sprite</em>, so it's always your entry point. Use it to create an instance of the spriter and access the remaining three methods.</p> 
+<h5> <a id="user-content-arguments" class="anchor" href="#arguments" aria-hidden="true"><span class="octicon octicon-link"></span></a>Arguments</h5> 
+<ol> 
+ <li> <strong>config</strong> <code>{Object}</code> <em>(default: <code>{}</code>)</em> — <a href=".configuration.md.html">Main configuration</a> for the spriting process. As all configuration properties are optional, you may provide an empty object here or omit the argument altogether (no output files will be created then, but the <a href="#svgspriteraddfile--name-svg-">added SVG files</a> will be optimized nevertheless). The <code>mode</code> configuration properties may also be specified when calling the <code>.compile()</code> method (<a href="#svgspritercompile-config--callback-">see below</a>). </li> 
+</ol> 
+<h4> <a id="user-content-svgspriteraddfile--name-svg-" class="anchor" href="#svgspriteraddfile--name-svg-" aria-hidden="true"><span class="octicon octicon-link"></span></a>SVGSpriter.add(file [, name, svg ])</h4> 
+<p><strong>Registration of an SVG file</strong> — Prior to compiliation, you'll need to register one or more SVG files for processing, obviously. As <em>svg-sprite</em> doesn't read the files from disk itself, you'll have to pass both the path and the file contents explicitly. Alternatively, you may pass a <a href="https://github.com/wearefractal/vinyl">vinyl</a> file object as the first argument to <code>.add()</code>, which comes in handy when piping resources from one process to another (as you would do with the <a href="https://github.com/jkphl/gulp-svg-sprite">Gulp wrapper</a> anyway). Please <a href="#example-using-glob-and-vinyl">see below</a> for an example.</p> 
+<p>It is important to know that the spriter <strong>optimizes the SVG files as soon as you register them</strong>, not just when you <a href="#svgspritercompile-config--callback-">compile your sprite</a>. This way it is possibly to call the <code>.compile()</code> method several time, possibly passing in different render configurations without the need of repeating the optimization steps.</p> 
+<h5> <a id="user-content-arguments-1" class="anchor" href="#arguments-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Arguments</h5> 
+<ol> 
+ <li> <strong>file</strong> <code>{String|File}</code> — Absolute path to the SVG file or a <a href="https://github.com/wearefractal/vinyl">vinyl</a> file object carrying all the necessary values (the following arguments are ignored then).</li> 
+ <li> <strong>name</strong> <code>{String}</code> <em>(ignored with vinyl file)</em> — The &quot;local&quot; part of the file path, possibly including subdirectories which will get traversed to CSS selectors using the <code>shape.id.separator</code> <a href=".configuration.md.html#shape-ids">configuration option</a>. You will want to pay attention to this when recursively adding whole directories of SVG files (e.g. via <a href="#example-using-glob-and-vinyl">glob</a>). When <code>name</code> is empty, <em>svg-sprite</em> will use the basename of the <code>file</code> argument. As an example, setting <code>name</code> to <code>&quot;deeply/nested/asset.svg&quot;</code> while giving <code>&quot;/path/to/my/deeply/nested/asset.svg&quot;</code> for <code>file</code> will translate to the CSS selector <code>&quot;deeply--nested--asset&quot;</code>.</li> 
+ <li> <strong>svg</strong> <code>{String}</code> <em>(ignored with vinyl file)</em>: SVG file content.</li> 
+</ol> 
+<h5> <a id="user-content-example-using-glob-and-vinyl" class="anchor" href="#example-using-glob-and-vinyl" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example using <a href="https://github.com/isaacs/node-glob">glob</a> and <a href="https://github.com/wearefractal/vinyl">vinyl</a> </h5> 
+<div class="highlight highlight-javascript">
+ <pre><span class="pl-s"><span class="pl-pds">'</span>use strict<span class="pl-pds">'</span></span>;
+
+<span class="pl-k">var</span> SVGSpriter              <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>svg-sprite<span class="pl-pds">'</span></span>),
+mkdirp                      <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>mkdirp<span class="pl-pds">'</span></span>),
+path                        <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>path<span class="pl-pds">'</span></span>),
+fs                          <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>fs<span class="pl-pds">'</span></span>),
+File                        <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>vinyl<span class="pl-pds">'</span></span>),
+glob                        <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>glob<span class="pl-pds">'</span></span>),
+spriter                     <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">SVGSpriter</span>({
+    dest                    <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>out<span class="pl-pds">'</span></span>,
+    mode                    <span class="pl-k">:</span> {
+        css                 <span class="pl-k">:</span> {
+            render          <span class="pl-k">:</span> {
+                css         <span class="pl-k">:</span> <span class="pl-c1">true</span>
+            }
+        }
+    }
+}),
+cwd                         <span class="pl-k">=</span> path.resolve(<span class="pl-s"><span class="pl-pds">'</span>assets<span class="pl-pds">'</span></span>);
+
+<span class="pl-c">// Find SVG files recursively via `glob`</span>
+glob.glob(<span class="pl-s"><span class="pl-pds">'</span>**/*.svg<span class="pl-pds">'</span></span>, {cwd<span class="pl-k">:</span> cwd}, <span class="pl-k">function</span>(<span class="pl-smi">err</span>, <span class="pl-smi">files</span>) {
+    files.forEach(<span class="pl-k">function</span>(<span class="pl-smi">file</span>){
+
+        <span class="pl-c">// Create and add a vinyl file instance for each SVG</span>
+        spriter.<span class="pl-c1">add</span>(<span class="pl-k">new</span> <span class="pl-en">File</span>({
+            path<span class="pl-k">:</span> path.<span class="pl-c1">join</span>(cwd, file),                         <span class="pl-c">// Absolute path to the SVG file</span>
+            base<span class="pl-k">:</span> cwd,                                          <span class="pl-c">// Base path (see `name` argument)</span>
+            contents<span class="pl-k">:</span> fs.readFileSync(path.<span class="pl-c1">join</span>(cwd, file))     <span class="pl-c">// SVG file contents</span>
+        }));
+    })
+
+    spriter.<span class="pl-c1">compile</span>(<span class="pl-k">function</span>(<span class="pl-smi">error</span>, <span class="pl-smi">result</span>, <span class="pl-smi">data</span>){
+        <span class="pl-k">for</span> (<span class="pl-k">var</span> type <span class="pl-k">in</span> result.css) {
+            mkdirp.sync(path.dirname(result.css[type].path));
+            fs.writeFileSync(result.css[type].path, result.css[type].contents);
+        }
+    });
+});</pre>
+</div> 
+<h4> <a id="user-content-svgspritercompile-config--callback-" class="anchor" href="#svgspritercompile-config--callback-" aria-hidden="true"><span class="octicon octicon-link"></span></a>SVGSpriter.compile([ config ,] callback )</h4> 
+<p><strong>Sprite compilation</strong> — Triggers an asynchronous sprite compilation process. You may pass in an optional <a href=".configuration.md.html#output-modes">output mode configuration</a> object as the first argument in order to set the output parameters for that very run. You may call <code>.compile()</code> multiple times, allowing for several different sprites being generated by the same spriter instance. For each run, the callback will be triggered independently, giving you access to the resources that were generated.</p> 
+<h5> <a id="user-content-arguments-2" class="anchor" href="#arguments-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Arguments</h5> 
+<ol> 
+ <li> <strong>config</strong> <code>{Object}</code> <em>(optional)</em> — Configuration object setting the <a href=".configuration.md.html#output-modes">output mode parameters</a> for a single compilation run. If omitted, the <code>mode</code> property of the <a href=".configuration.md.html">main configuration</a> used for the <a href="#svgspriter-config-">constructor</a> will be used.</li> 
+ <li> <strong>callback</strong> <code>{Function}</code> — Callback triggered when the compilation has finished, getting three arguments: 
+  <ul> 
+   <li> <strong>error</strong> <code>{Error}</code> — Error message in case the compilation has failed</li> 
+   <li> <strong>result</strong> <code>{Object}</code> — Directory of generated resources (<a href="#compilation-example">see below</a>)</li> 
+   <li> <strong>data</strong> <code>{Object}</code> — Templating variables passed to Mustache for rendering the resources (see <a href=".templating.md.html#sprite--shape-variables">sprite &amp; shape variables</a> for details)</li> 
+  </ul> </li> 
+</ol> 
+<h5> <a id="user-content-compilation-example" class="anchor" href="#compilation-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compilation example</h5> 
+<p>Depending on the particular mode and render configuration, quite a lot of resources might be generated during a single compilation run. To understand the way <em>svg-sprite</em> returns these resources, please have a look at the following example: </p> 
+<div class="highlight highlight-javascript">
+ <pre>spriter.<span class="pl-c1">compile</span>({
+    css                 <span class="pl-k">:</span> {
+        render          <span class="pl-k">:</span> {
+            scss        <span class="pl-k">:</span> <span class="pl-c1">true</span>
+        },
+        example         <span class="pl-k">:</span> <span class="pl-c1">true</span>
+    }
+},
+<span class="pl-k">function</span>(<span class="pl-smi">error</span>, <span class="pl-smi">result</span>, <span class="pl-smi">data</span>){
+    <span class="pl-en">console</span><span class="pl-c1">.log</span>(result);
+});</pre>
+</div> 
+<p>The spriter is instructed to create a CSS sprite along with the accompanying stylesheet resource in Sass format and an example HTML document demonstrating the use of the sprite. The output will look something like this (shortened for brevity):</p> 
+<div class="highlight highlight-javascript">
+ <pre>{
+    css                     <span class="pl-k">:</span> {
+        sprite              <span class="pl-k">:</span> <span class="pl-k">&lt;</span>File <span class="pl-s"><span class="pl-pds">&quot;</span>css/svg/sprite.css.svg<span class="pl-pds">&quot;</span></span> <span class="pl-k">&lt;</span>Buffer 3c 3f <span class="pl-c1">78</span> ...<span class="pl-k">&gt;&gt;</span>,
+        scss                <span class="pl-k">:</span> <span class="pl-k">&lt;</span>File <span class="pl-s"><span class="pl-pds">&quot;</span>css/sprite.scss<span class="pl-pds">&quot;</span></span> <span class="pl-k">&lt;</span>Buffer 2e <span class="pl-c1">73</span> <span class="pl-c1">76</span> ...<span class="pl-k">&gt;&gt;</span>,
+        example             <span class="pl-k">:</span> <span class="pl-k">&lt;</span>File <span class="pl-s"><span class="pl-pds">&quot;</span>css/sprite.css.html<span class="pl-pds">&quot;</span></span> <span class="pl-k">&lt;</span>Buffer 3c <span class="pl-c1">21</span> <span class="pl-c1">44</span> ...<span class="pl-k">&gt;&gt;</span>
+    }
+}</pre>
+</div> 
+<p>For each configured output mode (<code>css</code> in the example), the <code>result</code> object holds an item containing the resources generated for this particular mode. There is always a <code>sprite</code> resource (obviously) and possibly an <code>example</code> resource for the demo HTML document (if configured). For the <a href=".configuration.md.html#css--view-mode">css and view</a> output modes, there are additional items named after the configured <a href=".configuration.md.html#rendering-configurations">rendering configurations</a> (<code>scss</code> in the example).</p> 
+<p>Please note that the resources are always returned as <a href="https://github.com/wearefractal/vinyl">vinyl</a> files. Have a look above for an <a href="#example-using-glob-and-vinyl">example of how to write these files to disk</a>. </p> 
+<h4> <a id="user-content-svgspritergetshapes-dest--callback-" class="anchor" href="#svgspritergetshapes-dest--callback-" aria-hidden="true"><span class="octicon octicon-link"></span></a>SVGSpriter.getShapes( dest , callback )</h4> 
+<p><strong>Accessing the intermediate SVG resources</strong> — Sometimes you may want to access the single transformed / optimized SVG files that <em>svg-sprite</em> produces in an intermediate step. Depending on the <a href=".configuration.md.html#shape-transformations">configured shape transformations</a> (e.g. SVG optimization with <a href="https://github.com/svg/svgo">SVGO</a>), <em>svg-sprite</em> will need some time for transforming the files, which is why accessing them must be an asynchronous task.</p> 
+<h5> <a id="user-content-arguments-3" class="anchor" href="#arguments-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Arguments</h5> 
+<ol> 
+ <li> <strong>dest</strong> <code>{String}</code> — Base directory for the SVG files in case the will be written to disk.</li> 
+ <li> <strong>callback</strong> <code>{Function}</code>: Callback triggered when the shapes are available, getting called with two arguments: 
+  <ul> 
+   <li> <strong>error</strong> <code>{Error}</code> — Error message in case the shape access has failed.</li> 
+   <li> <strong>result</strong> <code>{Array}</code> — Array of <a href="https://github.com/wearefractal/vinyl">vinyl</a> carrying the intermediate SVGs.<br /> </li> 
+  </ul> </li> 
+</ol> 
+<h5> <a id="user-content-shape-access-example" class="anchor" href="#shape-access-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shape access example</h5> 
+<div class="highlight highlight-javascript">
+ <pre><span class="pl-k">var</span> mkdirp                  <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>mkdirp<span class="pl-pds">'</span></span>),
+path                        <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>path<span class="pl-pds">'</span></span>),
+fs                          <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>fs<span class="pl-pds">'</span></span>);
+
+spriter.getShapes(path.resolve(<span class="pl-s"><span class="pl-pds">'</span>tmp/svg<span class="pl-pds">'</span></span>), <span class="pl-k">function</span>(<span class="pl-smi">error</span>, <span class="pl-smi">result</span>) {
+    result.forEach(<span class="pl-k">function</span>(<span class="pl-smi">file</span>){
+        mkdirp.sync(path.dirname(file.path));
+        fs.writeFileSync(file.path, file.contents);
+    });
+});</pre>
+</div>
+</body>
+</html>
