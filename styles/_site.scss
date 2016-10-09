@@ -24,11 +24,9 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 /* ::: SITE HEADER ::::::::::::::::::::::::::::::::: */
 
 	.site-header {
-		h1 { // this h1 is just for SEO and keeping a good HTML5 document model
-			@include hide(); 
-		}
-		.site-title {
-
+        
+		.site-title { // this h1 is just for SEO and keeping a good HTML5 document model
+			@include hide();
 		}
 	}
 
@@ -79,7 +77,6 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 	}
 	.wp-pagenavi span.current {
 	    background: $light-grey;
-	    color: $white;
 	}
 	.wp-pagenavi a:hover {
 	}

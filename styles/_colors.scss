@@ -179,7 +179,6 @@ $dark-grey: #333;
             border-top: 2px solid $orange;
             color: $orange;
         }
-        
         // Tags
         a[rel="tag"],
         .tags a {
@@ -203,3 +202,9 @@ $dark-grey: #333;
 
 // example of how to make classes you can use inline in your html
 	.orange { color: $orange; }
+
+// page navi default colors
+	.wp-pagenavi span.current {
+	    background: $light-grey;
+	    color: $white;
+	}
