@@ -28,8 +28,7 @@ FORMS
 		width: 100%;
 	}
 	input[type='submit'], .button {
-    	-webkit-appearance: none; // removes the default styling that gets applied by ios
-    	-moz-appearance: none; // removes the default styling that gets applied by ios
+        appearance: none; //removes the default button styling (prefixing hopefully not needed)
 		border-radius: .5em;
         white-space: nowrap; // helps stack buttons nicely vertically
 		text-decoration: none;
@@ -37,13 +36,22 @@ FORMS
         outline: none;
         padding: 1.2em 3em;
         vertical-align: middle;
-        border-radius: .5em;
+        border-radius: 2em;
         text-transform: uppercase;
 		@include transition (all .3s ease-in-out);
 		&:hover, &:focus, &:active {
 			text-decoration: none;
 			cursor: pointer;
 		}
+		display: block;
+        width: 80%;
+        margin: 1em auto;
+        @include media($smallmed){
+            width: 60%;
+        }
+        @include media($medium){
+            display: inline;
+        }
 	}
 	.button.toggle {
 		display: inline-block;
