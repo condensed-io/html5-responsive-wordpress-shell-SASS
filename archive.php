@@ -48,7 +48,7 @@ if ($disableSidebar !== 'true'): ?>
 			<small><?php the_time('l, F jS, Y') ?></small>
 
 			<div class="entry">
-				<?php the_content() ?>
+				<?php the_excerpt() ?>
 			</div>
 
 			<?php if(!is_tag()): // don't show this stuff on tag pages '?>
