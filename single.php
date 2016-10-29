@@ -9,7 +9,7 @@
 				
 		<header>
 			<h1 class="heading"><?php the_title(); ?></h1>
-            <p>written by <?php the_author(); ?> <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></p>
+            <p class="meta"><?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?> written by <?php the_author(); ?> <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></p>
 		</header>
 		
 		<div class="entry">
