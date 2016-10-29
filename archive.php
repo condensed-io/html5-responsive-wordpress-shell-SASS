@@ -16,25 +16,25 @@ if ($disableSidebar !== 'true'): ?>
 		<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 		
 		<?php if (is_category()) : // If this is a category archive ?>
-		<h1 class="page-title">Archive for &#8216;<?php single_cat_title(); ?>&#8217;</h1>
+		<h1 class="heading">Archive for &#8216;<?php single_cat_title(); ?>&#8217;</h1>
 		
 		<?php elseif (is_tag()) : // If this is a tag archive  ?>
-		<h1 class="page-title">Posts Tagged &#8216;<?php single_tag_title(); ?>&#8217;</h1>
+		<h1 class="heading">Posts Tagged &#8216;<?php single_tag_title(); ?>&#8217;</h1>
 
 		<?php elseif (is_day()) : // If this is a daily archive ?>
-		<h1 class="page-title">Archive for <?php the_time('F jS, Y'); ?></h1>
+		<h1 class="heading">Archive for <?php the_time('F jS, Y'); ?></h1>
 
 		<?php elseif (is_month()) : // If this is a monthly archive ?>
-		<h1 class="page-title">Archive for <?php the_time('F, Y'); ?></h1>
+		<h1 class="heading">Archive for <?php the_time('F, Y'); ?></h1>
 
 		<?php elseif (is_year()) : // If this is a yearly archive ?>
-		<h1 class="page-title">Archive for <?php the_time('Y'); ?></h1>
+		<h1 class="heading">Archive for <?php the_time('Y'); ?></h1>
 
 		<?php elseif (is_author()) : // If this is an author archive ?>
-		<h1 class="page-title">Author Archive</h1>
+		<h1 class="heading">Author Archive</h1>
 
 		<?php elseif (isset($_GET['paged']) && !empty($_GET['paged'])) : // If this is a paged archive ?>
-		<h1 class="page-title">Blog Archives</h1>
+		<h1 class="heading">Blog Archives</h1>
 
 		<?php endif; ?>
 		
