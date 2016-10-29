@@ -8,9 +8,8 @@
 	<article <?php post_class('clear-fix row'); ?>>
 				
 		<header>
-			<h1><?php the_title(); ?></h1>	
-			<time class="meta" datetime="<?php the_time('c'); ?>" pubdate="pubdate"><?php the_time('F jS, Y'); ?></time>
-			<p class="meta">by <?php the_author(); ?></p>
+			<h1 class="heading"><?php the_title(); ?></h1>
+            <p>written by <?php the_author(); ?> <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></p>
 		</header>
 		
 		<div class="entry">
