@@ -9,7 +9,7 @@ if ($disableSidebar !== 'true'): ?>
 <!--END: sidebar~main-->
 
 <!--BEGIN: Content-->
-<div class="content-main" role="main">
+<div class="content-main white-area" role="main">
 
 	<?php if (have_posts()) : ?>
 
