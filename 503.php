@@ -11,10 +11,6 @@
 	<title><?php bloginfo('name'); ?></title>
 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	
-	<!--Forces latest IE rendering engine & chrome frame-->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
 	<link rel="copyright" href="#copyright" /> 
 	<link rel="icon" href="/favicon.ico" type="image/x-icon" />  
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />

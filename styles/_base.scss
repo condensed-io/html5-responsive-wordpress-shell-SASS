@@ -1,173 +1,120 @@
 /*
-
-BASE - HOW LOW CAN YOU GO?
-
 Base is for standard things that don't change from project to project
-
 */
 
+/*
+Uses The New (lighter) css reset found here: 
+*/
 
+/***
+    The new CSS reset - version 1.11.1 (last updated 24.10.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
 
-/* ::: modified version of RESET CSS 2.0 by Eric Meyer ::::::::::::::::::::::::::::::::::::::::: */
-	
-	// http://meyerweb.com/eric/tools/css/reset/ - http://cssreset.com
-	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-		margin: 0;
-		padding: 0;
-		border: 0;
-		font-size: 100%;
-		font: inherit;
-		vertical-align: baseline;
-	}
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+	all: unset;
+	display: revert;
+}
 
-	// HTML5 display-role reset for older browsers
-	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-		display: block;
-	}
-	body {
-		line-height: 1;
-	}
-	blockquote, q {
-		quotes: none;
-	}
-	blockquote:before, blockquote:after,q:before, q:after
-	{
-		content: '';
-		content: none;
-	}
-	table {
-		border-collapse: collapse; border-spacing: 0;
-	}
-	sub, sup { // see: https://gist.github.com/unruthless/413930
-		/* Specified in % so that the sup/sup is the
-		right size relative to the surrounding text */
-		font-size: 75%;
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
 
-		/* Zero out the line-height so that it doesn't
-		interfere with the positioning that follows */
-		line-height: 0;
+/* Fix mobile Safari increase font-size on landscape mode */
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
 
-		/* Where the magic happens: makes all browsers position
-		the sup/sup properly, relative to the surrounding text */
-		position: relative;
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+	cursor: revert;
+}
 
-		/* Note that if you're using Eric Meyer's reset.css, this
-		is already set and you can remove this rule */
-		vertical-align: baseline;
-	}
-	sup {
-  		/* Move the superscripted text up */
-  		top: -0.5em;
-	}
-	sub {
-		/* Move the subscripted text down, but only
-		half as far down as the superscript moved up */
-		bottom: -0.25em;
-	}
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu,
+summary {
+	list-style: none;
+}
 
+/* For images to not be able to exceed their container */
+img {
+	max-inline-size: 100%;
+	max-block-size: 100%;
+}
 
+/* removes spacing between cells in tables */
+table {
+	border-collapse: collapse;
+}
 
-/* ::: HTML ELEMENTS ::::::::::::::::::::::::::::::::::::::::: */
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input,
+textarea {
+	-webkit-user-select: auto;
+}
 
-	// transition all links by default
-	a:link, a:visited {
-		@include transition(all .3s ease-in-out);
-	}
-	a:hover, a:active, a:focus {
-		//Fixes a bug with webkit where links flicker
-		//See http://stackoverflow.com/questions/3461441/prevent-flicker-on-webkit-transition-of-webkit-transform
-		-webkit-backface-visibility: hidden;
-		-webkit-transform-style: preserve-3d;
-        outline: none;
-	}
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+	white-space: revert;
+}
 
+/* minimum style to allow to style meter element */
+meter {
+	-webkit-appearance: revert;
+	appearance: revert;
+}
 
+/* preformatted text - use only for this feature */
+:where(pre) {
+	all: revert;
+	box-sizing: border-box;
+}
 
-/* ::: UTILITY ::::::::::::::::::::::::::::::::::::::::: */
+/* reset default text opacity of input placeholder */
+::placeholder {
+	color: unset;
+}
 
-	// Fixed header jumplink -- http://css-tricks.com/hash-tag-links-padding/
-	.anchor:before { // adjust the margin and height for your situation
-	  display: block; 
-	  content: " "; 
-	  margin-top: -60px; 
-	  height: 40px; 
-	  visibility: hidden; 
-	}
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+	display: none;
+}
 
-	.noborder {
-		border: none;
-	}
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable="false"])) {
+	-moz-user-modify: read-write;
+	-webkit-user-modify: read-write;
+	overflow-wrap: break-word;
+	-webkit-line-break: after-white-space;
+	-webkit-user-select: auto;
+}
 
-	// .clear-fix is attached to the element you want to clear
-	.clear-fix:before,
-	.clear-fix:after { content: ""; display: table; } 
-	.clear-fix:after { clear: both; }
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+	-webkit-user-drag: element;
+}
 
-	// You can also add an <hr class=".clear-all" /> wherever you are when doing production work and it will force a clear
-	.clear-all { visibility: hidden; clear: both; margin: 0 !important; padding: 0 !important; font-size: 0; height: 1px; }
-
-
-
-/* ::: TABLES ::::::::::::::::::::::::::::::::::::::::: */
-
-	// mobile scroll fix
-	table {
-	    display: block;
-	    overflow-x: auto;
-	    width: 100%;
-	    -webkit-overflow-scrolling: touch;
-		font-size: 80%;
-		@include media($medium) {
-			font-size: 90%;
-			display: table;
-		}
-	}
-	th {
-		font-weight: 600;
-		white-space: nowrap;
-		padding: .5em;
-	}
-	td {
-		padding: .5em;
-	}
-
-
-
-/* ::: OTHER BROWSER FIXES ::::::::::::::::::::::::::::::::::::::::: */
-
-	// Fixes a bug in webkit with fonts being animated 
-	// http://stackoverflow.com/questions/9733011/safari-changing-font-weights-when-unrelated-animations-are-running
-	html {
-		-webkit-font-smoothing: antialiased;
-	}
-
-	// Prevent font scaling in landscape mode on phones
-	@media all and (orientation:landscape) {
-		html {
-	    	-webkit-text-size-adjust: none;
-	    }
-	}
-
-	// Natural Box Layout Model for all elements ::::::::::::::::::::::::::::::::::::::::: */
-	// http://paulirish.com/2012/box-sizing-border-box-ftw/
-	* {
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-
-
-
-/* ::: NATURAL BOX LAYOUT MODEL for all elements ::::::::::::::::::::::::::::::::::::::::: */
-
-
-	// Removes inner padding and border in Firefox 4+ to make heights consistant across webkit and FF -- thanks Adrian! */
-	button::-moz-focus-inner,
-	input::-moz-focus-inner {
-		border: 0;
-		padding: 0;
-	}
-
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+	all: revert;
+	box-sizing: border-box;
+}
 
 
 /* ::: WordPress ::::::::::::::::::::::::::::::::::::::::: */

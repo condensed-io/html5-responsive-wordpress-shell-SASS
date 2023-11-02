@@ -1,13 +1,6 @@
 /*
-
-GENERAL MIXINS: This project uses Bourbon so you can use any of the Bourbon mixins
-http://bourbon.io/
-
-- utility
-- setting media
-
+MIXINS
 */
-
 
 
 /* ::: BREAKPOINT VARIABLES ::::::::::::::::::::::::::::::::::::::::: */
@@ -19,7 +12,6 @@ http://bourbon.io/
     $large: new-breakpoint(min-width 980px);
     $lrgmega: new-breakpoint(min-width 1200px);
     $mega: new-breakpoint(min-width 1400px);
-
 
 
 /* ::: HIDING CONTENT ::::::::::::::::::::::::::::::::::::::::: */
@@ -35,13 +27,6 @@ http://bourbon.io/
 	}
 
 
-/* ::: BOURBON NEAT GRID HACKS ::::::::::::::::::::::::::::::::::::::::: */
-	
-//reset margins when you're changing the column span of a collection
-@mixin omega-reset($nth) {
-  &:nth-child(#{$nth}) { margin-right: flex-gutter($grid-columns, $gutter); }
-  &:nth-child(#{$nth}+1) { clear: none }
-}
 
 // these were removed from bourbon for some reason but we still need them
 

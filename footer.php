@@ -12,20 +12,16 @@
 			<!--END: Footer Nav-->
 			
 			<!--BEGIN: Credits :: Web Design Credit -->
-			<article class="credit"><h1>Web Design by <a href="http://www.mimoymima.com" title="web design brooklyn">mimoYmima.com</a></h1></article>
+			<article class="credit"><h1>Branding & Design by <a <?php if ( is_front_page() && is_home() ) : ?>rel="nofollow"<?php endif;?> href="https://condensed.io" title="branding for startups">condensed.io</a></h1></article>
 			<!--END: Credits-->
 			
-			<p class="copyright"><small>&copy; <?php echo date('Y'); ?> <?php bloginfo('name')?></small></p>
+			<p id="copyright" class="copyright"><small>&copy; <?php echo date('Y'); ?> <?php bloginfo('name')?></small></p>
 
 		</div>
 		<!--END: Row-->
 
 	</footer>
 	<!--END: Footer Section-->
-
-	<!--Javascript Indicator-->
-	<div class="js-ind indicator"><a href="http://www.mimoymima.com/help/turning-javascript-on-and-off/" title="You don't have javascript enabled, click here to learn more.">Enable Javascript</a></div>
-	<!--Javascript Indicator-->
 
     <!-- wp_footer hook for Plugins -->
     <?php wp_footer(); ?>
