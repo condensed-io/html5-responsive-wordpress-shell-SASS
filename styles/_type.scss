@@ -50,8 +50,6 @@
 	}
 
 
-
-
 //::: REUSABLE FONT SIZES ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 	@mixin huge-type() {
@@ -101,14 +99,10 @@
 	}
 
 
-
 /*--- Links ---*/
 
 	a:link, a:visited { text-decoration: none; }
 	a:hover, a:active, a:focus { text-decoration: none; }
-
-
-
 
 
 /*--- Headings ---*/
@@ -130,8 +124,3 @@
 	h4 {
 		font-weight: bold;
 	}
-
-
-
-
-
