@@ -4,12 +4,16 @@ MIXINS
 
 
 /* ::: BREAKPOINT MIXIN ::::::::::::::::::::::::::::::::::::::::: */
+/* by real life cat: Kitty Giraudel  */
+/* https: //www.sitepoint.com/managing-responsive-breakpoints-sass/ */
 
 	// you can add as many as you like with max or min...
 	$breakpoints: (
-		'small' : (max-width: 400px),
-		'medium' : (min-width: 690px),
-		'large' : (min-width: 980px),
+		'mini' : (max-width: 400px),
+		'small' : (max-width: 600px),
+		'medium' : (min-width: 800px),
+		'large' : (min-width: 1000px),
+		'xlarge' : (min-width: 1200px),
 		'mega' : (min-width: 1400px)
 	);
 
@@ -27,7 +31,7 @@ MIXINS
 		// If the key doesn't exist in the map
 		@else {
 			@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-			+"Please make sure it is defined in `$breakpoints` map.";
+			+ "Please make sure it is defined in `$breakpoints` map.";
 		}
 	}
 

@@ -87,23 +87,6 @@ $dark-grey: #333;
 				color: $white;
 			}
 		}
-		input[type='text'], input[type='email']  {
-			@include placeholder {
-				color: $black;
-			}
-			&:hover, &:active {
-				@include placeholder {
-					color: $black;
-				}
-			}
-			&:focus {
-				color: $black;
-				background-color: $black-50;
-				@include placeholder {
-					color: $black;
-				}	
-			}
-		}
 		input[type='submit'], .button {
             background: $black;
             color: $white;
@@ -130,24 +113,6 @@ $dark-grey: #333;
 			}
 			&:hover, &:focus, &:active {
 				color: $black;
-			}
-		}
-
-		input[type='text'], input[type='email']  {
-			@include placeholder {
-				color: $orange;
-			}
-			&:hover, &:active {
-				@include placeholder {
-					color: $black;
-				}
-			}
-			&:focus {
-				color: $black;
-				background-color: $black-50;
-				@include placeholder {
-					color: $black;
-				}	
 			}
 		}
 

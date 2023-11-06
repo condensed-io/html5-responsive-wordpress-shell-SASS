@@ -18,10 +18,6 @@ FORMS
 	input[type='text'], input[type='url'], input[type='file'], input[type='tel'], input[type='email'], textarea, select {
 		width: 100%;
 		border-radius: .2em;
-		@include transition (all .3s ease-in-out);
-		@include placeholder {
-			@include transition (all .3s ease-in-out);
-		}
 	}
 	select {
 		height: 2.7em;
@@ -38,7 +34,6 @@ FORMS
         vertical-align: middle;
         border-radius: 2em;
         text-transform: uppercase;
-		@include transition (all .3s ease-in-out);
 		&:hover, &:focus, &:active {
 			text-decoration: none;
 			cursor: pointer;
@@ -46,10 +41,10 @@ FORMS
 		display: block;
         width: 80%;
         margin: 1em auto;
-        @include media($smallmed){
+        @include respond-to($smallmed){
             width: 60%;
         }
-        @include media($medium){
+        @include respond-to($medium){
             display: inline;
         }
 	}
