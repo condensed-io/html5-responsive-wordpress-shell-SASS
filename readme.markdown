@@ -1,10 +1,7 @@
-HTML5 Wordpress Shell
+Condensed WordPress Starter Theme
 ---------------------
 
-This *Shell* theme can freely be used to rapidly develop websites using clean HTML5 that generates a well thought out document outline.
-
 The theme was created and is actively maintained by [https://condensed.io]
-
 
 **What makes this starter theme unique?**
 
