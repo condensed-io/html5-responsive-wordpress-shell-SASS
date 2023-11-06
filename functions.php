@@ -24,7 +24,6 @@
     }
 
 
-
 // ::: TWEAK SOME WORDPRESS DEFAULTS :::::::::::::::::::::::::::::::::
 
     // For Responsive images and thumbnails, removes the width and height from the markup
@@ -82,10 +81,8 @@
 
     add_filter('body_class', 'condensed_body_class');
 
-
     // Removes the automatic paragraph tags from the excerpt, we leave it on for the content and have a custom field you can use to turn it off on a page by page basis --> wpautop = false
     remove_filter('the_excerpt', 'wpautop');
-
 
 
 /* ::: LOAD SCRIPTS AND STYLES ::::::::::::::::::::::::::::::::: */
@@ -94,7 +91,6 @@
     function is_login_page() {
         return in_array($GLOBALS['pagenow'], array('wp-login.php', 'wp-register.php'));
     }
-
 
     function load_my_scripts_and_styles_yo() {
         if ( !is_admin() && !is_login_page() ) {
@@ -131,7 +127,6 @@
     add_action('wp_enqueue_scripts', 'load_my_scripts_and_styles_yo');
 
 
-
 /* ::: ADD THEME SUPPORT ::::::::::::::::::::::::::::::::: */
 
     if (function_exists('add_theme_support')) {
@@ -143,7 +138,6 @@
         add_theme_support( 'post-thumbnails' );
 
     }
-
 
 
 /* ::: UTILITY ::::::::::::::::::::::::::::::::: */
@@ -176,7 +170,6 @@
     }
 
 
-
 // REGISTER SIDEBARS - changing the default output from lists to divs
 
     if ( function_exists('register_sidebar') )
@@ -202,12 +195,10 @@
     //     'after_title' => '</h4>',
     // ));
 
-
 // Adds meta box for disableSidebar (according to http://www.mimoymima.com/2010/03/lab/disable-sidebar/)
 //require_once('includes/sidebar_metabox.php');
 
 // To REMOVE unused dashboard widgets you can uncomment the next line and customize /includes/remove.php
 // require_once('includes/remove.php');
-
 
 ?>
