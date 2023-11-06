@@ -41,10 +41,10 @@ FORMS
 		display: block;
         width: 80%;
         margin: 1em auto;
-        @include respond-to($smallmed){
+        @include respond-to(small){
             width: 60%;
         }
-        @include respond-to($medium){
+        @include respond-to(medium){
             display: inline;
         }
 	}
