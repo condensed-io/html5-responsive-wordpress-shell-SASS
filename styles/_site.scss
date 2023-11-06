@@ -25,10 +25,9 @@ THIS SHEET IS FOR SITEWIDE STYLES RELATED TO:
 	.site-header {
         
 		.site-title { // this h1 is just for SEO and keeping a good HTML5 document model
-			@include hide();
+			display: none;
 		}
 	}
-
 
 
 /* ::: MAIN NAV ::::::::::::::::::::::::::::::::: */

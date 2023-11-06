@@ -161,11 +161,7 @@ meter {
 /* ::: WARNINGS ::::::::::::::::::::::::::::::::::::::::: */
 
 	.sys { text-align: left }
-	.warn { }
-
-	/* a class you can add when doing production to hide elements and keep them accessible */
-	.access-hide { @include hide(); }
-
+	.warn {}
 
 	// Show-Hide
 	.make-link {

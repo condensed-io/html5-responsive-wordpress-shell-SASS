@@ -36,15 +36,3 @@ MIXINS
 			+ "Please make sure it is defined in `$breakpoints` map.";
 		}
 	}
-
-/* ::: HIDING CONTENT ::::::::::::::::::::::::::::::::::::::::: */
-
-	// http://shoptalkshow.com/episodes/058-with-derek-featherstone/  (skip to 32 minutes)
-	@mixin hide() {
-		display: none;
-	}
-
-	// unhide accessible content
-	@mixin unhide() {
-		position: static;
-	}
