@@ -13,8 +13,10 @@ MIXINS
 		'small' : (max-width: 600px),
 		'medium' : (min-width: 800px),
 		'large' : (min-width: 1000px),
-		'xlarge' : (min-width: 1200px),
-		'mega' : (min-width: 1400px)
+		'xl' : (min-width: 1200px),
+		'xxl' : (min-width: 1400px),
+		'mega' : (min-width: 1600px),
+		'beyond' : (min-width: 1900px)
 	);
 
 	@mixin respond-to($name) {
