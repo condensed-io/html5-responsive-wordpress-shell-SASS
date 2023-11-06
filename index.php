@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!--BEGIN: Default Content Section-->
-<div class="white-area clear-fix" role="main">
+<div class="clear-fix" role="main">
 
 	<h1 class="access-hide">Latest Posts</h1>
 	
@@ -40,6 +40,5 @@
 	<?php dynamic_sidebar('sidebar-main'); ?>
 </aside>
 <!--END: Sidebar Main-->
-
 
 <?php get_footer(); ?>

@@ -10,7 +10,7 @@ Template Name: blog-template
 <?php get_header(); ?>
 
 <!--BEGIN: Default Content Section-->
-<div class="blog-listing white-area clear-fix" role="main">
+<div class="blog-listing clear-fix" role="main">
 
 	<h1 class="access-hide">Latest Posts</h1>
 
