@@ -9,7 +9,6 @@
 
     <!--SEO meta by Yoast plugin, don't add your own-->
 
-	<!--link rel="apple-touch-icon" href="/images/custom_icon.png"/--><!-- 114x114 icon for iphones and ipads -->
 	<link rel="copyright" href="#copyright" />
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -24,8 +23,6 @@
 <body <?php body_class(); // we add to the body classes with a function in functions.php ?>>
 
 <div class="hide"><?php // include_once('img/svgsprite.svg'); // if you haver icons, load the SVG sprite -- https://medium.com/@hayavuk/complete-guide-to-svg-sprites-7e202e215d34 ?></div>
-
-<!--[if lt IE 9]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
 
 	<!--BEGIN: Site Header -->
 	<header id="masthead" class="site-header">

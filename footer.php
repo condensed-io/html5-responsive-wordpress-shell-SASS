@@ -1,5 +1,5 @@
 	<!--BEGIN: Footer Section-->
-	<footer class="footer white-area clear-fix">
+	<footer class="footer clear-fix">
 
 		<!--BEGIN: Row-->
 		<div class="row">
@@ -11,7 +11,7 @@
 			</nav>
 			<!--END: Footer Nav-->
 			
-			<!--BEGIN: Credits :: Web Design Credit -->
+			<!--BEGIN: Web Design Credit ~~ Feel free to remove this, or change to your own company's info.-->
 			<article class="credit"><h1>Branding & Design by <a <?php if ( is_front_page() && is_home() ) : ?>rel="nofollow"<?php endif;?> href="https://condensed.io" title="branding for startups">condensed.io</a></h1></article>
 			<!--END: Credits-->
 			
