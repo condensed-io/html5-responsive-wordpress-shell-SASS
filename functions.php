@@ -195,9 +195,6 @@
     //     'after_title' => '</h4>',
     // ));
 
-// Adds meta box for disableSidebar (according to http://www.mimoymima.com/2010/03/lab/disable-sidebar/)
-//require_once('includes/sidebar_metabox.php');
-
 // To REMOVE unused dashboard widgets you can uncomment the next line and customize /includes/remove.php
 // require_once('includes/remove.php');
 
