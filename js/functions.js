@@ -1,36 +1,12 @@
-// mYm Functions v 2 - brent@mimoymima.com
-// last edited: Nov 10, 2013
-
-
-// fix for ipad resizing content on orientation change -- updated version of jeremy keith's fix
-// useful for making responsive sites, if your site isn't responsive you can remove this bit of code
-(function(doc) {
-
-	var addEvent = 'addEventListener',
-	type = 'gesturestart',
-	qsa = 'querySelectorAll',
-	scales = [1, 1],
-	meta = qsa in doc ? doc[qsa]('meta[name=viewport]') : [];
-
-	function fix() {
-		meta.content = 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1];
-		doc.removeEventListener(type, fix, true);
-	}
-
-	if ((meta = meta[meta.length - 1]) && addEvent in doc) {
-		fix();
-		scales = [0.25, 1.6];
-		doc[addEvent](type, fix, true);
-	}
-
-}(document));
-
+// mYm Functions v 2 - brent@condensed.io
+// last edited: Nov 7, 2023
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+// DOCUMENT READY FUNCTION
+$(document).ready(function(){
 //  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-// DOCUMENT READY FUNCTION: uses noConflict to work with other libraries
-jQuery(document).ready(function($) {
+//  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 
 /* ::: Equal Height Divs ::::::::::::::::::::::::::::::::: */
@@ -57,24 +33,6 @@ $('.elements').height(highestCol);
 			}
 		return false;
 	});
-		
-
-
-/* ::: STICKY NAV ::::::::::::::::::::::::::::::::: */
-	
-//uncomment these lines to use//////////	// Check the initial position of the sticky header
-//uncomment these lines to use//////////	var stickyNavTop = $('.sticky').offset().top;
-//uncomment these lines to use//////////
-//uncomment these lines to use//////////    $(window).bind('scroll', function() { // try this instead: $(window).scroll(function(){
-//uncomment these lines to use//////////		if ($(window).scrollTop() > stickyNavTop) {
-//uncomment these lines to use//////////			$('.sticky').addClass('fixed');
-//uncomment these lines to use//////////		}
-//uncomment these lines to use//////////		else {
-//uncomment these lines to use//////////			$('.sticky').removeClass('fixed');
-//uncomment these lines to use//////////		}
-//uncomment these lines to use//////////    });
-
-
 
 /* ::: SCROLL TO ELEMENTS ::::::::::::::::::::::::::::::::: */
 
@@ -104,36 +62,13 @@ $('.elements').height(highestCol);
 	
 	}
 
-
-/* ::: MOVE LABELS INTO INPUTS IN FORMS ::::::::::::::::::::::::::::::::: */
-	
-    var placeholderSupport = "null"; // added this to remove undefined errors when compling, might screw stuff up?
-    
-	// Detect support for placeholder attribute
-	placeholderSupport = ("placeholder" in document.createElement("input"));
-	
-	// if it's supported move the labels into the form fields
-	if(placeholderSupport){
-		$('label').not('.gfield_checkbox label').each(function(){ // don't hide checkbox labels but hide others
-
-			var label = $(this);
-			label.hide();
-
-			var field = label.parent().find('input, textarea');
-			var labelText = label.text();
-
-			field.attr('placeholder', labelText);
-
-		});
-	} // end browser check
-
-
-
 /* ::: POPUP LINKS ::::::::::::::::::::::::::::::::: */
 	$('.popup').attr('target', '_blank');
 
 
-
-	
+//  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+//  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 });//<--- this is the end of the document ready function don't delete it
+//  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+//  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
