@@ -139,7 +139,6 @@
 
     }
 
-
 /* ::: UTILITY ::::::::::::::::::::::::::::::::: */
 
     // CONDITIONAL FUNCTION to determine if a page is a child of another page
@@ -194,8 +193,5 @@
     //     'before_title' => '<h4 class="widgettitle">',
     //     'after_title' => '</h4>',
     // ));
-
-// To REMOVE unused dashboard widgets you can uncomment the next line and customize /includes/remove.php
-// require_once('includes/remove.php');
 
 ?>
