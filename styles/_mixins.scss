@@ -2,21 +2,20 @@
 MIXINS
 */
 
-
 /* ::: BREAKPOINT MIXIN ::::::::::::::::::::::::::::::::::::::::: */
 /* by real life cat: Kitty Giraudel  */
 /* https: //www.sitepoint.com/managing-responsive-breakpoints-sass/ */
 
 	// you can add as many as you like with max or min...
 	$breakpoints: (
-		'mini' : (max-width: 400px),
-		'small' : (max-width: 600px),
-		'medium' : (min-width: 800px),
-		'large' : (min-width: 1000px),
-		'xl' : (min-width: 1200px),
-		'xxl' : (min-width: 1400px),
+		'mini' : (max-width: 300px),
+		'mobile' : (max-width: 375px),
+		'tablet-port' : (min-width: 744px),
+		'tablet-land' : (min-width: 1024px),
+		'desktop-sm' : (min-width: 1200px),
+		'desktop' : (min-width: 1440px),
 		'mega' : (min-width: 1600px),
-		'beyond' : (min-width: 1900px)
+		'beyond' : (min-width: 1920px)
 	);
 
 	@mixin respond-to($name) {
