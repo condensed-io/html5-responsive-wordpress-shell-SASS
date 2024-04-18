@@ -2,6 +2,11 @@
 Base is for standard things that don't change from project to project
 */
 
+/* allows for smooth scrolling to in-page links */
+html {
+    scroll-behavior: smooth;
+}
+
 /*
 Uses The New (lighter) css reset found here: 
 */
