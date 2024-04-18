@@ -103,10 +103,6 @@
             // functions
             wp_register_script( 'functions', get_template_directory_uri().'/js/functions.js', array('jquery'),'1.1', true); // version number is for cache busting, true loads this script in the footer
             wp_enqueue_script( 'functions' );
-
-            // modernizr
-            wp_register_script( 'modernizr', get_template_directory_uri().'/js/modernizr.custom.js',null,null,false); // keep the last argument as false which loads modernizr in the head
-            wp_enqueue_script( 'modernizr' );
             
             // Enqueue css -- http://code.tutsplus.com/tutorials/loading-css-into-wordpress-the-right-way--cms-20402
             // Auto cache busting: https://markjaquith.wordpress.com/2009/05/04/force-css-changes-to-go-live-immediately/
