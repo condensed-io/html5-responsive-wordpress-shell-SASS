@@ -8,11 +8,11 @@ MIXINS
 
 	// you can add as many as you like with max or min...
 	$breakpoints: (
-		'mobile' : (max-width: 375px)
-		'tablet' : (min-width: 600px),
-		'laptop' : (min-width: 900px),
-		'desktop' : (min-width: 1200px),
-		'bigscreen' : (min-width: 1800px)
+		'mobile-only' : (max-width: 599px)
+		'tablet-up' : (min-width: 600px),
+		'laptop-up' : (min-width: 900px),
+		'desktop-up' : (min-width: 1200px),
+		'bigscreen-up' : (min-width: 1800px)
 	);
 
 	@mixin respond-to($name) {
