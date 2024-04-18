@@ -3,7 +3,7 @@
 <!--BEGIN: sidebar~main-->
 
 <aside class="sidebar-main">
-	<h1>Main Sidebar</h1>
+	<p>Main Sidebar</p>
 	<?php dynamic_sidebar('sidebar-main'); ?>
 </aside>
 
@@ -22,7 +22,7 @@
 			<!--BEGIN: Post-->
 			<article <?php post_class() ?> class="post-<?php the_ID(); ?>">
 				
-				<h1 class="alt"><a href="<?php the_permalink(); ?>" rel="bookmark" title='Click to read: "<?php strip_tags(the_title()); ?>"'><?php the_title(); ?></a></h1>
+				<h2 class="alt"><a href="<?php the_permalink(); ?>" rel="bookmark" title='Click to read: "<?php strip_tags(the_title()); ?>"'><?php the_title(); ?></a></h2>
 				<p>by <?php the_author(); ?></p>
 				<p class="post-date"><?php the_time('F jS, Y') ?> &#8212; <?php the_category(', ') ?></p>
 				<p><?php the_tags('Topics Covered: ', ', ', '<br />'); ?></p>
