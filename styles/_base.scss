@@ -134,7 +134,7 @@ meter {
     	padding: 4px;
     	margin: 0 0 2px 15px;
     	display: inline;
-    	@include respond-to(tablet-up) {
+    	@include for-tablet-up {
     		max-width: 40%;
     	}
     	max-width: 100%;
@@ -143,7 +143,7 @@ meter {
     	padding: 4px;
     	margin: 0 15px 2px 0;
     	display: inline;
-    	@include respond-to(tablet-up) {
+    	@include for-tablet-up {
     		max-width: 40%;
     	}
     	max-width: 100%;
@@ -226,7 +226,7 @@ meter {
 
 	.content-main ul {
 		margin-left: 1em;
-		@include respond-to(tablet-up) {
+		@include for-tablet-up {
 			margin-left: 2em;
 		}
 		margin-top: 1em;
@@ -255,7 +255,7 @@ meter {
 
 	.content-main ol {
 		margin-left: 1em;
-		@include respond-to(tablet-up) {
+		@include for-tablet-up {
 			margin-left: 2em;
 		}
 		li {
@@ -269,7 +269,7 @@ meter {
 
 	// Horizontal List
 	.horiz-list {
-		@include respond-to(tablet-up) {
+		@include for-tablet-up {
 			list-style-type: none;
 			display: inline-block;
 			width: 100%;
@@ -283,7 +283,7 @@ meter {
 			li {
 				display: block;
 				width: 100%;
-				@include respond-to(tablet-up) {
+				@include for-tablet-up {
 					display: inline-block;
 					width: auto;
 				}

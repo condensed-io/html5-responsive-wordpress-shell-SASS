@@ -2,33 +2,24 @@
 MIXINS
 */
 
-/* ::: BREAKPOINT MIXIN ::::::::::::::::::::::::::::::::::::::::: */
-/* by real life cat: Kitty Giraudel  */
-/* https: //www.sitepoint.com/managing-responsive-breakpoints-sass/ */
+/* ::: BREAKPOINT MIXINS ::::::::::::::::::::::::::::::::::::::::: */
 
-	// you can add as many as you like with max or min...
-	$breakpoints: (
-		'mobile-only' : (max-width: 599px)
-		'tablet-up' : (min-width: 600px),
-		'laptop-up' : (min-width: 900px),
-		'desktop-up' : (min-width: 1200px),
-		'bigscreen-up' : (min-width: 1800px)
-	);
+/*
+https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
+*/
 
-	@mixin respond-to($name) {
-
-		// If the key exists in the map
-		@if map-has-key($breakpoints, $name) {
-
-			// Prints a media query based on the value
-			@media #{inspect(map-get($breakpoints, $name))} {
-				@content;
-			}
-		}
-
-		// If the key doesn't exist in the map
-		@else {
-			@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-			+ "Please make sure it is defined in `$breakpoints` map.";
-		}
-	}
+@mixin for-phone-only {
+	@media (max-width: 599px) { @content; }
+  }
+  @mixin for-tablet-portrait-up {
+	@media (min-width: 600px) { @content; }
+  }
+  @mixin for-tablet-landscape-up {
+	@media (min-width: 900px) { @content; }
+  }
+  @mixin for-desktop-up {
+	@media (min-width: 1200px) { @content; }
+  }
+  @mixin for-bigscreen-up {
+	@media (min-width: 1800px) { @content; }
+  }
