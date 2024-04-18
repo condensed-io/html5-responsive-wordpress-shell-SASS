@@ -30,8 +30,6 @@
 		/* apply a natural box layout model to all elements - http://paulirish.com/2012/box-sizing-border-box-ftw/ */
 		* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 		
-		h1 { position: absolute; left: -999em; }
-
 		.content { letter-spacing: .1em; }
 
 		/* size the image */

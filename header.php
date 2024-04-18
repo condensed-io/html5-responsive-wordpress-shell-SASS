@@ -22,7 +22,7 @@
 
 <body <?php body_class(); // we add to the body classes with a function in functions.php ?>>
 
-<div class="hide"><?php // include_once('img/svgsprite.svg'); // if you haver icons, load the SVG sprite -- https://medium.com/@hayavuk/complete-guide-to-svg-sprites-7e202e215d34 ?></div>
+<div class="hide"><?php // include_once('img/svgsprite.svg'); // if you have icons, load the SVG sprite -- https://medium.com/@hayavuk/complete-guide-to-svg-sprites-7e202e215d34 ?></div>
 
 	<!--BEGIN: Site Header -->
 	<header id="masthead" class="site-header">

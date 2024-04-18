@@ -2,8 +2,6 @@
 
 <!--BEGIN: Default Content Section-->
 <div class="clear-fix" role="main">
-
-	<h1 class="access-hide">Latest Posts</h1>
 	
 	<?php if (have_posts()) : // BEGIN THE LOOP ?>
 

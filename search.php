@@ -3,9 +3,7 @@
 <!--BEGIN: Content-->
 <div class="content-main clear-fix" role="main">
 	
-	<header>
-		<h1>Search Results</h1>
-	</header>
+	<h1>Search Results</h1>	
 	
 	<?php
 	
