@@ -41,10 +41,10 @@ FORMS
 		display: block;
         width: 80%;
         margin: 1em auto;
-        @include respond-to(small){
+        @include respond-to(mobile){
             width: 60%;
         }
-        @include respond-to(medium){
+        @include respond-to(tablet){
             display: inline;
         }
 	}
